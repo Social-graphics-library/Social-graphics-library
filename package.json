@@ -1,5 +1,5 @@
 {
-    "name": "@josunlp/social-graphics-library",
+    "name": "social-graphics-library",
     "version": "1.0.0",
     "description": "A script for generating social media logos and banners",
     "scripts": {
@@ -25,7 +25,7 @@
     "author": "Jonas Pfalzgraf",
     "license": "MIT",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/josunlp"
+        "registry": "https://npm.pkg.github.com/@josunlp"
     },
     "dependencies": {
         "@types/node": "^13.13.15",
