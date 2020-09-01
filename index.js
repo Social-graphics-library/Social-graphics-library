@@ -24,12 +24,8 @@ document
                         containerId: 'img-container-4',
                         imgMode: 'jpeg'
                     }, {
-                        mode: 'gaming',
+                        mode: 'logo',
                         containerId: 'img-container-5',
                         imgMode: 'png'
-                    }, {
-                        mode: 'eSports',
-                        containerId: 'img-container-6',
-                        imgMode: 'svg'
                     }])
         });

@@ -1,7 +1,10 @@
 import {False_Template} from "./false.template";
 import {Logo_Template} from "./logo.template";
 import {Call} from "./call";
-import { ENGINE_METHOD_DIGESTS } from "constants";
+import { Youtube_Template } from "./youtube-title.template";
+import { Elevate_Template } from "./elevate-title.template";
+import { Twitch_Template } from "./twitch-title.template";
+import { Twitter_Template } from "./twitter-title.template";
 
 class SocialGraphicsLibrary {
 
@@ -36,7 +39,7 @@ class SocialGraphicsLibrary {
                 break;
 
             case 'logo':
-				svgString = Logo_Template.template();
+				svgString = Logo_Template.template(teamName);
 				width = Logo_Template.width;
 				height = Logo_Template.height;
                 break;
