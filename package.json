@@ -20,7 +20,7 @@
     "author": "Jonas Pfalzgraf",
     "license": "MIT",
     "publishConfig": {
-        "registry": ""
+        "registry": "https://npm.pkg.github.com/"
     },
     "dependencies": {
         "@types/node": "^13.13.15",
