@@ -1,5 +1,5 @@
 {
-    "name": "social-graphics-library",
+    "name": "@josunlp/social-graphics-library",
     "version": "1.0.0",
     "description": "A script for generating social media logos and banners",
     "scripts": {
@@ -8,6 +8,11 @@
     },
     "main": "./dist/sgl.bundle.js",
     "module": "src/glc.ts",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JosunLP/Social-graphics-library"
+    },
     "keywords": [
         "fearnixx-grafik-generator",
         "social-graphics-library",
@@ -20,7 +25,7 @@
     "author": "Jonas Pfalzgraf",
     "license": "MIT",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
+        "registry": "https://npm.pkg.github.com/josunlp"
     },
     "dependencies": {
         "@types/node": "^13.13.15",
