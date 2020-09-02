@@ -1,5 +1,3 @@
-[logo]: ./assets/Demo.gif "Logo example"
-
 # Social Graphics Library
 
 ## Einführung
@@ -56,4 +54,4 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
     * jpeg
     * webp
 
-![Example Gif](logo)
+![Example Gif](./assets/Demo.gif)
