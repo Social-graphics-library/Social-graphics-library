@@ -3,7 +3,7 @@
 ## Einführung
 
 Das **Social Graphics Library** Script nutzt `<canvas>`
-zum generieren von von SVG, PNG, JPEG und WebP Grafiken für FearNixx Team Mitglieder und Spieler.
+zum generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitglieder und Spieler.
 
 <img src="assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
 
