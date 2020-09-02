@@ -6,8 +6,10 @@ document
         function() {
             new SocialGraphicsLibrary
                 .multiGenerator(document
-                    .getElementById('uName')
-                    .value, [{
+                    .getElementById('tName')
+                    .value,
+                    document
+                    .getElementById('uName').value, [{
                         mode: 'twitch-title',
                         containerId: 'img-container-1',
                         imgMode: 'jpeg'

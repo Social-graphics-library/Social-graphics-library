@@ -8,38 +8,46 @@ import { Twitter_Template } from "./twitter-title.template";
 
 class SocialGraphicsLibrary {
 
-    public static generator(teamName: string, mode: string, containerId: string, imgMode: string): void {
+	public static generator(teamName: string, playerName:string, mode: string, containerId: string, imgMode: string): void {
         let svgString: string;
         let width: number;
-        let height: number;
+		let height: number;
+
+		if (teamName === "" ) {
+			teamName = "Community";
+		}
+
+		if (playerName === "") {
+			playerName = "Player";
+		}
 
         switch (mode) {
             case 'youtube-title':
-                svgString = Youtube_Template.template(teamName);
+				svgString = Youtube_Template.template(teamName, playerName);
                 width = Youtube_Template.width;
                 height = Youtube_Template.height;
                 break;
 
             case 'twitch-title':
-                svgString = Twitch_Template.template(teamName);
+				svgString = Twitch_Template.template(teamName, playerName);
                 width = Twitch_Template.width;
                 height = Twitch_Template.height;
                 break;
 
             case 'twitter-title':
-                svgString = Twitter_Template.template(teamName);
+				svgString = Twitter_Template.template(teamName, playerName);
                 width = Twitter_Template.width;
                 height = Twitter_Template.height;
                 break;
 
             case 'elavate-title':
-                svgString = Elevate_Template.template(teamName);
+				svgString = Elevate_Template.template(teamName, playerName);
                 width = Elevate_Template.width;
                 height = Elevate_Template.height;
                 break;
 
             case 'logo':
-				svgString = Logo_Template.template(teamName);
+				svgString = Logo_Template.template(playerName);
 				width = Logo_Template.width;
 				height = Logo_Template.height;
                 break;
@@ -143,9 +151,9 @@ class SocialGraphicsLibrary {
 
     }
 
-    public static multiGenerator(teamName: string, calls: Array<Call>): void {
+	public static multiGenerator(teamName: string, playerName:string, calls: Array<Call>): void {
         calls.forEach(element => {
-			SocialGraphicsLibrary.generator(teamName, element.mode, element.containerId, element.imgMode);
+			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode);
         });
     }
 }

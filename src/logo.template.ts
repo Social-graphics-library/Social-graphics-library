@@ -3,7 +3,7 @@ export class Logo_Template {
 	static width = 1000;
 	static height = 1000;
 
-	static template(teamName:string): string {
+	static template(playerName:string): string {
 		return '<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 5000 5000">\n' +
 			'  <defs/>\n' +
 			'  <path fill="#2d8ec9" d="M2134.11693971 2214.50666625c-23.22948693 83.9636016-35.64467454 172.4442324-35.64467454 263.80114797 0 223.81215417 74.51769642 430.35995703 200.04460935 596.1150006-606.4390694-96.93013248-1070.43495151-622.9514682-1070.43495151-1256.48474157 0-702.28976475 570.17064626-1272.46041102 1272.45908248-1272.46041102 684.5956314 0 1243.6444218 541.79573166 1271.38429524 1219.61116938-177.71188557-170.6507061-419.00759982-275.6052081-684.62884485-275.6052081-54.24420654 0-107.4787242 4.37753271-159.31163427 12.79382094-74.47119759-238.14707919-296.94817107-411.18118246-559.5137787-411.18118246-323.48571762 0-586.10978092 262.6240633-586.10978092 586.10978092 0 240.17974233 144.78938539 446.81390016 351.75567772 537.30062334z"/>\n' +
@@ -11,7 +11,7 @@ export class Logo_Template {
 			'  <g>\n' +
 			'     <text text-anchor="middle" alignment-baseline="central" y="4504.82" font-family="Arial"\n' +
 			'                    font-size="700" fill="#1c0100">\n' +
-			'                <tspan x="2500" dy="0" id="textRoot">' + teamName + '</tspan>\n' +
+			'                <tspan x="2500" dy="0" id="textRoot">' + playerName + '</tspan>\n' +
 			'            </text>\n' +
 			'  </g>\n' +
 			'</svg>\n';
