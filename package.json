@@ -22,7 +22,7 @@
         "josunlp",
         "fngg"
     ],
-    "author": "Jonas Pfalzgraf",
+    "author": "josunlp",
     "license": "MIT",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/@josunlp"
