@@ -34,7 +34,7 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
   * Der Modus des zu generierenden Bildes
     * youtube-title
       * Generiert ein Youtube Titelbild
-    *twitch-title
+    * twitch-title
       * Generiert ein Twitch Titelbild
     * twitter-title
       * Generiert ein Twitter Titelbild
