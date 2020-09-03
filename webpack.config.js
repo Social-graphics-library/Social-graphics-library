@@ -3,6 +3,9 @@ module.exports = {
     mode: 'production',
     entry: './src/glc.ts',
     watch: false,
+    stats: {
+        warnings: false
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         publicPath: '/dist/',
@@ -21,7 +24,10 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, './'),
         compress: true,
-        port: 9000
+        port: 9000,
+        stats: {
+            warnings: false
+        },
     },
     resolve: {
         extensions: ['.json', '.js', '.jsx', '.ts', '.tsx']
