@@ -71,8 +71,10 @@ class SocialGraphicsLibrary {
             img2 = new Image(),
             canvas = document.createElement('canvas'),
             imgAtr: string,
-            downloadLink = document.createElement('a'),
-            container = document.getElementById(containerId)!
+			downloadLink = document.createElement('a'),
+			container = <HTMLDivElement>document.getElementById(containerId)
+
+
         ;
 
         switch (imgMode) {
@@ -122,7 +124,12 @@ class SocialGraphicsLibrary {
         img.setAttribute('width', width);
         img.setAttribute('height', height);
 
-        container.appendChild(canvas);
+		try {
+			container.appendChild(canvas);
+		} catch (error) {
+			throw new Error("The Container " + containerId + " is not defined!");
+		}
+
         let renderCanvas = <HTMLCanvasElement>  document.getElementById('render-canvas' + containerId)!;
 
         let ctx = renderCanvas.getContext('2d');
