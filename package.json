@@ -28,7 +28,7 @@
         "registry": "https://npm.pkg.github.com/@josunlp"
     },
     "dependencies": {
-        "@types/node": "^13.13.16",
+        "@types/node": "^14.6.4",
         "webpack": "^4.44.1"
     },
     "devDependencies": {
