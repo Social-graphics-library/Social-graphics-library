@@ -1,6 +1,6 @@
 {
     "name": "social-graphics-library",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "A script for generating social media logos and banners",
     "scripts": {
         "build": "webpack",
@@ -24,13 +24,14 @@
     ],
     "author": "josunlp",
     "license": "MIT",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/@josunlp"
-    },
     "dependencies": {
         "@types/node": "^13.13.16",
         "webpack": "^4.44.1"
     },
+    "bugs": {
+        "url": "https://github.com/JosunLP/Social-graphics-library/issues"
+    },
+    "homepage": "https://github.com/JosunLP/Social-graphics-library",
     "devDependencies": {
         "@babel/core": "^7.11.6",
         "@babel/preset-env": "^7.11.5",
