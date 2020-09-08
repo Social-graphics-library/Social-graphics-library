@@ -24,9 +24,6 @@
     ],
     "author": "josunlp",
     "license": "MIT",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/@josunlp"
-    },
     "dependencies": {
         "@types/node": "^13.13.16",
         "webpack": "^4.44.1"
