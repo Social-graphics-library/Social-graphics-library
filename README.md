@@ -2,7 +2,7 @@
 
   - [Deutsche Version](#german)
   - [English Version](#english)
-  
+
 --------------------------------------------------------------------------------------------------------
 
 # German
@@ -24,11 +24,11 @@ Es besteht auch Support über den Discord Server des [WAPS-Framework](https://wa
 Zum generieren einer Grafik wird die statische Funktion `generator`
 auf der Klasse `SocialGraphicsLibrary` aufgerufen:
 
-`SocialGraphicsLibrary.generator(teamName, mode, containerId, imgMode);`
+`SocialGraphicsLibrary.generator(teamName, playerName, mode, containerId, imgMode);`
 
 Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `multiGenerator` aufgerufen werden:
 
-        SocialGraphicsLibrary.multiGenerator(uName, [{
+        SocialGraphicsLibrary.multiGenerator(tName, pName, [{
                         mode: 'twitch-title',
                         containerId: 'img-container-1',
                         imgMode: 'jpeg'
@@ -41,7 +41,9 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
 ### Modifikatoren
 
 * Team Name:
-  * Der Nutzer oder Team-Name
+  * Der Team-Name
+* Player Name:
+  * Der Nutzer-Name
 * Modus:
   * Der Modus des zu generierenden Bildes
     * youtube-title
@@ -89,11 +91,11 @@ There is also support via the Discord server of the [WAPS-Framework] (https://wa
 The static function `generator` is used to generate a graphic
 called on the class `SocialGraphicsLibrary`:
 
-`SocialGraphicsLibrary.generator(teamName, mode, containerId, imgMode);`
+`SocialGraphicsLibrary.generator(teamName, playerName, mode, containerId, imgMode);`
 
 Alternatively, if several graphics are to be generated, the `multiGenerator` method can be called:
 
-        SocialGraphicsLibrary.multiGenerator(uName, [{
+        SocialGraphicsLibrary.multiGenerator(tName, pName, [{
                         mode: 'twitch-title',
                         containerId: 'img-container-1',
                         imgMode: 'jpeg'
@@ -106,7 +108,9 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
 ### Modifiers
 
 * Team name:
-   * The user or team name
+  * The team name
+* Player name:
+  * The name of the player
 * Mode:
    * The mode of the image to be generated
      * youtube-title
@@ -123,7 +127,7 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
 * Container ID:
    * Indicates the ID of the container which is the target for
        the generated image is used
-       
+
 * Image mode:
    * The mode of the image to be generated
      * png
