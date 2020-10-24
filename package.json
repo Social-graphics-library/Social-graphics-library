@@ -1,6 +1,6 @@
 {
     "name": "social-graphics-library",
-    "version": "1.0.14",
+    "version": "1.0.15",
     "description": "A script for generating social media logos and banners",
     "scripts": {
         "build": "webpack",
