@@ -65,17 +65,22 @@ class SocialGraphicsLibrary {
 
     static printImage(svgString: string, width: any, height: any, containerId: string, imgMode:string) {
 
-        let xml = svgString,
-            data = "data:image/svg+xml;charset=utf-8;base64, " + btoa(xml),
-            img = new Image(),
-            img2 = new Image(),
-            canvas = document.createElement('canvas'),
-            imgAtr: string,
+		let xml = svgString,
+			parser = new DOMParser(),
+			result: XMLDocument = parser.parseFromString(xml, 'text/xml'),
+			inlineSVG = result.getElementsByTagName('svg')[0];
+
+		inlineSVG.setAttribute('width', width);
+		inlineSVG.setAttribute('height', height);
+
+		let data = "data:image/svg+xml;charset=utf-8;base64, " + btoa(new XMLSerializer().serializeToString(inlineSVG)),
+			img = new Image(),
+			img2 = new Image(),
+			canvas = document.createElement('canvas'),
+			imgAtr: string,
 			downloadLink = document.createElement('a'),
-			container = <HTMLDivElement>document.getElementById(containerId)
-
-
-        ;
+			container = document.getElementById(containerId)!
+			;
 
         switch (imgMode) {
             case 'svg':
@@ -130,15 +135,18 @@ class SocialGraphicsLibrary {
 			throw new Error("The Container " + containerId + " is not defined!");
 		}
 
-        let renderCanvas = <HTMLCanvasElement>  document.getElementById('render-canvas' + containerId)!;
+		let renderCanvas = <HTMLCanvasElement>document.getElementById('render-canvas' + containerId)!;
 
-        let ctx = renderCanvas.getContext('2d');
+		let ctx: CanvasRenderingContext2D | null;
+		let imgPng: string;
 
-        img.onload = function() {
+		img.onload = async function () {
 
-            ctx!.drawImage(img, 0, 0);
+			ctx = renderCanvas.getContext('2d');
 
-            let imgPng = renderCanvas.toDataURL(imgAtr, 1);
+			ctx!.drawImage(img, 0, 0);
+
+			imgPng = renderCanvas.toDataURL(imgAtr, 1.0);
 
             width = width / 4;
             height = height / 4;
