@@ -1,10 +1,12 @@
 import "./dist/sgl.bundle.js";
 
+console.log(SocialGraphicsLibrary.info());
+
 document
     .getElementById("generate")
     .addEventListener("click",
         function() {
-            new SocialGraphicsLibrary
+            SocialGraphicsLibrary
                 .multiGenerator(document
                     .getElementById('tName')
                     .value,
