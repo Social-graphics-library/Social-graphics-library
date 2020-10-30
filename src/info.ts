@@ -1,14 +1,14 @@
 export class Info {
 
-	private readonly _version = "1.1.0"
+	private readonly _version: string = "1.1.0"
 
-	private readonly _author = "Jonas Pfalzgraf / JosunLP"
+	private readonly _author: string = "Jonas Pfalzgraf / JosunLP"
 
-	private readonly _license = "MIT"
+	private readonly _license: string = "MIT"
 
-	private readonly _repository = "https://github.com/JosunLP/Social-graphics-library"
+	private readonly _repository: string = "https://github.com/JosunLP/Social-graphics-library"
 
-	private readonly _install = "npm i social-graphics-library"
+	private readonly _install: string = "npm i social-graphics-library"
 
 	public constructor() {
 		this._version;

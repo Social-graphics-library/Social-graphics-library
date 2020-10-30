@@ -1,7 +1,7 @@
 export class Youtube_Template {
 
-	static width = 2560;
-	static height = 1440;
+	static width: number = 2560;
+	static height: number = 1440;
 
 	static template(teamName: string, playerName:string): string {
 		return '<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 2560 1440">\n' +

@@ -1,7 +1,7 @@
 export class False_Template {
 
-    static width = 1000;
-    static height = 1000;
+    static width: number = 1000;
+    static height: number = 1000;
 
     static template(): string {
         return '<svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">\n' +

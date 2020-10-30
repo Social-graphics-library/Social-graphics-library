@@ -1,7 +1,7 @@
 export class Logo_Template {
 
-	static width = 1000;
-	static height = 1000;
+	static width: number = 1000;
+	static height: number = 1000;
 
 	static template(playerName:string): string {
 		return '<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 5000 5000">\n' +
