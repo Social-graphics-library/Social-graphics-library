@@ -168,7 +168,13 @@ class SocialGraphicsLibrary {
 
 	public static multiGenerator(teamName: string, playerName:string, calls: Array<Call>): void {
         calls.forEach(element => {
-			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode);
+			SocialGraphicsLibrary.generator(
+				teamName,
+				playerName,
+				element.mode,
+				element.containerId,
+				element.imgMode
+				);
         });
 	}
 
