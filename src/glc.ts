@@ -5,6 +5,7 @@ import { Youtube_Template } from "./youtube-title.template";
 import { Elevate_Template } from "./elevate-title.template";
 import { Twitch_Template } from "./twitch-title.template";
 import { Twitter_Template } from "./twitter-title.template";
+import { Info } from "./info";
 
 class SocialGraphicsLibrary {
 
@@ -63,7 +64,7 @@ class SocialGraphicsLibrary {
 
     }
 
-    static printImage(svgString: string, width: any, height: any, containerId: string, imgMode:string) {
+    static printImage(svgString: string, width: any, height: any, containerId: string, imgMode:string):void {
 
 		let xml = svgString,
 			parser = new DOMParser(),
@@ -120,8 +121,7 @@ class SocialGraphicsLibrary {
                 break;
         }
 
-
-        canvas.setAttribute('width', width);
+		canvas.setAttribute('width', width);
         canvas.setAttribute('height', height);
         canvas.setAttribute('id', 'render-canvas' + containerId);
 
@@ -170,7 +170,11 @@ class SocialGraphicsLibrary {
         calls.forEach(element => {
 			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode);
         });
-    }
+	}
+
+	public static info():object {
+		return { "SGL Info": new Info() }
+	}
 }
 
 export default SocialGraphicsLibrary;
