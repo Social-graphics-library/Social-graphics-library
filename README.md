@@ -1,14 +1,15 @@
-## Languages:
+# Languages
 
-  - [Deutsche Version](#german)
-  - [English Version](#english)
+- [Deutsche Version](#german)
+- [English Version](#english)
 
 --------------------------------------------------------------------------------------------------------
 
 # German
-# Social Graphics Library
 
-## Einführung
+## Social Graphics Library
+
+### Einführung
 
 Das **Social Graphics Library** Script nutzt `<canvas>`
 zum generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitglieder und Spieler.
@@ -24,7 +25,13 @@ Es besteht auch Support über den Discord Server des [WAPS-Framework](https://wa
 Zum generieren einer Grafik wird die statische Funktion `generator`
 auf der Klasse `SocialGraphicsLibrary` aufgerufen:
 
-`SocialGraphicsLibrary.generator(teamName, playerName, mode, containerId, imgMode);`
+    SocialGraphicsLibrary.generator(
+        teamName,
+        playerName,
+        mode,
+        containerId,
+        imgMode
+      );
 
 Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `multiGenerator` aufgerufen werden:
 
@@ -70,12 +77,13 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
 
 ![Example Gif](./assets/Demo.gif)
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
 
 # English
-# Social Graphics Library
 
-## Introduction
+## Social Graphics Library
+
+### Introduction
 
 The **Social Graphics Library** script uses `<canvas>`
 to generate SVG, PNG, JPEG and WebP graphics for community team members and players.
@@ -91,7 +99,13 @@ There is also support via the Discord server of the [WAPS-Framework] (https://wa
 The static function `generator` is used to generate a graphic
 called on the class `SocialGraphicsLibrary`:
 
-`SocialGraphicsLibrary.generator(teamName, playerName, mode, containerId, imgMode);`
+    SocialGraphicsLibrary.generator(
+        teamName,
+        playerName,
+        mode,
+        containerId,
+        imgMode
+      );
 
 Alternatively, if several graphics are to be generated, the `multiGenerator` method can be called:
 
