@@ -10,6 +10,14 @@ import { Info } from "./info";
 class SocialGraphicsLibrary {
 
 	//#region generator
+	/**
+	 * Generators social graphics library
+	 * @param teamName
+	 * @param playerName
+	 * @param mode
+	 * @param containerId
+	 * @param imgMode
+	 */
 	public static generator(teamName: string, playerName:string, mode: string, containerId: string, imgMode: string): void {
         let svgString: string;
         let width: number;
@@ -68,7 +76,16 @@ class SocialGraphicsLibrary {
 	//#endregion
 
 	//#region printImage
-    static printImage(svgString: string, width: number, height: number, containerId: string, imgMode:string):void {
+	/**
+	 * Prints image
+	 * @param svgString
+	 * @param width
+	 * @param height
+	 * @param containerId
+	 * @param imgMode
+	 * @returns image
+	 */
+	static printImage(svgString: string, width: number, height: number, containerId: string, imgMode:string):void {
 
 		let xml = svgString,
 			parser = new DOMParser(),
@@ -144,7 +161,7 @@ class SocialGraphicsLibrary {
 		let ctx: CanvasRenderingContext2D | null;
 		let imgPng: string;
 
-        img.onload = function() {
+        img.onload = async function() {
 
 			ctx = renderCanvas.getContext('2d');
 
@@ -172,6 +189,12 @@ class SocialGraphicsLibrary {
 	//#endregion
 
 	//#region multiGenerator
+	/**
+	 * Multis generator
+	 * @param teamName
+	 * @param playerName
+	 * @param calls
+	 */
 	public static multiGenerator(teamName: string, playerName:string, calls: Array<Call>): void {
         calls.forEach(async element => {
 			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode);
@@ -180,6 +203,10 @@ class SocialGraphicsLibrary {
 	//#endregion
 
 	//#region info
+	/**
+	 * Infos social graphics library
+	 * @returns info
+	 */
 	public static info():object {
 		return { "SGL Info": new Info() }
 	}
