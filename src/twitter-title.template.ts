@@ -1,7 +1,7 @@
 export class Twitter_Template {
 
-    static width = 1500;
-    static height = 500;
+    static width: number = 1500;
+    static height: number = 500;
 
 	static template(teamName: string, playerName:string): string {
         return '<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 1500 500">\n' +

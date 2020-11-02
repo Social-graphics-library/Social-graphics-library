@@ -1,7 +1,7 @@
 export class Twitch_Template {
 
-    static width = 1920;
-    static height = 480;
+    static width: number = 1920;
+    static height: number = 480;
 
 	static template(teamName: string, playerName:string): string {
         return '<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 1920 480">\n' +
