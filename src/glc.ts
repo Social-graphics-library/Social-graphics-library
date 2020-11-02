@@ -30,25 +30,25 @@ class SocialGraphicsLibrary {
                 height = Youtube_Template.height;
                 break;
 
-            case "twitch-title":
+			case "twitch-title":
 				svgString = Twitch_Template.template(teamName, playerName);
                 width = Twitch_Template.width;
                 height = Twitch_Template.height;
                 break;
 
-            case "twitter-title":
+			case "twitter-title":
 				svgString = Twitter_Template.template(teamName, playerName);
                 width = Twitter_Template.width;
                 height = Twitter_Template.height;
                 break;
 
-            case "elavate-title":
+			case "elavate-title":
 				svgString = Elevate_Template.template(teamName, playerName);
                 width = Elevate_Template.width;
                 height = Elevate_Template.height;
                 break;
 
-            case "logo":
+			case "logo":
 				svgString = Logo_Template.template(playerName);
 				width = Logo_Template.width;
 				height = Logo_Template.height;
@@ -144,7 +144,7 @@ class SocialGraphicsLibrary {
 		let ctx: CanvasRenderingContext2D | null;
 		let imgPng: string;
 
-        img.onload = async () => {
+        img.onload = function() {
 
 			ctx = renderCanvas.getContext('2d');
 
@@ -173,7 +173,7 @@ class SocialGraphicsLibrary {
 
 	//#region multiGenerator
 	public static multiGenerator(teamName: string, playerName:string, calls: Array<Call>): void {
-        calls.forEach(element => {
+        calls.forEach(async element => {
 			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode);
         });
 	}
