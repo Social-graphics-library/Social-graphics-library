@@ -5,7 +5,7 @@ console.log(SocialGraphicsLibrary.info());
 document
     .getElementById("generate")
     .addEventListener("click",
-        function() {
+        async function() {
             SocialGraphicsLibrary
                 .multiGenerator(document
                     .getElementById('tName')

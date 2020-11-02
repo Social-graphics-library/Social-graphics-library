@@ -1,1 +1,1 @@
-console.log("ok");
+console.log("No tests at this moment...");
