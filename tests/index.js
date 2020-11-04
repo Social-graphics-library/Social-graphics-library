@@ -1,8 +1,17 @@
 //#region setup
 const jsdom = require("jsdom");
-require('jsdom-global')()
+const buffer = require('buffer');
+const events = require('events');
+const eventEmitter = new events.EventEmitter();
+require('canvas');
 
-const { JSDOM } = jsdom;
+//#region global
+global.Buffer = buffer.Buffer;
+
+const {
+    JSDOM
+} = jsdom;
+
 const dom = new JSDOM(`<!DOCTYPE html><body id="body"></body>`, {
     url: "https://example.org/",
     referrer: "https://example.com/",
@@ -10,29 +19,53 @@ const dom = new JSDOM(`<!DOCTYPE html><body id="body"></body>`, {
     includeNodeLocations: true,
     storageQuota: 10000000
 });
-const doc = dom.window.document;
-const window = dom.window;
-const main = doc.createElement("div");
-const testDiv = doc.createElement("div");
-global.window = window;
-global.document = doc;
+
+if (typeof global.btoa === 'undefined') {
+    global.btoa = function(str) {
+        return Buffer.from(str, 'binary').toString('base64');
+    };
+}
+
+if (typeof global.atob === 'undefined') {
+    global.atob = function(b64Encoded) {
+        return Buffer.from(b64Encoded, 'base64').toString('binary');
+    };
+}
+
+global.window = dom.window;
+global.document = dom.window.document;
 global.DOMParser = window.DOMParser;
 global.XMLSerializer = window.XMLSerializer;
+global.Image = window.Image;
+global.Event = window.Event;
+//#endregion
+
+//#region local
 const sgl = require("../dist/sgl.bundle");
+
+const main = document.createElement("div");
+const testDiv = document.createElement("div");
 
 main.id = "main";
 testDiv.id = "test";
 testDiv.className = "test";
 
-doc.getElementById("body").appendChild(main);
-doc.getElementById("main").appendChild(testDiv);
+document.getElementById("body").appendChild(main);
+document.getElementById("main").appendChild(testDiv);
+//#endregion
 //#endregion
 
 //#region test
 
 console.log(sgl.info());
 
-sgl.generator("Tester", "Test", "logo", "test", "jpeg");
+console.log();
+
+sgl.generator("Tester", "Test", "false", "test", "svg");
+
+eventEmitter.emit('load', window);
+
+console.log(document.body.innerHTML + "\n");
 
 //#endregion
 
