@@ -47,37 +47,37 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
 
 ### Modifikatoren
 
-* Team Name:
-  * Der Team-Name
-* Player Name:
-  * Der Nutzer-Name
-* Modus:
-  * Der Modus des zu generierenden Bildes
-    * youtube-title
-      * Generiert ein Youtube Titelbild
-    * twitch-title
-      * Generiert ein Twitch Titelbild
-    * twitter-title
-      * Generiert ein Twitter Titelbild
-    * elavate-title
-      * Generiert ein Youtube Titelbild
-    * gaming
-      * Generiert ein Gaming Logo
+- Team Name:
+  - Der Team-Name
+- Player Name:
+  - Der Nutzer-Name
+- Modus:
+  - Der Modus des zu generierenden Bildes
+    - youtube-title
+      - Generiert ein Youtube Titelbild
+    - twitch-title
+      - Generiert ein Twitch Titelbild
+    - twitter-title
+      - Generiert ein Twitter Titelbild
+    - elavate-title
+      - Generiert ein Youtube Titelbild
+    - gaming
+      - Generiert ein Gaming Logo
 
-* Container ID:
-  * Gibt die ID des Containers an, welcher als Ziel für
+- Container ID:
+  - Gibt die ID des Containers an, welcher als Ziel für
       das generierte Bild dient
 
-* Image Modus:
-  * Der Modus des zu generierenen Bildes
-    * png
-    * svg
-    * jpeg
-    * webp
+- Image Modus:
+  - Der Modus des zu generierenen Bildes
+    - png
+    - svg
+    - jpeg
+    - webp
 
 ![Example Gif](./assets/Demo.gif)
 
-----------------------------------------------------------------------------------------------------------
+---
 
 # English
 
@@ -92,7 +92,7 @@ to generate SVG, PNG, JPEG and WebP graphics for community team members and play
 
 ### Support
 
-There is also support via the Discord server of the [WAPS-Framework] (https://waps-framework.info), the invitation link is [https://discord.gg/fraspbc](https://discord.gg/fraspbc)
+There is also support via the Discord server of the [WAPS-Framework](https://waps-framework.info), the invitation link is [https://discord.gg/fraspbc](https://discord.gg/fraspbc)
 
 ### Structure
 
@@ -121,32 +121,32 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
 
 ### Modifiers
 
-* Team name:
-  * The team name
-* Player name:
-  * The name of the player
-* Mode:
-   * The mode of the image to be generated
-     * youtube-title
-       * Generates a Youtube cover picture
-     * twitch-title
-       * Generates a Twitch cover photo
-     * twitter-title
-       * Generates a Twitter cover photo
-     * elavate-title
-       * Generates a Youtube cover picture
-     * gaming
-       * Generates a gaming logo
+- Team name:
+  - The team name
+- Player name:
+  - The name of the player
+- Mode:
+  - The mode of the image to be generated
+    - youtube-title
+      - Generates a Youtube cover picture
+    - twitch-title
+      - Generates a Twitch cover photo
+    - twitter-title
+      - Generates a Twitter cover photo
+    - elavate-title
+      - Generates a Youtube cover picture
+    - gaming
+      - Generates a gaming logo
 
-* Container ID:
-   * Indicates the ID of the container which is the target for
+- Container ID:
+  - Indicates the ID of the container which is the target for
        the generated image is used
 
-* Image mode:
-   * The mode of the image to be generated
-     * png
-     * svg
-     * jpeg
-     * webp
+- Image mode:
+  - The mode of the image to be generated
+    - png
+    - svg
+    - jpeg
+    - webp
 
 ![Example Gif](./assets/Demo.gif)

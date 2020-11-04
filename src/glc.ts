@@ -144,7 +144,8 @@ class SocialGraphicsLibrary {
 
         canvas.setAttribute('width', width.toString());
         canvas.setAttribute('height', height.toString());
-        canvas.setAttribute('id', 'render-canvas' + containerId);
+		canvas.setAttribute('id', 'render-canvas' + containerId);
+		canvas.setAttribute('display', 'none');
 
         img.setAttribute('src', data);
         img.setAttribute('width', width.toString());
@@ -159,31 +160,31 @@ class SocialGraphicsLibrary {
 		let renderCanvas = <HTMLCanvasElement>document.getElementById('render-canvas' + containerId)!;
 
 		let ctx: CanvasRenderingContext2D | null;
-		let imgPng: string;
+		let imgDataUrl: string;
 
-        img.onload = async function() {
+        img.onload = function() {
 
 			ctx = renderCanvas.getContext('2d');
 
 			ctx!.drawImage(img, 0, 0);
 
-			imgPng = renderCanvas.toDataURL(imgAtr, 1.0);
+			imgDataUrl = renderCanvas.toDataURL(imgAtr, 1.0);
 
             width = width / 4;
-            height = height / 4;
+			height = height / 4;
 
-            img2.setAttribute('src', imgPng);
+            img2.setAttribute('src', imgDataUrl);
             img2.setAttribute('width', width.toString());
             img2.setAttribute('height', height.toString());
-            downloadLink.setAttribute('href', imgPng);
+            downloadLink.setAttribute('href', imgDataUrl);
             downloadLink.setAttribute('download', 'image.' + imgMode);
-            downloadLink.innerHTML = 'Download Link';
+			downloadLink.innerHTML = 'Download Link';
 
             container.innerHTML = "";
 
             container.appendChild(img2);
             container.appendChild(downloadLink);
-        };
+		};
 
 	}
 	//#endregion
@@ -196,7 +197,7 @@ class SocialGraphicsLibrary {
 	 * @param calls
 	 */
 	public static multiGenerator(teamName: string, playerName:string, calls: Array<Call>): void {
-        calls.forEach(async element => {
+        calls.forEach( async element => {
 			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode);
         });
 	}
