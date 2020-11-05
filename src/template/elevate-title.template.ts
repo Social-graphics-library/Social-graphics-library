@@ -1,4 +1,6 @@
-export class Elevate_Template {
+import Template from "../model/templateBase"
+
+export class Elevate_Template extends Template {
 
 	//#region setup
 	/**

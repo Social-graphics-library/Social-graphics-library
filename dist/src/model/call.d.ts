@@ -1,4 +1,4 @@
-export declare class Call {
+export default interface Call {
     /**
      * Mode  of call
      */
@@ -11,8 +11,4 @@ export declare class Call {
      * Img mode of call
      */
     imgMode: string;
-    /**
-     * Creates an instance of call.
-     */
-    constructor();
 }

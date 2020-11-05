@@ -1,11 +1,11 @@
-import {False_Template} from "./false.template";
-import {Logo_Template} from "./logo.template";
-import {Call} from "./call";
-import { Youtube_Template } from "./youtube-title.template";
-import { Elevate_Template } from "./elevate-title.template";
-import { Twitch_Template } from "./twitch-title.template";
-import { Twitter_Template } from "./twitter-title.template";
-import { Info } from "./info";
+import { False_Template } from "./template/false.template";
+import { Logo_Template } from "./template/logo.template";
+import Call from "./model/call";
+import { Youtube_Template } from "./template/youtube-title.template";
+import { Elevate_Template } from "./template/elevate-title.template";
+import { Twitch_Template } from "./template/twitch-title.template";
+import { Twitter_Template } from "./template/twitter-title.template";
+import { Info } from "./model/info";
 
 class SocialGraphicsLibrary {
 
@@ -162,7 +162,7 @@ class SocialGraphicsLibrary {
 		let ctx: CanvasRenderingContext2D | null;
 		let imgDataUrl: string;
 
-        img.onload = function() {
+        img.onload = async function() {
 
 			ctx = renderCanvas.getContext('2d');
 

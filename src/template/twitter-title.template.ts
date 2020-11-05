@@ -1,4 +1,6 @@
-export class Twitter_Template {
+import Template from "../model/templateBase";
+
+export class Twitter_Template extends Template {
 
 	//#region setup
 	/**
