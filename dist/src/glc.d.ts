@@ -1,4 +1,4 @@
-import Call from "./call";
+import Call from "./model/call";
 declare class SocialGraphicsLibrary {
     /**
      * Generators social graphics library

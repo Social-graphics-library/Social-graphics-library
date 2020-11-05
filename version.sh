@@ -16,4 +16,4 @@ function change_line {
 }
 
 
-change_line 'private readonly _version: string = '  "	private readonly _version: string = \"${VERSION}\"" ./src/info.ts
+change_line 'private readonly _version: string = '  "	private readonly _version: string = \"${VERSION}\"" ./src/model/info.ts
