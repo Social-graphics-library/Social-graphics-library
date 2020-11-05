@@ -1,4 +1,6 @@
-export class Youtube_Template {
+import Template from "../model/templateBase";
+
+export class Youtube_Template extends Template {
 
 	//#region setup
 	/**

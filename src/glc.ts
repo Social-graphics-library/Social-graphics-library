@@ -1,5 +1,5 @@
-import {False_Template} from "./template/false.template";
-import {Logo_Template} from "./template/logo.template";
+import { False_Template } from "./template/false.template";
+import { Logo_Template } from "./template/logo.template";
 import Call from "./model/call";
 import { Youtube_Template } from "./template/youtube-title.template";
 import { Elevate_Template } from "./template/elevate-title.template";
@@ -162,7 +162,7 @@ class SocialGraphicsLibrary {
 		let ctx: CanvasRenderingContext2D | null;
 		let imgDataUrl: string;
 
-        img.onload = function() {
+        img.onload = async function() {
 
 			ctx = renderCanvas.getContext('2d');
 
