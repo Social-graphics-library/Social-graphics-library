@@ -77,7 +77,7 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
 
 ![Example Gif](./assets/Demo.gif)
 
----
+--------------------------------------------------------------------------------------------------------
 
 # English
 
