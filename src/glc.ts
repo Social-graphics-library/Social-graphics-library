@@ -1,6 +1,6 @@
 import {False_Template} from "./false.template";
 import {Logo_Template} from "./logo.template";
-import {Call} from "./call";
+import Call from "./call";
 import { Youtube_Template } from "./youtube-title.template";
 import { Elevate_Template } from "./elevate-title.template";
 import { Twitch_Template } from "./twitch-title.template";

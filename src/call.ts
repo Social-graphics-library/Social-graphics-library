@@ -1,27 +1,18 @@
-export class Call {
+export default interface Call {
 
 	/**
 	 * Mode  of call
 	 */
-	public mode: string = "null";
+	mode: string;
 
 	/**
 	 * Container id of call
 	 */
-	public containerId: string = "null";
+	containerId: string;
 
 	/**
 	 * Img mode of call
 	 */
-	public imgMode: string = "null";
-
-	/**
-	 * Creates an instance of call.
-	 */
-	constructor() {
-		this.mode;
-		this.containerId;
-		this.imgMode;
-	}
+	imgMode: string;
 
 }
