@@ -3,11 +3,11 @@ export declare class Logo_Template extends Template {
     /**
      * Width  of logo template
      */
-    static width: number;
+    static readonly width: number;
     /**
      * Height  of logo template
      */
-    static height: number;
+    static readonly height: number;
     /**
      * Templates logo template
      * @param playerName

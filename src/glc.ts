@@ -215,9 +215,9 @@ class SocialGraphicsLibrary {
 
 	//#region version
 	/**
-	 * Version  of social graphics library
+	 * Version of social graphics library
 	 */
-	public static VERSION: string = new Info().getVersion()
+	public static readonly VERSION: string = new Info().getVersion()
 	//#endregion
 }
 

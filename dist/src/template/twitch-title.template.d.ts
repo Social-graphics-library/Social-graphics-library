@@ -3,11 +3,11 @@ export declare class Twitch_Template extends Template {
     /**
      * Width  of twitch template
      */
-    static width: number;
+    static readonly width: number;
     /**
      * Height  of twitch template
      */
-    static height: number;
+    static readonly height: number;
     /**
      * Templates twitch template
      * @param teamName

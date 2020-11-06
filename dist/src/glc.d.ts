@@ -32,8 +32,8 @@ declare class SocialGraphicsLibrary {
      */
     static info(): object;
     /**
-     * Version  of social graphics library
+     * Version of social graphics library
      */
-    static VERSION: string;
+    static readonly VERSION: string;
 }
 export default SocialGraphicsLibrary;

@@ -3,11 +3,11 @@ export declare class Twitter_Template extends Template {
     /**
      * Width  of twitter template
      */
-    static width: number;
+    static readonly width: number;
     /**
      * Height  of twitter template
      */
-    static height: number;
+    static readonly height: number;
     /**
      * Templates twitter template
      * @param teamName
