@@ -6,12 +6,12 @@ export class Logo_Template extends Template {
 	/**
 	 * Width  of logo template
 	 */
-	static width: number = 1000;
+	static readonly width: number = 1000;
 
 	/**
 	 * Height  of logo template
 	 */
-	static height: number = 1000;
+	static readonly height: number = 1000;
 	//#endregion
 
 	//#region template

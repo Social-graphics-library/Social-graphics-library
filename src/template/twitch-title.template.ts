@@ -6,12 +6,12 @@ export class Twitch_Template extends Template {
 	/**
 	 * Width  of twitch template
 	 */
-	static width: number = 1920;
+	static readonly width: number = 1920;
 
 	/**
 	 * Height  of twitch template
 	 */
-	static height: number = 480;
+	static readonly height: number = 480;
 	//#endregion
 
 	//#region template
