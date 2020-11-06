@@ -4,7 +4,7 @@ export class Info {
 	/**
 	 * Version  of info
 	 */
-	private readonly _version: string = "1.3.0"
+	private readonly _version: string = "1.3.1"
 
 	/**
 	 * Author  of info
@@ -37,6 +37,16 @@ export class Info {
 		this._license;
 		this._repository;
 		this._install;
+	}
+	//#endregion
+
+	//#region get
+	/**
+	 * Gets version
+	 * @returns version
+	 */
+	public getVersion(): string {
+		return this._version;
 	}
 	//#endregion
 

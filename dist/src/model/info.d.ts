@@ -23,4 +23,9 @@ export declare class Info {
      * Creates an instance of info.
      */
     constructor();
+    /**
+     * Gets version
+     * @returns version
+     */
+    getVersion(): string;
 }
