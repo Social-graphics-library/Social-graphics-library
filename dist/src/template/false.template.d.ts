@@ -3,11 +3,11 @@ export declare class False_Template extends Template {
     /**
      * Width  of false template
      */
-    static width: number;
+    static readonly width: number;
     /**
      * Height  of false template
      */
-    static height: number;
+    static readonly height: number;
     /**
      * Templates false template
      * @returns template

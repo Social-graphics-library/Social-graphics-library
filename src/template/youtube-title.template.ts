@@ -6,12 +6,12 @@ export class Youtube_Template extends Template {
 	/**
 	 * Width  of youtube template
 	 */
-	static width: number = 2560;
+	static readonly width: number = 2560;
 
 	/**
 	 * Height  of youtube template
 	 */
-	static height: number = 1440;
+	static readonly height: number = 1440;
 	//#endregion
 
 	//#region template

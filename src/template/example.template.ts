@@ -1,4 +1,3 @@
-import "../model/template.ts"
 import Template from "../model/templateBase";
 
 export class Example_Template extends Template {
@@ -7,12 +6,12 @@ export class Example_Template extends Template {
 	/**
 	 * Width  of example template
 	 */
-	static width: number = 1000;
+	static readonly width: number = 1000;
 
 	/**
 	 * Height  of example template
 	 */
-	static height: number = 1000;
+	static readonly height: number = 1000;
 	//#endregion
 
 	//#region template
@@ -20,7 +19,9 @@ export class Example_Template extends Template {
 	 * Templates example template
 	 * @returns template
 	 */
-	static template(): string {
+	static template(teamName: string, playerName: string): string {
+		teamName;
+		playerName;
 		return 'svg string';
 	}
 	//#endregion

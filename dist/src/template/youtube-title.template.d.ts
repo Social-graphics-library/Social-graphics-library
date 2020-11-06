@@ -3,11 +3,11 @@ export declare class Youtube_Template extends Template {
     /**
      * Width  of youtube template
      */
-    static width: number;
+    static readonly width: number;
     /**
      * Height  of youtube template
      */
-    static height: number;
+    static readonly height: number;
     /**
      * Templates youtube template
      * @param teamName
