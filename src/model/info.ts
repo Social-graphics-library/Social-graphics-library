@@ -40,4 +40,14 @@ export class Info {
 	}
 	//#endregion
 
+	//#region get
+	/**
+	 * Gets version
+	 * @returns version
+	 */
+	public getVersion(): string {
+		return this._version;
+	}
+	//#endregion
+
 }

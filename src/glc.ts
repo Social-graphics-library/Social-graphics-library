@@ -212,6 +212,13 @@ class SocialGraphicsLibrary {
 		return { "SGL Info": new Info() }
 	}
 	//#endregion
+
+	//#region version
+	/**
+	 * Version  of social graphics library
+	 */
+	public static VERSION: string = new Info().getVersion()
+	//#endregion
 }
 
 export default SocialGraphicsLibrary;
