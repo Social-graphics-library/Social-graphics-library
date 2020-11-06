@@ -75,6 +75,41 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
     - jpeg
     - webp
 
+### Templates
+
+Um eine Grafik generieren zu können, müssen sogenannte Template Dateien vorbereitet werden. Dabei handelt es sich um Typescript Klassen, in welchen die Grunddaten hinterlegt sind.
+
+Ein simples Template ist wie folgt aufgebaut:
+
+    import Template from "../model/templateBase";
+
+    export class Example_Template extends Template {
+
+      static readonly width: number = 1000;
+
+      static readonly height: number = 1000;
+
+      static template(teamName: string, playerName: string): string {
+        teamName;
+        playerName;
+        return 'svg string';
+      }
+    }
+
+> Die Klasse hat immer(!) ein Feld für die Breite, eines für die Höhe und eine Methode, welche des SVG String zurückgibt.
+
+Für das erstellen und anpassen liegen im `assetes` Ordner diverse Vorlagen für die großen Social Media Plattformen im .afpub Format vor. Diese Können mit Programmen der [Affinity Familie von Serif](http://affinity.serif.com/) geöffnet und bearbeitet werden. Alternativ liegen im `svg` Verzeichnis die daraus generierten Files.
+
+### Achtung!
+> Beim anlegen eines SVG files muss darauf geachtet werden, dass die später dynamischen Teile als TEXT und nicht als Vektor hinterlegt sind.
+
+Nachdem das SVG fertig ist, kann es im `svg` Verzeichnis gespeichert werden und der Sourcecode der SVG wird als String in die `template()` Methode eingepflegt. Dabei werden die entsprechenden test stellen durch die Variablen ersetzt, die der Methode übergeben werden.
+
+Solange der Name des Files (und der Klasse) einer der bestehenden, ausgenommen des Beispiels ist, kann jetzt das Beispiel Template einfach ersetzt werden und es funktioniert mit dem neuen. Sollte der Name anders sein,
+muss die Klasse im glc File in der `generator` methoden eingepflegt werden.
+
+Danach nurnoch kompilieren, einbinden und es ist fertig.
+
 ![Example Gif](./assets/Demo.gif)
 
 --------------------------------------------------------------------------------------------------------
@@ -148,5 +183,42 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
     - svg
     - jpeg
     - webp
+
+### Templates
+
+In order to be able to generate a graphic, so-called template files must be prepared. These are typescript classes in which the basic data are stored.
+
+A simple template is structured as follows:
+
+    import Template from "../model/templateBase";
+
+    export class Example_Template extends Template {
+
+      static readonly width: number = 1000;
+
+      static readonly height: number = 1000;
+
+      static template(teamName: string, playerName: string): string {
+        teamName;
+        playerName;
+        return 'svg string';
+      }
+    }
+
+> The class always(!) has a field for the width, one for the height and a method which returns the SVG string.
+
+Various templates for the large social media platforms in .afpub format are available in the `assetes` folder for creating and adapting. These can be opened and edited with programs from the
+[Affinity Family of Serif](http://affinity.serif.com/). Alternatively, the files generated from it are located in the `svg` directory.
+
+### Caution!
+
+> When creating an SVG file, it must be ensured that the later dynamic parts are stored as TEXT and not as a vector.
+
+After the SVG is ready, it can be saved in the `svg` directory and the source code of the SVG is entered as a string in the `template()` method. The corresponding test points are replaced by the variables that are transferred to the method.
+
+As long as the name of the file (and the class) is one of the existing ones, with the exception of the example, the example template can now simply be replaced and it will work with the new one. Should the name be different
+the class must be entered in the glc file in the `generator` methods.
+
+Then just compile, integrate and it's done.
 
 ![Example Gif](./assets/Demo.gif)

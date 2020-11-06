@@ -6,12 +6,12 @@ export class False_Template extends Template {
 	/**
 	 * Width  of false template
 	 */
-	static width: number = 1000;
+	static readonly width: number = 1000;
 
 	/**
 	 * Height  of false template
 	 */
-	static height: number = 1000;
+	static readonly height: number = 1000;
 	//#endregion
 
 	//#region template

@@ -6,12 +6,12 @@ export class Twitter_Template extends Template {
 	/**
 	 * Width  of twitter template
 	 */
-	static width: number = 1500;
+	static readonly width: number = 1500;
 
 	/**
 	 * Height  of twitter template
 	 */
-	static height: number = 500;
+	static readonly height: number = 500;
 	//#endregion
 
 	//#region template
