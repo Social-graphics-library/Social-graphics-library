@@ -157,7 +157,8 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
                     }, {
                         mode: 'elavate-title',
                         containerId: 'img-container-2',
-                        imgMode: 'jpeg'
+                        imgMode: 'jpeg',
+                        generateLink: true
                     }]
 
 ### Modifiers
