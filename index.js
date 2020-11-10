@@ -30,6 +30,7 @@ document
                     }, {
                         mode: 'logo',
                         containerId: 'img-container-5',
-                        imgMode: 'png'
+                        imgMode: 'png',
+                        generateLink: true
                     }])
         });
