@@ -18,6 +18,6 @@ export default interface Call {
 	/**
 	 *  generate link of call
 	 */
-	genrateLink: boolean;
+	generateLink: boolean;
 
 }

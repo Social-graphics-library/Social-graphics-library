@@ -1,5 +1,8 @@
 import Call from "./model/call";
-declare class SocialGraphicsLibrary {
+/**
+ * Social graphics library
+ */
+export default class SocialGraphicsLibrary {
     /**
      * Generators social graphics library
      * @param teamName
@@ -27,4 +30,3 @@ declare class SocialGraphicsLibrary {
      */
     static readonly VERSION: string;
 }
-export default SocialGraphicsLibrary;

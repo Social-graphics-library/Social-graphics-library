@@ -2,7 +2,10 @@ import Call from "./model/call";
 import { Info } from "./model/info";
 import Generator from "./controller/generator";
 
-class SocialGraphicsLibrary {
+/**
+ * Social graphics library
+ */
+export default class SocialGraphicsLibrary {
 
 	/**
 	 * Generators social graphics library
@@ -18,7 +21,6 @@ class SocialGraphicsLibrary {
 		Generator.run(teamName, playerName, mode, containerId, imgMode, generateLink);
 
 	}
-
 	//#endregion
 
 
@@ -31,7 +33,7 @@ class SocialGraphicsLibrary {
 	 */
 	public static multiGenerator(teamName: string, playerName:string, calls: Array<Call>): void {
         calls.forEach( async element => {
-			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode, element.genrateLink);
+			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode, element.generateLink);
         });
 	}
 	//#endregion
@@ -53,5 +55,3 @@ class SocialGraphicsLibrary {
 	public static readonly VERSION: string = new Info().getVersion()
 	//#endregion
 }
-
-export default SocialGraphicsLibrary;

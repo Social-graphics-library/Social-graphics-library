@@ -99,29 +99,32 @@ export default class ImageRenderer {
 
 		ctx = renderCanvas.getContext('2d');
 
-		ctx!.drawImage(img, 0, 0);
+		img.onload = async () => {
 
-		imgDataUrl = renderCanvas.toDataURL(imgAtr, 1.0);
+			ctx!.drawImage(img, 0, 0);
 
-		width = width / 4;
-		height = height / 4;
-		img2.setAttribute('src', imgDataUrl);
-		img2.setAttribute('width', width.toString());
-		img2.setAttribute('height', height.toString());
+			imgDataUrl = renderCanvas.toDataURL(imgAtr, 1.0);
 
-		container.innerHTML = "";
+			width = width / 4;
+			height = height / 4;
+			img2.setAttribute('src', imgDataUrl);
+			img2.setAttribute('width', width.toString());
+			img2.setAttribute('height', height.toString());
 
-		container.appendChild(img2);
+			container.innerHTML = "";
 
-		if (generateLink) {
+			container.appendChild(img2);
 
-			let downloadLink = document.createElement('a')
+			if (generateLink) {
 
-			downloadLink.setAttribute('href', imgDataUrl);
-			downloadLink.setAttribute('download', 'image.' + imgMode);
-			downloadLink.innerHTML = 'Download Link';
+				let downloadLink = document.createElement('a')
 
-			container.appendChild(downloadLink);
+				downloadLink.setAttribute('href', imgDataUrl);
+				downloadLink.setAttribute('download', 'image.' + imgMode);
+				downloadLink.innerHTML = 'Download Link';
+
+				container.appendChild(downloadLink);
+			}
 		}
 	}
 
