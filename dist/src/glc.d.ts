@@ -7,18 +7,9 @@ declare class SocialGraphicsLibrary {
      * @param mode
      * @param containerId
      * @param imgMode
+     * @param [generateLink]
      */
-    static generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string): void;
-    /**
-     * Prints image
-     * @param svgString
-     * @param width
-     * @param height
-     * @param containerId
-     * @param imgMode
-     * @returns image
-     */
-    static printImage(svgString: string, width: number, height: number, containerId: string, imgMode: string): void;
+    static generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void;
     /**
      * Multis generator
      * @param teamName

@@ -11,4 +11,8 @@ export default interface Call {
      * Img mode of call
      */
     imgMode: string;
+    /**
+     *  generate link of call
+     */
+    genrateLink: boolean;
 }
