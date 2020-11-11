@@ -42,7 +42,8 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
                     }, {
                         mode: 'elavate-title',
                         containerId: 'img-container-2',
-                        imgMode: 'jpeg'
+                        imgMode: 'jpeg',
+                        generateLink: true
                     }]
 
 ### Modifikatoren
@@ -74,6 +75,11 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
     - svg
     - jpeg
     - webp
+
+- Generate Link
+  - Dieser alternative Modus sorgt für das automatische rendern eines Download Links
+    - true
+    - false
 
 ### Templates
 
@@ -151,7 +157,8 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
                     }, {
                         mode: 'elavate-title',
                         containerId: 'img-container-2',
-                        imgMode: 'jpeg'
+                        imgMode: 'jpeg',
+                        generateLink: true
                     }]
 
 ### Modifiers
@@ -183,6 +190,11 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
     - svg
     - jpeg
     - webp
+
+- Generate Link
+  - This alternative mode ensures the automatic rendering of a download link
+    - true
+    - false
 
 ### Templates
 
