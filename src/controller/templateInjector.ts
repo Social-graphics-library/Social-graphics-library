@@ -5,8 +5,14 @@ import ImportTemplate from "../model/importTemplate";
  */
 export default class TemplateInjector {
 
+	/**
+	 * Inject list of template injector
+	 */
 	private injectList: Array<ImportTemplate>
 
+	/**
+	 * Creates an instance of template injector.
+	 */
 	constructor() {
 		this.injectList = []
 	}
@@ -26,6 +32,11 @@ export default class TemplateInjector {
 
 	}
 
+	/**
+	 * Calls template injector
+	 * @param templateName
+	 * @returns call
+	 */
 	public call(templateName: string): ImportTemplate | null {
 
 		let result: ImportTemplate | null = null;
