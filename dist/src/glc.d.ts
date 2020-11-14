@@ -1,8 +1,11 @@
 import Call from "./model/call";
+import ImportTemplate from "./model/importTemplate";
 /**
  * Social graphics library
  */
 export default class SocialGraphicsLibrary {
+    private templateInject;
+    constructor();
     /**
      * Generators social graphics library
      * @param teamName
@@ -12,19 +15,24 @@ export default class SocialGraphicsLibrary {
      * @param imgMode
      * @param [generateLink]
      */
-    static generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void;
+    generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void;
     /**
      * Multis generator
      * @param teamName
      * @param playerName
      * @param calls
      */
-    static multiGenerator(teamName: string, playerName: string, calls: Array<Call>): void;
+    multiGenerator(teamName: string, playerName: string, calls: Array<Call>): void;
     /**
      * Infos social graphics library
      * @returns info
      */
     static info(): object;
+    /**
+     * Injects templates into social graphics library
+     * @param importedTemplates
+     */
+    inject(importedTemplates: Array<ImportTemplate>): void;
     /**
      * Version of social graphics library
      */

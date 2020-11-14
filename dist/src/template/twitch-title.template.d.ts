@@ -1,5 +1,4 @@
-import Template from "../model/templateBase";
-export declare class Twitch_Template extends Template {
+export declare class Twitch_Template {
     /**
      * Width  of twitch template
      */

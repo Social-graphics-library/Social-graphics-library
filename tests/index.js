@@ -41,8 +41,9 @@ global.Event = window.Event;
 //#endregion
 
 //#region local
-const sgl = require("../dist/sgl.bundle");
+const SocialGraphicsLibrary = require("../dist/sgl.bundle");
 
+const sgl = new SocialGraphicsLibrary();
 const main = document.createElement("div");
 const testDiv = document.createElement("div");
 
@@ -57,7 +58,7 @@ document.getElementById("main").appendChild(testDiv);
 
 //#region test
 
-console.log(sgl.info());
+console.log(SocialGraphicsLibrary.info());
 
 console.log();
 

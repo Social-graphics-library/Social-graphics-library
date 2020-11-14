@@ -1,5 +1,4 @@
-import Template from "../model/templateBase";
-export declare class Example_Template extends Template {
+export declare class Example_Template {
     /**
      * Width  of example template
      */

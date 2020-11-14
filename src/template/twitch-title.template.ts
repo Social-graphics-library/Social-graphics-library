@@ -1,6 +1,4 @@
-import Template from "../model/templateBase";
-
-export class Twitch_Template extends Template {
+export class Twitch_Template {
 
 	//#region setup
 	/**

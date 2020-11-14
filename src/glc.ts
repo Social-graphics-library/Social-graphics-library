@@ -1,12 +1,23 @@
 import Call from "./model/call";
 import { Info } from "./model/info";
 import Generator from "./controller/generator";
+import TemplateInjector from "./controller/templateInjector";
+import ImportTemplate from "./model/importTemplate";
 
 /**
  * Social graphics library
  */
 export default class SocialGraphicsLibrary {
 
+	//#region properties
+	private templateInject
+	//#endregion
+
+	constructor() {
+		this.templateInject = new TemplateInjector();
+	}
+
+	//#region generator
 	/**
 	 * Generators social graphics library
 	 * @param teamName
@@ -16,13 +27,12 @@ export default class SocialGraphicsLibrary {
 	 * @param imgMode
 	 * @param [generateLink]
 	 */
-	public static generator(teamName: string, playerName:string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void {
+	public generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void {
 
-		Generator.run(teamName, playerName, mode, containerId, imgMode, generateLink);
+		Generator.run(teamName, playerName, mode, containerId, imgMode, generateLink, this.templateInject);
 
 	}
 	//#endregion
-
 
 	//#region multiGenerator
 	/**
@@ -31,10 +41,10 @@ export default class SocialGraphicsLibrary {
 	 * @param playerName
 	 * @param calls
 	 */
-	public static multiGenerator(teamName: string, playerName:string, calls: Array<Call>): void {
-        calls.forEach( async element => {
-			SocialGraphicsLibrary.generator(teamName, playerName, element.mode, element.containerId, element.imgMode, element.generateLink);
-        });
+	public multiGenerator(teamName: string, playerName: string, calls: Array<Call>): void {
+		calls.forEach(async element => {
+			this.generator(teamName, playerName, element.mode, element.containerId, element.imgMode, element.generateLink);
+		});
 	}
 	//#endregion
 
@@ -43,8 +53,18 @@ export default class SocialGraphicsLibrary {
 	 * Infos social graphics library
 	 * @returns info
 	 */
-	public static info():object {
+	public static info(): object {
 		return { "SGL Info": new Info() }
+	}
+	//#endregion
+
+	//#region injector
+	/**
+	 * Injects templates into social graphics library
+	 * @param importedTemplates
+	 */
+	public inject(importedTemplates: Array<ImportTemplate>): void {
+		this.templateInject.injector(importedTemplates)
 	}
 	//#endregion
 

@@ -5,6 +5,8 @@ import { Twitch_Template } from "../template/twitch-title.template";
 import { Twitter_Template } from "../template/twitter-title.template";
 import { Youtube_Template } from "../template/youtube-title.template";
 import ImageRenderer from "./imageRenderer";
+import Template from "../model/templateBase";
+import TemplateInjector from "./templateInjector";
 
 /**
  * Generator
@@ -20,10 +22,11 @@ export default class Generator {
 	 * @param imgMode
 	 * @param [generateLink]
 	 */
-	public static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void {
-		let svgString: string;
-		let width: number;
-		let height: number;
+	public static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean, templateInjector?: TemplateInjector): void {
+		let svgString: string,
+			width: number,
+			height: number,
+			tempTemplate: Template;
 
 		if (teamName === "") {
 			teamName = "Community";
@@ -69,6 +72,13 @@ export default class Generator {
 				width = False_Template.width;
 				height = False_Template.height;
 				break;
+		}
+
+		if (templateInjector!.call(mode) != null) {
+			tempTemplate = <Template>templateInjector!.call(mode)!.template
+			svgString = tempTemplate.template(teamName, playerName)
+			width = tempTemplate.width
+			height = tempTemplate.height
 		}
 
 		ImageRenderer.renderImage(svgString, width, height, containerId, imgMode, generateLink)

@@ -6,7 +6,7 @@ document
     .getElementById("generate")
     .addEventListener("click",
         async function() {
-            SocialGraphicsLibrary
+            new SocialGraphicsLibrary()
                 .multiGenerator(document
                     .getElementById('tName')
                     .value,

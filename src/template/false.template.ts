@@ -1,6 +1,4 @@
-import Template from "../model/templateBase";
-
-export class False_Template extends Template {
+export class False_Template {
 
 	//#region setup
 	/**
