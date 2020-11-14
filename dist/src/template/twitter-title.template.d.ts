@@ -1,5 +1,4 @@
-import Template from "../model/templateBase";
-export declare class Twitter_Template extends Template {
+export declare class Twitter_Template {
     /**
      * Width  of twitter template
      */

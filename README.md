@@ -25,7 +25,7 @@ Es besteht auch Support über den Discord Server des [WAPS-Framework](https://wa
 Zum generieren einer Grafik wird die statische Funktion `generator`
 auf der Klasse `SocialGraphicsLibrary` aufgerufen:
 
-    SocialGraphicsLibrary.generator(
+    new SocialGraphicsLibrary.generator(
         teamName,
         playerName,
         mode,
@@ -35,16 +35,16 @@ auf der Klasse `SocialGraphicsLibrary` aufgerufen:
 
 Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `multiGenerator` aufgerufen werden:
 
-        SocialGraphicsLibrary.multiGenerator(tName, pName, [{
-                        mode: 'twitch-title',
-                        containerId: 'img-container-1',
-                        imgMode: 'jpeg'
-                    }, {
-                        mode: 'elavate-title',
-                        containerId: 'img-container-2',
-                        imgMode: 'jpeg',
-                        generateLink: true
-                    }]
+    new SocialGraphicsLibrary.multiGenerator(tName, pName, [{
+                    mode: 'twitch-title',
+                    containerId: 'img-container-1',
+                    imgMode: 'jpeg'
+                }, {
+                    mode: 'elavate-title',
+                    containerId: 'img-container-2',
+                    imgMode: 'jpeg',
+                    generateLink: true
+                }]
 
 ### Modifikatoren
 
@@ -81,6 +81,19 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
     - true
     - false
 
+---
+### Inject Template (Experimentelles Feature)
+
+Es ist möglich, alternativ zum Forkend es Projektes, eigene Templates lokal zu injecten. Dazu einfach das NPM Packet installieren mit `npm i social-graphics-library` , danach kann nach der initialisierung mit der folgenden Methode ein Template Injekted werden:
+
+    new SocialGraphicsLibrary.inject([
+      {
+        "callName": "template_name",
+        "template": new Template()
+      }
+    ])
+
+---
 ### Templates
 
 Um eine Grafik generieren zu können, müssen sogenannte Template Dateien vorbereitet werden. Dabei handelt es sich um Typescript Klassen, in welchen die Grunddaten hinterlegt sind.
@@ -140,7 +153,7 @@ There is also support via the Discord server of the [WAPS-Framework](https://wap
 The static function `generator` is used to generate a graphic
 called on the class `SocialGraphicsLibrary`:
 
-    SocialGraphicsLibrary.generator(
+    new SocialGraphicsLibrary.generator(
         teamName,
         playerName,
         mode,
@@ -150,16 +163,16 @@ called on the class `SocialGraphicsLibrary`:
 
 Alternatively, if several graphics are to be generated, the `multiGenerator` method can be called:
 
-        SocialGraphicsLibrary.multiGenerator(tName, pName, [{
-                        mode: 'twitch-title',
-                        containerId: 'img-container-1',
-                        imgMode: 'jpeg'
-                    }, {
-                        mode: 'elavate-title',
-                        containerId: 'img-container-2',
-                        imgMode: 'jpeg',
-                        generateLink: true
-                    }]
+    new SocialGraphicsLibrary.multiGenerator(tName, pName, [{
+                    mode: 'twitch-title',
+                    containerId: 'img-container-1',
+                    imgMode: 'jpeg'
+                }, {
+                    mode: 'elavate-title',
+                    containerId: 'img-container-2',
+                    imgMode: 'jpeg',
+                    generateLink: true
+                }]
 
 ### Modifiers
 
@@ -195,6 +208,20 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
   - This alternative mode ensures the automatic rendering of a download link
     - true
     - false
+
+---
+### Inject Template (Experimentelles Feature)
+
+As an alternative to forking the project, it is possible to inject your own templates locally. To do this, simply install the NPM package with `npm i social-graphics-library`, then after the initialization a template can be injected with the following method:
+
+    new SocialGraphicsLibrary.inject([
+      {
+        "callName": "template_name",
+        "template": new Template()
+      }
+    ])
+
+---
 
 ### Templates
 

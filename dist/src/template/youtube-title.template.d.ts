@@ -1,5 +1,4 @@
-import Template from "../model/templateBase";
-export declare class Youtube_Template extends Template {
+export declare class Youtube_Template {
     /**
      * Width  of youtube template
      */

@@ -1,3 +1,4 @@
+import TemplateInjector from "./templateInjector";
 /**
  * Generator
  */
@@ -11,5 +12,5 @@ export default class Generator {
      * @param imgMode
      * @param [generateLink]
      */
-    static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void;
+    static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean, templateInjector?: TemplateInjector): void;
 }

@@ -1,6 +1,4 @@
-import Template from "../model/templateBase";
-
-export class Logo_Template extends Template {
+export class Logo_Template {
 
 	//#region setup
 	/**

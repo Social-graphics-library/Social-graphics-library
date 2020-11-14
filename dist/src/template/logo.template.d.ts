@@ -1,5 +1,4 @@
-import Template from "../model/templateBase";
-export declare class Logo_Template extends Template {
+export declare class Logo_Template {
     /**
      * Width  of logo template
      */

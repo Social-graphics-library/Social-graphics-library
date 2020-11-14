@@ -1,12 +1,12 @@
-export default abstract class Template {
+export default interface Template {
     /**
      * Width  of template
      */
-    static readonly width: number;
+    width: number;
     /**
      * Height  of template
      */
-    static readonly height: number;
+    height: number;
     /**
      * Templates template
      * @param teamName

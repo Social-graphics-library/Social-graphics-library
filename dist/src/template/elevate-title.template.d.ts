@@ -1,5 +1,4 @@
-import Template from "../model/templateBase";
-export declare class Elevate_Template extends Template {
+export declare class Elevate_Template {
     /**
      * Width  of elevate template
      */
