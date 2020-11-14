@@ -1,14 +1,14 @@
-export default abstract class Template {
+export default interface Template {
 
 	/**
 	 * Width  of template
 	 */
-	public static readonly width: number
+	width: number
 
 	/**
 	 * Height  of template
 	 */
-	public static readonly height: number
+	height: number
 
 	/**
 	 * Templates template
@@ -16,10 +16,6 @@ export default abstract class Template {
 	 * @param playerName
 	 * @returns template
 	 */
-	public template(teamName: string, playerName: string): string {
-		teamName;
-		playerName;
-		return 'svg';
-	}
+	template(teamName: string, playerName: string): string
 
 }
