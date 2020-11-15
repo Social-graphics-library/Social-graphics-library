@@ -100,9 +100,7 @@ Um eine Grafik generieren zu können, müssen sogenannte Template Dateien vorber
 
 Ein simples Template ist wie folgt aufgebaut:
 
-    import Template from "../model/templateBase";
-
-    export class Example_Template extends Template {
+    export class Example_Template {
 
       static readonly width: number = 1000;
 
@@ -210,7 +208,7 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
     - false
 
 ---
-### Inject Template (Experimentelles Feature)
+### Inject Template (Experimental Feature)
 
 As an alternative to forking the project, it is possible to inject your own templates locally. To do this, simply install the NPM package with `npm i social-graphics-library`, then after the initialization a template can be injected with the following method:
 
@@ -229,9 +227,7 @@ In order to be able to generate a graphic, so-called template files must be prep
 
 A simple template is structured as follows:
 
-    import Template from "../model/templateBase";
-
-    export class Example_Template extends Template {
+    export class Example_Template {
 
       static readonly width: number = 1000;
 
