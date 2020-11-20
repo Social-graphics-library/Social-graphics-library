@@ -32,7 +32,8 @@
         "library",
         "svg",
         "graphics",
-        "social-media"
+        "social-media",
+        "webp"
     ],
     "author": "josunlp",
     "license": "MIT",
