@@ -7,6 +7,7 @@ module.exports = {
         warnings: false
     },
     output: {
+        globalObject: 'this',
         path: path.join(__dirname, 'dist'),
         publicPath: '/dist/',
         filename: "sgl.bundle.js",
