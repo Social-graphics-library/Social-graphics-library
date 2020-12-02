@@ -4,7 +4,7 @@ export class Info {
 	/**
 	 * Version  of info
 	 */
-	private readonly _version: string = "1.5.3"
+	private readonly _version: string = "1.5.4"
 
 	/**
 	 * Author  of info
