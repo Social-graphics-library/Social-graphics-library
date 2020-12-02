@@ -14,7 +14,7 @@
 Das **Social Graphics Library** Script nutzt `<canvas>`
 zum generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitglieder und Spieler.
 
-<img src="assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
+<img src="https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
 
 ### Support
 
@@ -127,7 +127,7 @@ muss die Klasse im glc File in der `generator` methoden eingepflegt werden.
 
 Danach nurnoch kompilieren, einbinden und es ist fertig.
 
-![Example Gif](./assets/Demo.gif)
+![Example Gif](https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/Demo.gif)
 
 --------------------------------------------------------------------------------------------------------
 
@@ -140,7 +140,7 @@ Danach nurnoch kompilieren, einbinden und es ist fertig.
 The **Social Graphics Library** script uses `<canvas>`
 to generate SVG, PNG, JPEG and WebP graphics for community team members and players.
 
-<img src="assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
+<img src="https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
 
 ### Support
 
@@ -256,4 +256,4 @@ the class must be entered in the glc file in the `generator` methods.
 
 Then just compile, integrate and it's done.
 
-![Example Gif](./assets/Demo.gif)
+![Example Gif](https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/Demo.gif)
