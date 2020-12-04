@@ -1,7 +1,7 @@
 /**
  * Image renderer
  */
-export default class ImageRenderer {
+export declare class ImageRenderer {
     /**
      * Renders image
      * @param svgString

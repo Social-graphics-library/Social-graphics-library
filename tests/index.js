@@ -38,6 +38,7 @@ global.DOMParser = window.DOMParser;
 global.XMLSerializer = window.XMLSerializer;
 global.Image = window.Image;
 global.Event = window.Event;
+global.self = this;
 //#endregion
 
 //#region local

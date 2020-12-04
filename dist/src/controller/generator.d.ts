@@ -1,8 +1,8 @@
-import TemplateInjector from "./templateInjector";
+import { TemplateInjector } from "./templateInjector";
 /**
  * Generator
  */
-export default class Generator {
+export declare class Generator {
     /**
      * Runs generator
      * @param teamName
