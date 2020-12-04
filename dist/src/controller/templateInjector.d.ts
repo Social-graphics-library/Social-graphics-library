@@ -1,8 +1,8 @@
-import ImportTemplate from "../model/importTemplate";
+import { ImportTemplate } from "../model/importTemplate";
 /**
  * Template injector
  */
-export default class TemplateInjector {
+export declare class TemplateInjector {
     /**
      * Inject list of template injector
      */

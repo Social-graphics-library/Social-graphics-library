@@ -1,17 +1,18 @@
 const path = require('path');
 module.exports = {
     mode: 'production',
+    target: 'web',
     entry: './src/glc.ts',
     watch: false,
     stats: {
         warnings: false
     },
     output: {
-        globalObject: 'this',
         path: path.join(__dirname, 'dist'),
         publicPath: '/dist/',
         filename: "sgl.bundle.js",
         libraryTarget: 'umd',
+        umdNamedDefine: true,
         library: 'SocialGraphicsLibrary',
         libraryExport: 'default'
     },

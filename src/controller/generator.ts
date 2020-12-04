@@ -4,14 +4,14 @@ import { Logo_Template } from "../template/logo.template";
 import { Twitch_Template } from "../template/twitch-title.template";
 import { Twitter_Template } from "../template/twitter-title.template";
 import { Youtube_Template } from "../template/youtube-title.template";
-import ImageRenderer from "./imageRenderer";
-import Template from "../model/templateBase";
-import TemplateInjector from "./templateInjector";
+import { ImageRenderer } from "./imageRenderer";
+import { Template } from "../model/templateBase";
+import { TemplateInjector } from "./templateInjector";
 
 /**
  * Generator
  */
-export default class Generator {
+export class Generator {
 
 	/**
 	 * Runs generator
@@ -75,7 +75,7 @@ export default class Generator {
 		}
 
 		if (templateInjector!.call(mode) != null) {
-			tempTemplate = <Template>templateInjector!.call(mode)!.template
+			tempTemplate = templateInjector!.call(mode)!.template
 			svgString = tempTemplate.template(teamName, playerName)
 			width = tempTemplate.width
 			height = tempTemplate.height
