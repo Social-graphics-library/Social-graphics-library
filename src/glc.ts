@@ -1,8 +1,8 @@
-import Call from "./model/call";
+import { Call } from "./model/call";
 import { Info } from "./model/info";
-import Generator from "./controller/generator";
-import TemplateInjector from "./controller/templateInjector";
-import ImportTemplate from "./model/importTemplate";
+import { Generator } from "./controller/generator";
+import { TemplateInjector } from "./controller/templateInjector";
+import { ImportTemplate } from "./model/importTemplate";
 
 /**
  * Social graphics library
@@ -10,7 +10,7 @@ import ImportTemplate from "./model/importTemplate";
 export default class SocialGraphicsLibrary {
 
 	//#region properties
-	private templateInject
+	private templateInject: TemplateInjector;
 	//#endregion
 
 	constructor() {

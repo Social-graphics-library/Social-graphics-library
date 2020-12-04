@@ -3,7 +3,7 @@ import { False_Template } from "../template/false.template";
 /**
  * Image renderer
  */
-export default class ImageRenderer {
+export class ImageRenderer {
 
 	/**
 	 * Renders image

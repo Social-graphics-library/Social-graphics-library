@@ -1,5 +1,5 @@
-import Call from "./model/call";
-import ImportTemplate from "./model/importTemplate";
+import { Call } from "./model/call";
+import { ImportTemplate } from "./model/importTemplate";
 /**
  * Social graphics library
  */

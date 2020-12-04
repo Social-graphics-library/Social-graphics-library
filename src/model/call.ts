@@ -1,4 +1,4 @@
-export default interface Call {
+export interface Call {
 
 	/**
 	 * Mode  of call

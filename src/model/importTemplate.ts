@@ -1,8 +1,8 @@
-import Template from "./templateBase";
+import { Template } from "./templateBase";
 /**
  * Import template
  */
-export default interface ImportTemplate {
+export interface ImportTemplate {
 
 	/**
 	 * call name of ImportTemplate
