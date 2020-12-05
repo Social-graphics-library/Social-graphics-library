@@ -7,6 +7,7 @@ import { Youtube_Template } from "../template/youtube-title.template";
 import { ImageRenderer } from "./imageRenderer";
 import { Template } from "../model/templateBase";
 import { TemplateInjector } from "./templateInjector";
+import { StringCleaner } from "./stringCleaner";
 
 /**
  * Generator
@@ -35,6 +36,9 @@ export class Generator {
 		if (playerName === "") {
 			playerName = "Player";
 		}
+
+		teamName = StringCleaner.run(teamName);
+		playerName = StringCleaner.run(playerName);
 
 		switch (mode) {
 			case "youtube-title":
