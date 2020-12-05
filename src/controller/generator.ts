@@ -36,8 +36,8 @@ export class Generator {
 			playerName = "Player";
 		}
 
-		teamName = encodeURI(teamName);
-		playerName = encodeURI(playerName);
+		teamName = encodeURI(teamName.replace("&", "and"));
+		playerName = encodeURI(playerName.replace("&", "and"));
 
 		switch (mode) {
 			case "youtube-title":
