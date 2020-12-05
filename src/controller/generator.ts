@@ -36,6 +36,9 @@ export class Generator {
 			playerName = "Player";
 		}
 
+		teamName = encodeURI(teamName);
+		playerName = encodeURI(playerName);
+
 		switch (mode) {
 			case "youtube-title":
 				svgString = Youtube_Template.template(teamName, playerName);
