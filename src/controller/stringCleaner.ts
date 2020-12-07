@@ -10,7 +10,7 @@ export class StringCleaner {
 	 */
 	public static run(item: string): string {
 
-		item = item.replace(/[^a-zA-Z0-9]/g, "");
+		item = item.replace(/[^a-zA-Z0-9\_\-\.\~]/g, "");
 
 		return item;
 	}
