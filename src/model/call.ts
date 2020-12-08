@@ -1,3 +1,5 @@
+import { TemplateInjector } from "../controller/templateInjector";
+
 export interface Call {
 
 	/**
@@ -19,5 +21,10 @@ export interface Call {
 	 *  generate link of call
 	 */
 	generateLink: boolean;
+
+	/**
+	 *  add Template Injector
+	 */
+	templateInjector: TemplateInjector;
 
 }

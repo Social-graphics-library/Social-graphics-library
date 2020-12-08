@@ -1,3 +1,4 @@
+import { TemplateInjector } from "../controller/templateInjector";
 export interface Call {
     /**
      * Mode  of call
@@ -15,4 +16,8 @@ export interface Call {
      *  generate link of call
      */
     generateLink: boolean;
+    /**
+     *  add Template Injector
+     */
+    templateInjector: TemplateInjector;
 }

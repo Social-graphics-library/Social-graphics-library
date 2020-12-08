@@ -1,4 +1,5 @@
 import { Call } from "./model/call";
+import { TemplateInjector } from "./controller/templateInjector";
 import { ImportTemplate } from "./model/importTemplate";
 /**
  * Social graphics library
@@ -15,7 +16,7 @@ export default class SocialGraphicsLibrary {
      * @param imgMode
      * @param [generateLink]
      */
-    generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void;
+    generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean, templateInjector?: TemplateInjector): void;
     /**
      * Multis generator
      * @param teamName
