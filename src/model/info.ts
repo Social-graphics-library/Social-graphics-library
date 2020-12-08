@@ -22,6 +22,11 @@ export class Info {
 	private readonly _repository: string = "https://github.com/JosunLP/Social-graphics-library"
 
 	/**
+	 * Repository  of info
+	 */
+	private readonly _homepage: string = "https://social-graphics-library.net/"
+
+	/**
 	 * Install  of info
 	 */
 	private readonly _install: string = "npm i social-graphics-library"
@@ -37,6 +42,7 @@ export class Info {
 		this._license;
 		this._repository;
 		this._install;
+		this._homepage;
 	}
 	//#endregion
 
