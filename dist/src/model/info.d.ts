@@ -16,6 +16,10 @@ export declare class Info {
      */
     private readonly _repository;
     /**
+     * Repository  of info
+     */
+    private readonly _homepage;
+    /**
      * Install  of info
      */
     private readonly _install;
