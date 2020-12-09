@@ -12,5 +12,5 @@ export declare class Generator {
      * @param imgMode
      * @param [generateLink]
      */
-    static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean, templateInjector?: TemplateInjector): void;
+    static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, templateInjector: TemplateInjector, generateLink?: boolean): void;
 }
