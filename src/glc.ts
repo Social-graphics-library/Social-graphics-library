@@ -27,9 +27,9 @@ export default class SocialGraphicsLibrary {
 	 * @param imgMode
 	 * @param [generateLink]
 	 */
-	public generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean, templateInjector?: TemplateInjector): void {
+	public generator(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean): void {
 
-		Generator.run(teamName, playerName, mode, containerId, imgMode, generateLink, templateInjector);
+		Generator.run(teamName, playerName, mode, containerId, imgMode, this.templateInject, generateLink);
 
 	}
 	//#endregion
@@ -44,7 +44,7 @@ export default class SocialGraphicsLibrary {
 	public multiGenerator(teamName: string, playerName: string, calls: Array<Call>): void {
 
 		calls.forEach(async element => {
-			this.generator(teamName, playerName, element.mode, element.containerId, element.imgMode, element.generateLink, element.templateInjector);
+			this.generator(teamName, playerName, element.mode, element.containerId, element.imgMode, element.generateLink);
 		});
 
 	}
