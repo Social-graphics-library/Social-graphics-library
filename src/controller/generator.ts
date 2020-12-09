@@ -23,7 +23,7 @@ export class Generator {
 	 * @param imgMode
 	 * @param [generateLink]
 	 */
-	public static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, generateLink?: boolean, templateInjector?: TemplateInjector): void {
+	public static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, templateInjector: TemplateInjector, generateLink?: boolean): void {
 
 		let svgString: string,
 			width: number,
@@ -79,7 +79,7 @@ export class Generator {
 				break;
 		}
 
-		if (templateInjector?.call(mode) !== undefined) {
+		if (templateInjector.call(mode) !== null) {
 			tempTemplate = templateInjector.call(mode)!.template
 			svgString = tempTemplate.template(teamName, playerName)
 			width = tempTemplate.width
