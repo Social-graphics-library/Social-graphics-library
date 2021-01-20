@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Social-graphics-library Blog</title>
+        <link>https://social-graphics-library.net/blog</link>
+        <description>Social-graphics-library Blog</description>
+        <lastBuildDate>Fri, 04 Dec 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[New test area]]></title>
+            <link>https://social-graphics-library.net/blog/test-area</link>
+            <guid>test-area</guid>
+            <pubDate>Fri, 04 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hey everyone,]]></description>
+        </item>
+        <item>
+            <title><![CDATA[H3ll0 W0rld]]></title>
+            <link>https://social-graphics-library.net/blog/hello-world</link>
+            <guid>hello-world</guid>
+            <pubDate>Thu, 17 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is a test post.]]></description>
+        </item>
+    </channel>
+</rss>
