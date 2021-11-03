@@ -1,16 +1,16 @@
-import { readFile, writeFile } from 'fs';
+var fs = require('fs');
 
 var packageFile = "./package.json";
 var targetFile = "./src/model/info.ts";
 
-readFile(packageFile, 'utf8', (err, data) => {
+fs.readFile(packageFile, 'utf8', (err, data) => {
 	if (err) {
 		console.error(err)
 		return
 	}
 	const pkg = JSON.parse(data)
 
-	readFile(targetFile, 'utf8', (err, target) => {
+	fs.readFile(targetFile, 'utf8', (err, target) => {
 		if (err) {
 			console.error(err)
 			return
@@ -22,7 +22,7 @@ readFile(packageFile, 'utf8', (err, data) => {
 		target = replaceLine(target, 'readonly _repository', pkg.repository.url);
 		target = replaceLine(target, 'readonly _homepage', pkg.homepage);
 
-		writeFile(targetFile, target, 'utf8', function (err) {
+		fs.writeFile(targetFile, target, 'utf8', function (err) {
 			if (err) return console.log(err);
 		});
 	})

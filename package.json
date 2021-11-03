@@ -3,7 +3,7 @@
   "version": "2.0.0_beta_109412",
   "description": "A script for generating social media logos and banners",
   "main": "./dist/sgl.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev:build": "webpack",
     "dev:deploy": "npm install && npm run dev:update && npm run dev:build",
