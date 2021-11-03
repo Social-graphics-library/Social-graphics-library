@@ -15,3 +15,4 @@ export interface Template {
      */
     template(teamName: string, playerName: string): string;
 }
+//# sourceMappingURL=templateBase.d.ts.map

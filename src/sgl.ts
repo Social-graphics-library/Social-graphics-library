@@ -7,7 +7,7 @@ import { ImportTemplate } from "./model/importTemplate";
 /**
  * Social graphics library
  */
-export default class SocialGraphicsLibrary {
+export class SGL {
 
 	//#region properties
 	private templateInject: TemplateInjector;

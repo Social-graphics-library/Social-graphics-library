@@ -15,3 +15,4 @@ export declare class Twitter_Template {
      */
     static template(teamName: string, playerName: string): string;
 }
+//# sourceMappingURL=twitter-title.template.d.ts.map

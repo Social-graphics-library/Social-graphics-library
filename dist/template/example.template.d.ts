@@ -13,3 +13,4 @@ export declare class Example_Template {
      */
     static template(teamName: string, playerName: string): string;
 }
+//# sourceMappingURL=example.template.d.ts.map

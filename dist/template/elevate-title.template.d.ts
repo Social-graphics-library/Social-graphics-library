@@ -15,3 +15,4 @@ export declare class Elevate_Template {
      */
     static template(teamName: string, playerName: string): string;
 }
+//# sourceMappingURL=elevate-title.template.d.ts.map

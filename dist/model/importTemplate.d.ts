@@ -12,3 +12,4 @@ export interface ImportTemplate {
      */
     template: Template;
 }
+//# sourceMappingURL=importTemplate.d.ts.map

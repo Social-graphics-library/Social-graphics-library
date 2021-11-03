@@ -25,7 +25,7 @@ export class ImageRenderer {
 		inlineSVG.setAttribute('width', width.toString());
 		inlineSVG.setAttribute('height', height.toString());
 
-		let data = "data:image/svg+xml;charset=utf-8;base64, " + btoa(new XMLSerializer().serializeToString(inlineSVG)),
+		let data = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(new XMLSerializer().serializeToString(inlineSVG)),
 			img = new Image(),
 			img2 = new Image(),
 			canvas = document.createElement('canvas'),
@@ -70,7 +70,7 @@ export class ImageRenderer {
 				break;
 
 			default:
-				data = "data:image/svg+xml;charset=utf-8;base64, " + btoa(False_Template.template());
+				data = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(False_Template.template());
 				width = False_Template.width;
 				height = False_Template.height;
 				imgAtr = 'image/png';

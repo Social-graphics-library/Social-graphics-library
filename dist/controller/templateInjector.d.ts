@@ -23,3 +23,4 @@ export declare class TemplateInjector {
      */
     call(templateName: string): ImportTemplate | null;
 }
+//# sourceMappingURL=templateInjector.d.ts.map

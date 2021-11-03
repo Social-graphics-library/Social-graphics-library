@@ -3,7 +3,7 @@ import { ImportTemplate } from "./model/importTemplate";
 /**
  * Social graphics library
  */
-export default class SocialGraphicsLibrary {
+export declare class SGL {
     private templateInject;
     constructor();
     /**
@@ -38,3 +38,4 @@ export default class SocialGraphicsLibrary {
      */
     static readonly VERSION: string;
 }
+//# sourceMappingURL=sgl.d.ts.map

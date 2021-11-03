@@ -13,3 +13,4 @@ export declare class False_Template {
      */
     static template(): string;
 }
+//# sourceMappingURL=false.template.d.ts.map

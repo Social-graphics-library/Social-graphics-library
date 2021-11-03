@@ -33,3 +33,4 @@ export declare class Info {
      */
     getVersion(): string;
 }
+//# sourceMappingURL=info.d.ts.map

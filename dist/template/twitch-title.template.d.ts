@@ -15,3 +15,4 @@ export declare class Twitch_Template {
      */
     static template(teamName: string, playerName: string): string;
 }
+//# sourceMappingURL=twitch-title.template.d.ts.map

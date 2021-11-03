@@ -19,3 +19,4 @@ export interface Call {
      */
     generateLink: boolean;
 }
+//# sourceMappingURL=call.d.ts.map

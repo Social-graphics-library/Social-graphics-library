@@ -14,3 +14,4 @@ export declare class Logo_Template {
      */
     static template(playerName: string): string;
 }
+//# sourceMappingURL=logo.template.d.ts.map

@@ -15,3 +15,4 @@ export declare class Youtube_Template {
      */
     static template(teamName: string, playerName: string): string;
 }
+//# sourceMappingURL=youtube-title.template.d.ts.map
