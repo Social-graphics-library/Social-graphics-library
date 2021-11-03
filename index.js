@@ -1,4 +1,4 @@
-import { SGL } from "./dist/sgl.js";
+import SGL from './dist/sgl.js';
 
 console.log(SGL.info());
 

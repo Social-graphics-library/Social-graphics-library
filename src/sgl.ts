@@ -5,9 +5,10 @@ import { TemplateInjector } from "./controller/templateInjector";
 import { ImportTemplate } from "./model/importTemplate";
 
 /**
- * Social graphics library
+ * Social graphics library:
+ * a TS Library that generates dynamic Social Media images
  */
-export class SGL {
+export default class SGL {
 
 	//#region properties
 	private templateInject: TemplateInjector;
