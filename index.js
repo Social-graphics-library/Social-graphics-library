@@ -2,7 +2,7 @@ import SGL from './dist/sgl.js';
 
 console.log(SGL.info());
 
-console.log(SGL.VERSION)
+console.log(new SGL.VERSION)
 
 document
     .getElementById("generate")
