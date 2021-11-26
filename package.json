@@ -1,13 +1,13 @@
 {
   "name": "social-graphics-library",
-  "version": "2.0.0_beta_19112021",
+  "version": "2.0.0_beta_26112021",
   "description": "A script for generating social media logos and banners",
   "main": "./dist/sgl.js",
   "type": "commonjs",
   "scripts": {
-    "dev:build": "webpack",
+    "dev:build": "tsc",
     "dev:deploy": "npm install && npm run dev:update && npm run dev:build",
-    "dev:run": "webpack serve",
+    "dev:run": "tsc -w",
     "dev:update": "node ./tools/updateInfo.js",
     "prod:deploy": "npm run dev:deploy && npm publish"
   },
@@ -57,14 +57,6 @@
   },
   "homepage": "https://social-graphics-library.net/",
   "devDependencies": {
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-typescript": "^7.16.0",
-    "babel-loader": "^8.2.3",
-    "source-map-loader": "^3.0.0",
-    "ts-loader": "^9.2.6",
-    "typescript": "^4.5.2",
-    "webpack": "^5.59.1",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.3.1"
+    "typescript": "^4.5.2"
   }
 }

@@ -20,12 +20,12 @@ export class ImageRenderer {
 		let xml = svgString,
 			parser = new DOMParser(),
 			result: XMLDocument = parser.parseFromString(xml, 'text/xml'),
-			inlineSVG = result.getElementsByTagName('svg')[0];
+			inlineSVG: SVGSVGElement = <SVGSVGElement>result.getElementsByTagName('svg')[0];
 
 		inlineSVG.setAttribute('width', width.toString());
 		inlineSVG.setAttribute('height', height.toString());
 
-		let data = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(new XMLSerializer().serializeToString(inlineSVG)),
+		let data: string = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(new XMLSerializer().serializeToString(inlineSVG)),
 			img = new Image(),
 			img2 = new Image(),
 			canvas = document.createElement('canvas'),

@@ -1,4 +1,3 @@
-import { Elevate_Template } from "../template/elevate-title.template";
 import { False_Template } from "../template/false.template";
 import { Logo_Template } from "../template/logo.template";
 import { Twitch_Template } from "../template/twitch-title.template";
@@ -58,12 +57,6 @@ export class Generator {
 				svgString = Twitter_Template.template(teamName, playerName);
 				width = Twitter_Template.width;
 				height = Twitter_Template.height;
-				break;
-
-			case "elavate-title":
-				svgString = Elevate_Template.template(teamName, playerName);
-				width = Elevate_Template.width;
-				height = Elevate_Template.height;
 				break;
 
 			case "logo":
