@@ -1,4 +1,4 @@
-export declare class Logo_Template {
+﻿export declare class Logo_Template {
     /**
      * Width  of logo template
      */

@@ -1,4 +1,4 @@
-import { Template } from "./templateBase";
+﻿import { Template } from "./templateBase";
 /**
  * Import template
  */

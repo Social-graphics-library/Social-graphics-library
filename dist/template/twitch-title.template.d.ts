@@ -1,4 +1,4 @@
-export declare class Twitch_Template {
+﻿export declare class Twitch_Template {
     /**
      * Width  of twitch template
      */

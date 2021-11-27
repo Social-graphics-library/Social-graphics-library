@@ -1,4 +1,4 @@
-export declare class Youtube_Template {
+﻿export declare class Youtube_Template {
     /**
      * Width  of youtube template
      */

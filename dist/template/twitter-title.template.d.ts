@@ -1,4 +1,4 @@
-export declare class Twitter_Template {
+﻿export declare class Twitter_Template {
     /**
      * Width  of twitter template
      */

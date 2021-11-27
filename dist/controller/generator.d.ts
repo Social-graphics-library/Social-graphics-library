@@ -1,4 +1,4 @@
-import { TemplateInjector } from "./templateInjector";
+﻿import { TemplateInjector } from "./templateInjector";
 /**
  * Generator
  */

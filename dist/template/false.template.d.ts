@@ -1,4 +1,4 @@
-export declare class False_Template {
+﻿export declare class False_Template {
     /**
      * Width  of false template
      */

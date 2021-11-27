@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Image renderer
  */
 export declare class ImageRenderer {

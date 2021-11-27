@@ -1,4 +1,4 @@
-export declare class Example_Template {
+﻿export declare class Example_Template {
     /**
      * Width  of example template
      */

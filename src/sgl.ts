@@ -8,7 +8,7 @@ import { ImportTemplate } from "./model/importTemplate";
  * Social graphics library:
  * a TS Library that generates dynamic Social Media images
  */
-export default class SGL {
+export class SGL {
 
 	//#region properties
 	private templateInject: TemplateInjector;

@@ -1,4 +1,4 @@
-export declare class Info {
+﻿export declare class Info {
     /**
      * Version  of info
      */

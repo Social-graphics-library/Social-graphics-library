@@ -1,4 +1,4 @@
-export interface Template {
+﻿export interface Template {
     /**
      * Width  of template
      */

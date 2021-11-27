@@ -1,10 +1,10 @@
-import { Call } from "./model/call";
+﻿import { Call } from "./model/call";
 import { ImportTemplate } from "./model/importTemplate";
 /**
  * Social graphics library:
  * a TS Library that generates dynamic Social Media images
  */
-export default class SGL {
+export declare class SGL {
     private templateInject;
     constructor();
     /**
