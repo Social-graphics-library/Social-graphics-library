@@ -1,11 +1,8 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ImageRenderer = void 0;
-const false_template_1 = require("../template/false.template");
+﻿import { False_Template } from "../template/false.template.js";
 /**
  * Image renderer
  */
-class ImageRenderer {
+export class ImageRenderer {
     /**
      * Renders image
      * @param svgString
@@ -48,9 +45,9 @@ class ImageRenderer {
                 imgAtr = 'image/webp';
                 break;
             default:
-                data = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(false_template_1.False_Template.template());
-                width = false_template_1.False_Template.width;
-                height = false_template_1.False_Template.height;
+                data = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(False_Template.template());
+                width = False_Template.width;
+                height = False_Template.height;
                 imgAtr = 'image/png';
                 break;
         }
@@ -71,7 +68,7 @@ class ImageRenderer {
         let ctx;
         let imgDataUrl;
         ctx = renderCanvas.getContext('2d');
-        img.onload = async () => {
+        img.onload = () => {
             ctx.drawImage(img, 0, 0);
             imgDataUrl = renderCanvas.toDataURL(imgAtr, 1.0);
             width = width / 4;
@@ -91,5 +88,4 @@ class ImageRenderer {
         };
     }
 }
-exports.ImageRenderer = ImageRenderer;
 //# sourceMappingURL=imageRenderer.js.map

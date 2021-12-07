@@ -18,7 +18,7 @@ zum generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitg
 
 ### Support
 
-Es besteht auch Support über den Discord Server des [WAPS-Framework](https://waps-framework.info), der Einladungslink ist [https://discord.gg/fraspbc](https://discord.gg/fraspbc)
+Es besteht auch Support über den [Software Support Discord Server](https://discord.gg/fraspbc)
 
 ### Aufbau
 
@@ -144,7 +144,7 @@ to generate SVG, PNG, JPEG and WebP graphics for community team members and play
 
 ### Support
 
-There is also support via the Discord server of the [WAPS-Framework](https://waps-framework.info), the invitation link is [https://discord.gg/fraspbc](https://discord.gg/fraspbc)
+There is also support via the [Software Support Discord Server](https://discord.gg/fraspbc)
 
 ### Structure
 

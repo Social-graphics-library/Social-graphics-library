@@ -1,17 +1,23 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SGL = void 0;
-const info_1 = require("./model/info");
-const generator_1 = require("./controller/generator");
-const templateInjector_1 = require("./controller/templateInjector");
+﻿var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+import { Info } from "./model/info.js";
+import { Generator } from "./controller/generator.js";
+import { TemplateInjector } from "./controller/templateInjector.js";
 /**
  * Social graphics library:
  * a TS Library that generates dynamic Social Media images
  */
-class SGL {
+export class SGL {
     //#endregion
     constructor() {
-        this.templateInject = new templateInjector_1.TemplateInjector();
+        this.templateInject = new TemplateInjector();
     }
     //#region generator
     /**
@@ -24,7 +30,7 @@ class SGL {
      * @param [generateLink]
      */
     generator(teamName, playerName, mode, containerId, imgMode, generateLink) {
-        generator_1.Generator.run(teamName, playerName, mode, containerId, imgMode, this.templateInject, generateLink);
+        Generator.run(teamName, playerName, mode, containerId, imgMode, this.templateInject, generateLink);
     }
     //#endregion
     //#region multiGenerator
@@ -35,9 +41,9 @@ class SGL {
      * @param calls
      */
     multiGenerator(teamName, playerName, calls) {
-        calls.forEach(async (element) => {
+        calls.forEach((element) => __awaiter(this, void 0, void 0, function* () {
             this.generator(teamName, playerName, element.mode, element.containerId, element.imgMode, element.generateLink);
-        });
+        }));
     }
     //#endregion
     //#region info
@@ -46,7 +52,7 @@ class SGL {
      * @returns info
      */
     static info() {
-        return { "SGL Info": new info_1.Info() };
+        return { "SGL Info": new Info() };
     }
     //#endregion
     //#region injector
@@ -58,11 +64,10 @@ class SGL {
         this.templateInject.injector(importedTemplates);
     }
 }
-exports.SGL = SGL;
 //#endregion
 //#region version
 /**
  * Version of social graphics library
  */
-SGL.VERSION = new info_1.Info().getVersion();
+SGL.VERSION = new Info().getVersion();
 //# sourceMappingURL=sgl.js.map

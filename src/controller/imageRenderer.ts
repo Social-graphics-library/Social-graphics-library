@@ -1,4 +1,4 @@
-import { False_Template } from "../template/false.template";
+import { False_Template } from "../template/false.template.js";
 
 /**
  * Image renderer
@@ -99,7 +99,7 @@ export class ImageRenderer {
 
 		ctx = renderCanvas.getContext('2d');
 
-		img.onload = async () => {
+		img.onload = () => {
 
 			ctx!.drawImage(img, 0, 0);
 

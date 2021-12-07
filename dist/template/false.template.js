@@ -1,7 +1,4 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.False_Template = void 0;
-class False_Template {
+﻿export class False_Template {
     //#endregion
     //#region template
     /**
@@ -14,7 +11,6 @@ class False_Template {
             '</svg>\n';
     }
 }
-exports.False_Template = False_Template;
 //#region setup
 /**
  * Width  of false template

@@ -1,7 +1,4 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Twitch_Template = void 0;
-class Twitch_Template {
+﻿export class Twitch_Template {
     //#endregion
     //#region template
     /**
@@ -35,7 +32,6 @@ class Twitch_Template {
             '</svg>';
     }
 }
-exports.Twitch_Template = Twitch_Template;
 //#region setup
 /**
  * Width  of twitch template

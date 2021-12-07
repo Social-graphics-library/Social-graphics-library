@@ -1,17 +1,14 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Generator = void 0;
-const false_template_1 = require("../template/false.template");
-const logo_template_1 = require("../template/logo.template");
-const twitch_title_template_1 = require("../template/twitch-title.template");
-const twitter_title_template_1 = require("../template/twitter-title.template");
-const youtube_title_template_1 = require("../template/youtube-title.template");
-const imageRenderer_1 = require("./imageRenderer");
-const stringCleaner_1 = require("./stringCleaner");
+﻿import { False_Template } from "../template/false.template.js";
+import { Logo_Template } from "../template/logo.template.js";
+import { Twitch_Template } from "../template/twitch-title.template.js";
+import { Twitter_Template } from "../template/twitter-title.template.js";
+import { Youtube_Template } from "../template/youtube-title.template.js";
+import { ImageRenderer } from "./imageRenderer.js";
+import { StringCleaner } from "./stringCleaner.js";
 /**
  * Generator
  */
-class Generator {
+export class Generator {
     /**
      * Runs generator
      * @param teamName
@@ -29,33 +26,33 @@ class Generator {
         if (playerName === "") {
             playerName = "Player";
         }
-        teamName = stringCleaner_1.StringCleaner.run(teamName);
-        playerName = stringCleaner_1.StringCleaner.run(playerName);
+        teamName = StringCleaner.run(teamName);
+        playerName = StringCleaner.run(playerName);
         switch (mode) {
             case "youtube-title":
-                svgString = youtube_title_template_1.Youtube_Template.template(teamName, playerName);
-                width = youtube_title_template_1.Youtube_Template.width;
-                height = youtube_title_template_1.Youtube_Template.height;
+                svgString = Youtube_Template.template(teamName, playerName);
+                width = Youtube_Template.width;
+                height = Youtube_Template.height;
                 break;
             case "twitch-title":
-                svgString = twitch_title_template_1.Twitch_Template.template(teamName, playerName);
-                width = twitch_title_template_1.Twitch_Template.width;
-                height = twitch_title_template_1.Twitch_Template.height;
+                svgString = Twitch_Template.template(teamName, playerName);
+                width = Twitch_Template.width;
+                height = Twitch_Template.height;
                 break;
             case "twitter-title":
-                svgString = twitter_title_template_1.Twitter_Template.template(teamName, playerName);
-                width = twitter_title_template_1.Twitter_Template.width;
-                height = twitter_title_template_1.Twitter_Template.height;
+                svgString = Twitter_Template.template(teamName, playerName);
+                width = Twitter_Template.width;
+                height = Twitter_Template.height;
                 break;
             case "logo":
-                svgString = logo_template_1.Logo_Template.template(playerName);
-                width = logo_template_1.Logo_Template.width;
-                height = logo_template_1.Logo_Template.height;
+                svgString = Logo_Template.template(playerName);
+                width = Logo_Template.width;
+                height = Logo_Template.height;
                 break;
             default:
-                svgString = false_template_1.False_Template.template();
-                width = false_template_1.False_Template.width;
-                height = false_template_1.False_Template.height;
+                svgString = False_Template.template();
+                width = False_Template.width;
+                height = False_Template.height;
                 break;
         }
         if (templateInjector.call(mode) !== null) {
@@ -64,8 +61,7 @@ class Generator {
             width = tempTemplate.width;
             height = tempTemplate.height;
         }
-        imageRenderer_1.ImageRenderer.renderImage(svgString, width, height, containerId, imgMode, generateLink);
+        ImageRenderer.renderImage(svgString, width, height, containerId, imgMode, generateLink);
     }
 }
-exports.Generator = Generator;
 //# sourceMappingURL=generator.js.map

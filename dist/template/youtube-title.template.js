@@ -1,7 +1,4 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Youtube_Template = void 0;
-class Youtube_Template {
+﻿export class Youtube_Template {
     //#endregion
     //#region template
     /**
@@ -35,7 +32,6 @@ class Youtube_Template {
             '</svg>\n';
     }
 }
-exports.Youtube_Template = Youtube_Template;
 //#region setup
 /**
  * Width  of youtube template

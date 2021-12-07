@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/sgl.png">
     <title>SGL Test Page</title>
-    <script src="./dist/sgl.js"></script>
+    <script src="./index.js" type="module"></script>
     <style type="text/css">
         #banner {
             float: left;
@@ -47,10 +47,6 @@
                 <div id="img-container-1" style="width: 500px; height: auto"></div>
             </div>
             <div class="item">
-                <h2>Elavate: </h2>
-                <div id="img-container-2" style="width: 500px; height: auto"></div>
-            </div>
-            <div class="item">
                 <h2>Twitter: </h2>
                 <div id="img-container-3" style="width: 500px; height: auto"></div>
             </div>
@@ -67,43 +63,4 @@
     </div>
 
 </body>
-<script>
-    console.log(SGL.info());
-
-    console.log(new SGL.VERSION)
-
-    document
-        .getElementById("generate")
-        .addEventListener("click",
-            async function () {
-                new SGL()
-                    .multiGenerator(document
-                        .getElementById('tName')
-                        .value,
-                        document
-                        .getElementById('uName').value, [{
-                            mode: 'twitch-title',
-                            containerId: 'img-container-1',
-                            imgMode: 'webp'
-                        }, {
-                            mode: 'elavate-title',
-                            containerId: 'img-container-2',
-                            imgMode: 'jpeg'
-                        }, {
-                            mode: 'twitter-title',
-                            containerId: 'img-container-3',
-                            imgMode: 'webp'
-                        }, {
-                            mode: 'youtube-title',
-                            containerId: 'img-container-4',
-                            imgMode: 'jpeg'
-                        }, {
-                            mode: 'logo',
-                            containerId: 'img-container-5',
-                            imgMode: 'png',
-                            generateLink: true
-                        }])
-            });
-
-</script>
 </html>

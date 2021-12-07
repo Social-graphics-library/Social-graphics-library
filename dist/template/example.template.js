@@ -1,7 +1,4 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Example_Template = void 0;
-class Example_Template {
+﻿export class Example_Template {
     //#endregion
     //#region template
     /**
@@ -14,7 +11,6 @@ class Example_Template {
         return 'svg string';
     }
 }
-exports.Example_Template = Example_Template;
 //#region setup
 /**
  * Width  of example template

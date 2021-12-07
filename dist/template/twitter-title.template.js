@@ -1,7 +1,4 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Twitter_Template = void 0;
-class Twitter_Template {
+﻿export class Twitter_Template {
     //#endregion
     //#region template
     /**
@@ -33,7 +30,6 @@ class Twitter_Template {
             '</svg>';
     }
 }
-exports.Twitter_Template = Twitter_Template;
 //#region setup
 /**
  * Width  of twitter template

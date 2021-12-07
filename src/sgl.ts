@@ -1,8 +1,8 @@
-import { Call } from "./model/call";
-import { Info } from "./model/info";
-import { Generator } from "./controller/generator";
-import { TemplateInjector } from "./controller/templateInjector";
-import { ImportTemplate } from "./model/importTemplate";
+import { Call } from "./model/call.js";
+import { Info } from "./model/info.js";
+import { Generator } from "./controller/generator.js";
+import { TemplateInjector } from "./controller/templateInjector.js";
+import { ImportTemplate } from "./model/importTemplate.js";
 
 /**
  * Social graphics library:

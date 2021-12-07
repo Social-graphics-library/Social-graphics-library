@@ -1,7 +1,4 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Info = void 0;
-class Info {
+﻿export class Info {
     //#endregion
     //#region constructor
     /**
@@ -12,7 +9,7 @@ class Info {
         /**
          * Version  of info
          */
-        this._version = "2.0.0_beta_19112021";
+        this._version = "2.0.0_beta_07122021";
         /**
          * Author  of info
          */
@@ -50,5 +47,4 @@ class Info {
         return this._version;
     }
 }
-exports.Info = Info;
 //# sourceMappingURL=info.js.map

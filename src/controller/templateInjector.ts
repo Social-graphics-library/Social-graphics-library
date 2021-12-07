@@ -1,4 +1,4 @@
-import { ImportTemplate } from "../model/importTemplate";
+import { ImportTemplate } from "../model/importTemplate.js";
 
 /**
  * Template injector

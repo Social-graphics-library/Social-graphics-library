@@ -1,5 +1,5 @@
-﻿import { Call } from "./model/call";
-import { ImportTemplate } from "./model/importTemplate";
+﻿import { Call } from "./model/call.js";
+import { ImportTemplate } from "./model/importTemplate.js";
 /**
  * Social graphics library:
  * a TS Library that generates dynamic Social Media images

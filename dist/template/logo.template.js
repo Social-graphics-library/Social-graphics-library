@@ -1,7 +1,4 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Logo_Template = void 0;
-class Logo_Template {
+﻿export class Logo_Template {
     //#endregion
     //#region template
     /**
@@ -23,7 +20,6 @@ class Logo_Template {
             '</svg>\n';
     }
 }
-exports.Logo_Template = Logo_Template;
 //#region setup
 /**
  * Width  of logo template

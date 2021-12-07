@@ -1,10 +1,7 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TemplateInjector = void 0;
-/**
+﻿/**
  * Template injector
  */
-class TemplateInjector {
+export class TemplateInjector {
     /**
      * Creates an instance of template injector.
      */
@@ -38,5 +35,4 @@ class TemplateInjector {
         return result;
     }
 }
-exports.TemplateInjector = TemplateInjector;
 //# sourceMappingURL=templateInjector.js.map

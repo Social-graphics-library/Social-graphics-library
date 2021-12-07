@@ -1,10 +1,7 @@
-﻿"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StringCleaner = void 0;
-/**
+﻿/**
  * Image renderer
  */
-class StringCleaner {
+export class StringCleaner {
     /**
      * Runs string cleaner
      * @param item
@@ -15,5 +12,4 @@ class StringCleaner {
         return item;
     }
 }
-exports.StringCleaner = StringCleaner;
 //# sourceMappingURL=stringCleaner.js.map
