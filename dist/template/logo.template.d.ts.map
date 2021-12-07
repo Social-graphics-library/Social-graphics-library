@@ -1,0 +1,1 @@
+{"version":3,"file":"logo.template.d.ts","sourceRoot":"","sources":["../../src/template/logo.template.ts"],"names":[],"mappings":"AAAA,qBAAa,aAAa;IAGzB;;OAEG;IACH,MAAM,CAAC,QAAQ,CAAC,KAAK,EAAE,MAAM,CAAQ;IAErC;;OAEG;IACH,MAAM,CAAC,QAAQ,CAAC,MAAM,EAAE,MAAM,CAAQ;IAItC;;;;OAIG;IACH,MAAM,CAAC,QAAQ,CAAC,UAAU,EAAC,MAAM,GAAG,MAAM;CAc1C"}
