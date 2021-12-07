@@ -1,13 +1,12 @@
-import { Elevate_Template } from "../template/elevate-title.template";
-import { False_Template } from "../template/false.template";
-import { Logo_Template } from "../template/logo.template";
-import { Twitch_Template } from "../template/twitch-title.template";
-import { Twitter_Template } from "../template/twitter-title.template";
-import { Youtube_Template } from "../template/youtube-title.template";
-import { ImageRenderer } from "./imageRenderer";
-import { Template } from "../model/templateBase";
-import { TemplateInjector } from "./templateInjector";
-import { StringCleaner } from "./stringCleaner";
+import { False_Template } from "../template/false.template.js";
+import { Logo_Template } from "../template/logo.template.js";
+import { Twitch_Template } from "../template/twitch-title.template.js";
+import { Twitter_Template } from "../template/twitter-title.template.js";
+import { Youtube_Template } from "../template/youtube-title.template.js";
+import { ImageRenderer } from "./imageRenderer.js";
+import { Template } from "../model/templateBase.js";
+import { TemplateInjector } from "./templateInjector.js";
+import { StringCleaner } from "./stringCleaner.js";
 
 /**
  * Generator
@@ -58,12 +57,6 @@ export class Generator {
 				svgString = Twitter_Template.template(teamName, playerName);
 				width = Twitter_Template.width;
 				height = Twitter_Template.height;
-				break;
-
-			case "elavate-title":
-				svgString = Elevate_Template.template(teamName, playerName);
-				width = Elevate_Template.width;
-				height = Elevate_Template.height;
 				break;
 
 			case "logo":

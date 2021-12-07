@@ -1,0 +1,1 @@
+{"version":3,"file":"call.d.ts","sourceRoot":"","sources":["../../src/model/call.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,WAAW,IAAI;IAEpB;;OAEG;IACH,IAAI,EAAE,MAAM,CAAC;IAEb;;OAEG;IACH,WAAW,EAAE,MAAM,CAAC;IAEpB;;OAEG;IACH,OAAO,EAAE,MAAM,CAAC;IAEhB;;OAEG;IACH,YAAY,EAAE,OAAO,CAAC;CAEtB"}

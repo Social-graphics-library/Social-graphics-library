@@ -1,4 +1,4 @@
-import { False_Template } from "../template/false.template";
+import { False_Template } from "../template/false.template.js";
 
 /**
  * Image renderer
@@ -20,12 +20,12 @@ export class ImageRenderer {
 		let xml = svgString,
 			parser = new DOMParser(),
 			result: XMLDocument = parser.parseFromString(xml, 'text/xml'),
-			inlineSVG = result.getElementsByTagName('svg')[0];
+			inlineSVG: SVGSVGElement = <SVGSVGElement>result.getElementsByTagName('svg')[0];
 
 		inlineSVG.setAttribute('width', width.toString());
 		inlineSVG.setAttribute('height', height.toString());
 
-		let data = "data:image/svg+xml;charset=utf-8;base64, " + btoa(new XMLSerializer().serializeToString(inlineSVG)),
+		let data: string = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(new XMLSerializer().serializeToString(inlineSVG)),
 			img = new Image(),
 			img2 = new Image(),
 			canvas = document.createElement('canvas'),
@@ -70,7 +70,7 @@ export class ImageRenderer {
 				break;
 
 			default:
-				data = "data:image/svg+xml;charset=utf-8;base64, " + btoa(False_Template.template());
+				data = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(False_Template.template());
 				width = False_Template.width;
 				height = False_Template.height;
 				imgAtr = 'image/png';
@@ -99,7 +99,7 @@ export class ImageRenderer {
 
 		ctx = renderCanvas.getContext('2d');
 
-		img.onload = async () => {
+		img.onload = () => {
 
 			ctx!.drawImage(img, 0, 0);
 
