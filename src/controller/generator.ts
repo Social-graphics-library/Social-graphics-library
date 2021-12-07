@@ -140,6 +140,6 @@ export class Generator {
 			height = tempTemplate.height
 		}
 
-		return await ImageRenderer.getImageDataUrl(svgString, width, height, imgMode)
+		return ImageRenderer.getImageDataUrl(svgString, width, height, imgMode)
 	}
 }

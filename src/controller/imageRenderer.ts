@@ -212,7 +212,7 @@ export class ImageRenderer {
 
 		ctx = renderCanvas.getContext('2d');
 
-		return await new Promise<string>((resolve) => {
+		return new Promise<string>((resolve) => {
 			img.onload = () => {
 
 				ctx!.drawImage(img, 0, 0);

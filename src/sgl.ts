@@ -61,7 +61,7 @@ export class SGL {
 	 * @returns image data url
 	 */
 	public async getImageDataUrl(teamName: string, playerName: string, mode: string, imgMode: string): Promise<string> {
-		return await Generator.getImageDataUrl(teamName, playerName, mode, imgMode, this.templateInject);
+		return Generator.getImageDataUrl(teamName, playerName, mode, imgMode, this.templateInject);
 	}
 	//#endregion
 
