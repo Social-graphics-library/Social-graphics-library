@@ -4,7 +4,7 @@ export class Info {
 	/**
 	 * Version  of info
 	 */
-	private readonly _version: string = "2.0.0_beta_07122021"
+	private readonly _version: string = "2.0.0"
 
 	/**
 	 * Author  of info
@@ -19,7 +19,7 @@ export class Info {
 	/**
 	 * Repository  of info
 	 */
-	private readonly _repository: string = "https://github.com/JosunLP/Social-graphics-library"
+	private readonly _repository: string = "https://github.com/Social-graphics-library/Social-graphics-library"
 
 	/**
 	 * Repository  of info

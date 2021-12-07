@@ -9,7 +9,7 @@
         /**
          * Version  of info
          */
-        this._version = "2.0.0_beta_07122021";
+        this._version = "2.0.0";
         /**
          * Author  of info
          */
@@ -21,7 +21,7 @@
         /**
          * Repository  of info
          */
-        this._repository = "https://github.com/JosunLP/Social-graphics-library";
+        this._repository = "https://github.com/Social-graphics-library/Social-graphics-library";
         /**
          * Repository  of info
          */

@@ -1,6 +1,6 @@
 {
   "name": "social-graphics-library",
-  "version": "2.0.0_beta_07122021",
+  "version": "2.0.0",
   "description": "A script for generating social media logos and banners",
   "main": "./dist/sgl.js",
   "types": "dist/sgl.d.ts",
@@ -16,10 +16,10 @@
     "prod:deploy": "npm run dev:deploy && npm publish"
   },
   "module": "src/sgl.ts",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/JosunLP/Social-graphics-library"
+    "url": "https://github.com/Social-graphics-library/Social-graphics-library"
   },
   "keywords": [
     "sgl",
@@ -57,7 +57,7 @@
   "funding": "https://ko-fi.com/josunlp",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/JosunLP/Social-graphics-library/issues"
+    "url": "https://github.com/Social-graphics-library/Social-graphics-library/issues"
   },
   "homepage": "https://social-graphics-library.net/",
   "devDependencies": {
