@@ -4,22 +4,22 @@ export class Info {
 	/**
 	 * Version  of info
 	 */
-	private readonly _version: string = "1.5.11"
+	private readonly _version: string = "2.0.0"
 
 	/**
 	 * Author  of info
 	 */
-	private readonly _author: string = "Jonas Pfalzgraf / JosunLP"
+	private readonly _author: string = "Jonas Pfalzgraf"
 
 	/**
 	 * License  of info
 	 */
-	private readonly _license: string = "MIT"
+	private readonly _license: string = "MPL-2.0"
 
 	/**
 	 * Repository  of info
 	 */
-	private readonly _repository: string = "https://github.com/JosunLP/Social-graphics-library"
+	private readonly _repository: string = "https://github.com/Social-graphics-library/Social-graphics-library"
 
 	/**
 	 * Repository  of info

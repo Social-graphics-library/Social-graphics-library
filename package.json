@@ -1,60 +1,66 @@
 {
-    "name": "social-graphics-library",
-    "version": "1.5.11",
-    "description": "A script for generating social media logos and banners",
-    "scripts": {
-        "dev:build": "webpack",
-        "dev:deploy": "npm install && npm run version:update && npm run dev:build && npm run dev:test",
-        "dev:run": "webpack serve",
-        "dev:test": "node tests",
-        "version:update": "sh ./version.sh",
-        "prod:deploy": "npm run dev:deploy && npm publish"
+  "name": "social-graphics-library",
+  "version": "2.0.0",
+  "description": "A script for generating social media logos and banners",
+  "main": "./dist/sgl.js",
+  "types": "dist/sgl.d.ts",
+  "type": "module",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "dev:build": "tsc",
+    "dev:deploy": "npm install && npm run dev:update && npm run dev:build",
+    "dev:run": "tsc -w",
+    "dev:update": "node ./tools/updateInfo.js",
+    "prod:deploy": "npm run dev:deploy && npm publish"
+  },
+  "module": "src/sgl.ts",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Social-graphics-library/Social-graphics-library"
+  },
+  "keywords": [
+    "sgl",
+    "fearnixx",
+    "josunlp",
+    "fngg",
+    "image-processing",
+    "gaming",
+    "community",
+    "gaming community",
+    "typescript",
+    "javascript",
+    "front-end",
+    "library",
+    "svg",
+    "graphics",
+    "social-media",
+    "webp"
+  ],
+  "author": {
+    "name": "Jonas Pfalzgraf",
+    "email": "info@josunlp.de",
+    "url": "https://josunlp.de"
+  },
+  "contributors": [
+    {
+      "name": "Jonas Pfalzgraf",
+      "email": "info@josunlp.de"
     },
-    "main": "./dist/sgl.bundle.js",
-    "module": "src/glc.ts",
-    "private": false,
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/JosunLP/Social-graphics-library"
-    },
-    "keywords": [
-        "sgl",
-        "fearnixx",
-        "josunlp",
-        "fngg",
-        "image-processing",
-        "gaming",
-        "community",
-        "gaming community",
-        "typescript",
-        "javascript",
-        "front-end",
-        "library",
-        "svg",
-        "graphics",
-        "social-media",
-        "webp"
-    ],
-    "author": "josunlp",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/JosunLP/Social-graphics-library/issues"
-    },
-    "homepage": "https://social-graphics-library.net/",
-    "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@babel/preset-env": "^7.12.10",
-        "@types/node": "^14.14.16",
-        "babel-loader": "^8.2.2",
-        "buffer": "^6.0.3",
-        "canvas": "^2.6.1",
-        "jsdom": "^16.4.0",
-        "jsdom-global": "^3.0.2",
-        "ts-loader": "^8.0.12",
-        "typescript": "^4.1.3",
-        "webpack": "^5.10.1",
-        "webpack-cli": "^4.3.0",
-        "webpack-dev-server": "^3.11.0"
-    },
-    "dependencies": {}
+    {
+      "name": "Magnus Leßmann",
+      "email": "github@m-lessmann.de"
+    }
+  ],
+  "funding": "https://ko-fi.com/josunlp",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Social-graphics-library/Social-graphics-library/issues"
+  },
+  "homepage": "https://social-graphics-library.net/",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
 }
