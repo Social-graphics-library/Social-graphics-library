@@ -155,7 +155,7 @@ export class ImageRenderer {
             let renderCanvas = document.getElementById(canvas.id);
             let ctx;
             ctx = renderCanvas.getContext('2d');
-            return yield new Promise((resolve) => {
+            return new Promise((resolve) => {
                 img.onload = () => {
                     ctx.drawImage(img, 0, 0);
                     imgDataUrl = renderCanvas.toDataURL(imgAtr, 1.0);

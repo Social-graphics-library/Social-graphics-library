@@ -57,7 +57,7 @@ export class SGL {
      */
     getImageDataUrl(teamName, playerName, mode, imgMode) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield Generator.getImageDataUrl(teamName, playerName, mode, imgMode, this.templateInject);
+            return Generator.getImageDataUrl(teamName, playerName, mode, imgMode, this.templateInject);
         });
     }
     //#endregion

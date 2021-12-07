@@ -116,7 +116,7 @@ export class Generator {
                 width = tempTemplate.width;
                 height = tempTemplate.height;
             }
-            return yield ImageRenderer.getImageDataUrl(svgString, width, height, imgMode);
+            return ImageRenderer.getImageDataUrl(svgString, width, height, imgMode);
         });
     }
 }
