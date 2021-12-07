@@ -82,4 +82,64 @@ export class Generator {
 		ImageRenderer.renderImage(svgString, width, height, containerId, imgMode, generateLink)
 
 	}
+
+	public static async getImageDataUrl(teamName: string, playerName: string, mode: string, imgMode: string, templateInjector: TemplateInjector): Promise<string> {
+
+		let svgString: string,
+			width: number,
+			height: number,
+			tempTemplate: Template;
+
+		if (teamName === "") {
+			teamName = "Community";
+		}
+
+		if (playerName === "") {
+			playerName = "Player";
+		}
+
+		teamName = StringCleaner.run(teamName);
+		playerName = StringCleaner.run(playerName);
+
+		switch (mode) {
+			case "youtube-title":
+				svgString = Youtube_Template.template(teamName, playerName);
+				width = Youtube_Template.width;
+				height = Youtube_Template.height;
+				break;
+
+			case "twitch-title":
+				svgString = Twitch_Template.template(teamName, playerName);
+				width = Twitch_Template.width;
+				height = Twitch_Template.height;
+				break;
+
+			case "twitter-title":
+				svgString = Twitter_Template.template(teamName, playerName);
+				width = Twitter_Template.width;
+				height = Twitter_Template.height;
+				break;
+
+			case "logo":
+				svgString = Logo_Template.template(playerName);
+				width = Logo_Template.width;
+				height = Logo_Template.height;
+				break;
+
+			default:
+				svgString = False_Template.template();
+				width = False_Template.width;
+				height = False_Template.height;
+				break;
+		}
+
+		if (templateInjector.call(mode) !== null) {
+			tempTemplate = templateInjector.call(mode)!.template
+			svgString = tempTemplate.template(teamName, playerName)
+			width = tempTemplate.width
+			height = tempTemplate.height
+		}
+
+		return await ImageRenderer.getImageDataUrl(svgString, width, height, imgMode)
+	}
 }

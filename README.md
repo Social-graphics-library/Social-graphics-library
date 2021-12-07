@@ -23,9 +23,9 @@ Es besteht auch Support über den [Software Support Discord Server](https://disc
 ### Aufbau
 
 Zum generieren einer Grafik wird die statische Funktion `generator`
-auf der Klasse `SocialGraphicsLibrary` aufgerufen:
+auf der Klasse `SGL` aufgerufen:
 
-    new SocialGraphicsLibrary.generator(
+    new SGL.generator(
         teamName,
         playerName,
         mode,
@@ -35,16 +35,16 @@ auf der Klasse `SocialGraphicsLibrary` aufgerufen:
 
 Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `multiGenerator` aufgerufen werden:
 
-    new SocialGraphicsLibrary.multiGenerator(tName, pName, [{
-                    mode: 'twitch-title',
-                    containerId: 'img-container-1',
-                    imgMode: 'jpeg'
-                }, {
-                    mode: 'elavate-title',
-                    containerId: 'img-container-2',
-                    imgMode: 'jpeg',
-                    generateLink: true
-                }]
+    new SGL.multiGenerator(tName, pName, [{
+              mode: 'twitch-title',
+              containerId: 'img-container-1',
+              imgMode: 'jpeg'
+          }, {
+              mode: 'elavate-title',
+              containerId: 'img-container-2',
+              imgMode: 'jpeg',
+              generateLink: true
+          }]
 
 ### Modifikatoren
 
@@ -82,11 +82,26 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
     - false
 
 ---
+### Nur DataURL
+
+Es besteht die möglichkeit, sich nur die dataURL des gewünschten Bildes zu generieren und diese zurück zu geben.
+Hierfür wird die Methode `getImageDataUrl` auf der Klasse `SGL` aufgerufen. Diese gibt die entsprechende DataURL als Promise zurück.
+
+Ein beispielhafter aufruf:
+
+    await new SGL.getImageDataUrl(
+      document.getElementById('M. Mustermann').value,
+      document.getElementById('Mustercorp').value,
+      'logo',
+      'webp'
+    ));
+
+---
 ### Inject Template (Experimentelles Feature)
 
 Es ist möglich, alternativ zum Forkend es Projektes, eigene Templates lokal zu injecten. Dazu einfach das NPM Packet installieren mit `npm i social-graphics-library` , danach kann nach der initialisierung mit der folgenden Methode ein Template Injekted werden:
 
-    new SocialGraphicsLibrary.inject([
+    new SGL.inject([
       {
         "callName": "template_name",
         "template": new Template()
@@ -149,9 +164,9 @@ There is also support via the [Software Support Discord Server](https://discord.
 ### Structure
 
 The static function `generator` is used to generate a graphic
-called on the class `SocialGraphicsLibrary`:
+called on the class `SGL`:
 
-    new SocialGraphicsLibrary.generator(
+    new SGL.generator(
         teamName,
         playerName,
         mode,
@@ -161,16 +176,16 @@ called on the class `SocialGraphicsLibrary`:
 
 Alternatively, if several graphics are to be generated, the `multiGenerator` method can be called:
 
-    new SocialGraphicsLibrary.multiGenerator(tName, pName, [{
-                    mode: 'twitch-title',
-                    containerId: 'img-container-1',
-                    imgMode: 'jpeg'
-                }, {
-                    mode: 'elavate-title',
-                    containerId: 'img-container-2',
-                    imgMode: 'jpeg',
-                    generateLink: true
-                }]
+    new SGL.multiGenerator(tName, pName, [{
+              mode: 'twitch-title',
+              containerId: 'img-container-1',
+              imgMode: 'jpeg'
+          }, {
+              mode: 'elavate-title',
+              containerId: 'img-container-2',
+              imgMode: 'jpeg',
+              generateLink: true
+          }]
 
 ### Modifiers
 
@@ -208,11 +223,26 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
     - false
 
 ---
+### DataURL only
+
+It is possible to generate only the dataURL of the desired image and to return it.
+For this the method `getImageDataUrl` is called on the class`SGL`. This returns the corresponding DataURL as a promise.
+
+An exemplary call:
+
+     await new SGL.getImageDataUrl (
+       document.getElementById ('M. Mustermann'). value,
+       document.getElementById ('Mustercorp'). value,
+       'logo',
+       'webp'
+     ));
+
+---
 ### Inject Template (Experimental Feature)
 
 As an alternative to forking the project, it is possible to inject your own templates locally. To do this, simply install the NPM package with `npm i social-graphics-library`, then after the initialization a template can be injected with the following method:
 
-    new SocialGraphicsLibrary.inject([
+    new SGL.inject([
       {
         "callName": "template_name",
         "template": new Template()

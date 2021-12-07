@@ -25,6 +25,15 @@ export declare class SGL {
      */
     multiGenerator(teamName: string, playerName: string, calls: Array<Call>): void;
     /**
+     * Gets image data url
+     * @param teamName
+     * @param playerName
+     * @param mode
+     * @param imgMode
+     * @returns image data url
+     */
+    getImageDataUrl(teamName: string, playerName: string, mode: string, imgMode: string): Promise<string>;
+    /**
      * Infos social graphics library
      * @returns info
      */

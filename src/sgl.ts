@@ -51,6 +51,20 @@ export class SGL {
 	}
 	//#endregion
 
+	//#region getImageDataUrl
+	/**
+	 * Gets image data url
+	 * @param teamName
+	 * @param playerName
+	 * @param mode
+	 * @param imgMode
+	 * @returns image data url
+	 */
+	public async getImageDataUrl(teamName: string, playerName: string, mode: string, imgMode: string): Promise<string> {
+		return await Generator.getImageDataUrl(teamName, playerName, mode, imgMode, this.templateInject);
+	}
+	//#endregion
+
 	//#region info
 	/**
 	 * Infos social graphics library
