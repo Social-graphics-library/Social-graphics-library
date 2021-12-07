@@ -1,6 +1,6 @@
 import { SGL } from './dist/sgl.js'
 
-var sgl = new SGL(); 
+var sgl = new SGL();
 
 console.log(SGL.info());
 
@@ -33,4 +33,12 @@ document
 							imgMode: 'png',
 							generateLink: true
 						}])
+
+			console.log(
+				await sgl.getImageDataUrl(
+					document.getElementById('tName').value,
+					document.getElementById('uName').value,
+					'logo',
+					'webp'
+					));
 		});

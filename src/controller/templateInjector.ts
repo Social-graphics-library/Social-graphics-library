@@ -1,4 +1,5 @@
 import { ImportTemplate } from "../model/importTemplate.js";
+import { ErrorCodes } from "../model/errorCodes.js";
 
 /**
  * Template injector
@@ -25,7 +26,7 @@ export class TemplateInjector {
 
 		importedTemplates.forEach(template => {
 			if (!template.callName || !template.template) {
-				throw new Error("#SGL001 One of the injected templates is missing a property!");
+				throw new Error(ErrorCodes.TEMPLATE_INJECTOR_ERROR);
 			}
 			this.injectList.push(template)
 		})

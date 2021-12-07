@@ -1,4 +1,5 @@
 import { False_Template } from "../template/false.template.js";
+import { Guid } from "./guid.js";
 
 /**
  * Image renderer
@@ -128,4 +129,100 @@ export class ImageRenderer {
 		}
 	}
 
+	/**
+	 * Gets image data url
+	 * @param svgString
+	 * @param width
+	 * @param height
+	 * @param imgMode
+	 * @returns image data url
+	 */
+	public static async getImageDataUrl(svgString: string, width: number, height: number, imgMode: string): Promise<string> {
+
+		let xml = svgString,
+			parser = new DOMParser(),
+			result: XMLDocument = parser.parseFromString(xml, 'text/xml'),
+			inlineSVG: SVGSVGElement = <SVGSVGElement>result.getElementsByTagName('svg')[0];
+
+		inlineSVG.setAttribute('width', width.toString());
+		inlineSVG.setAttribute('height', height.toString());
+
+		let data: string = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(new XMLSerializer().serializeToString(inlineSVG)),
+			img = new Image(),
+			canvas = document.createElement('canvas'),
+			imgAtr: string,
+			imgDataUrl: string,
+			containerId: string = new Guid().toString(),
+			container = document.createElement('div')
+			;
+
+		container.id = containerId;
+
+		document.body.appendChild(container);
+
+		switch (imgMode) {
+			case 'svg':
+				width = width / 4;
+				height = height / 4;
+				img.setAttribute('src', data);
+				img.setAttribute('width', width.toString());
+				img.setAttribute('height', height.toString());
+				imgDataUrl = data;
+				break;
+
+			case 'png':
+				imgAtr = 'image/png';
+				break;
+
+			case 'jpeg':
+				imgAtr = 'image/jpeg';
+				break;
+
+			case 'webp':
+				imgAtr = 'image/webp';
+				break;
+
+			default:
+				data = "data:image/svg+xml;charset=utf-8;base64, " + window.btoa(False_Template.template());
+				width = False_Template.width;
+				height = False_Template.height;
+				imgAtr = 'image/png';
+				break;
+		}
+
+		canvas.setAttribute('width', width.toString());
+		canvas.setAttribute('height', height.toString());
+		canvas.setAttribute('id', 'render-canvas-string' + new Guid().toString());
+		canvas.setAttribute('display', 'none');
+
+		img.setAttribute('src', data);
+		img.setAttribute('width', width.toString());
+		img.setAttribute('height', height.toString());
+
+		try {
+			container.appendChild(canvas);
+			container.appendChild(img);
+		} catch (error) {
+			throw new Error("The Container " + containerId + " is not defined!");
+		}
+
+		let renderCanvas = <HTMLCanvasElement>document.getElementById(canvas.id)!;
+
+		let ctx: CanvasRenderingContext2D | null;
+
+		ctx = renderCanvas.getContext('2d');
+
+		return await new Promise<string>((resolve) => {
+			img.onload = () => {
+
+				ctx!.drawImage(img, 0, 0);
+
+				imgDataUrl = renderCanvas.toDataURL(imgAtr, 1.0);
+
+				document.body.removeChild(container);
+
+				resolve(imgDataUrl);
+			}
+		});
+	}
 }

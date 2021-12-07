@@ -46,6 +46,21 @@ export class SGL {
         }));
     }
     //#endregion
+    //#region getImageDataUrl
+    /**
+     * Gets image data url
+     * @param teamName
+     * @param playerName
+     * @param mode
+     * @param imgMode
+     * @returns image data url
+     */
+    getImageDataUrl(teamName, playerName, mode, imgMode) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield Generator.getImageDataUrl(teamName, playerName, mode, imgMode, this.templateInject);
+        });
+    }
+    //#endregion
     //#region info
     /**
      * Infos social graphics library

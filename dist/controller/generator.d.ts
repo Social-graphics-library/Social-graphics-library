@@ -13,5 +13,6 @@ export declare class Generator {
      * @param [generateLink]
      */
     static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, templateInjector: TemplateInjector, generateLink?: boolean): void;
+    static getImageDataUrl(teamName: string, playerName: string, mode: string, imgMode: string, templateInjector: TemplateInjector): Promise<string>;
 }
 //# sourceMappingURL=generator.d.ts.map
