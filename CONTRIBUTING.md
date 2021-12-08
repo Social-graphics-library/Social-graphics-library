@@ -16,12 +16,12 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 - [I Have a Question](#i-have-a-question)
 - [I Want To Contribute](#i-want-to-contribute)
-- [Reporting Bugs](#reporting-bugs)
-- [Suggesting Enhancements](#suggesting-enhancements)
-- [Your First Code Contribution](#your-first-code-contribution)
-- [Improving The Documentation](#improving-the-documentation)
+  - [Reporting Bugs](#reporting-bugs)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Your First Code Contribution](#your-first-code-contribution)
+  - [Improving The Documentation](#improving-the-documentation)
 - [Styleguides](#styleguides)
-- [Commit Messages](#commit-messages)
+  - [Commit Messages](#commit-messages)
 - [Join The Project Team](#join-the-project-team)
 
 
@@ -126,25 +126,42 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/Social
 <!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
 ### Your First Code Contribution
-<!-- TODO
-include Setup of env, IDE and typical getting started instructions?
 
--->
+When setting up the project ether in your local enviroment
+or a GitHub Code Space, you will need to follow these steps:
+
+> ### Step 1: You need to have NodeJs and NPM installed.
+>  - [Download NodeJs](https://nodejs.org/en/download/)
+> ### Step 2: You need to run `npm install` in the root directory of the project.
+> ### Step 3: Your good to go!
+
+When you are ready with your changes, you can submit them to the project's [GitHub repository](https://github.com/Social-graphics-library/Social-graphics-library). Please do this by creating an new pull request and follow the given guidelines.
 
 ### Improving The Documentation
-<!-- TODO
-Updating, improving and correcting the documentation
 
--->
+When you have additions to the documentation, you can submit them to the project's [GitHub page repository](https://github.com/Social-graphics-library/Social-graphics-library.net) by creating a new pull request.
 
 ## Styleguides
-### Commit Messages
-<!-- TODO
 
--->
+While developing new Templates or the test page, the project follows a certain style guide. This is to make it easier and more consistent to work with the project. As far as possible,
+we try to follow this simple rules:
+
+- **Always** use `#2583C2` as the project's primary color.
+- **Always** use `#263F60` as the project's font color.
+- **Always** use `#E4E5E9` as the project's background color.
+- The project's font is `Arial`.
+- The project's logo can be found in the project's [Asset folder](https://github.com/Social-graphics-library/Social-graphics-library/tree/master/assets). The direct link to the logo is [here](https://github.com/Social-graphics-library/Social-graphics-library/tree/master/assets/sgl.png).
+
+### Commit Messages
+
+> Please keep your commit messages short and concise.
+> You mey use emjois to express your thoughts. For example:
+>
+> `🔥 implementing a new xyz`
 
 ## Join The Project Team
-<!-- TODO -->
+
+Before considering joining the project team, please read the [code of conduct](https://github.com/Social-graphics-library/Social-graphics-library/tree/master/CODE_OF_CONDUCT.md) and contribute a few times + communicate with the team in discussions.
 
 <!-- omit in toc -->
 ## Attribution
