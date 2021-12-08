@@ -9,7 +9,7 @@
         /**
          * Version  of info
          */
-        this._version = "2.0.0";
+        this._version = "2.0.1";
         /**
          * Author  of info
          */
