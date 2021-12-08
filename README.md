@@ -1,3 +1,12 @@
+[![npm version](https://badge.fury.io/js/social-graphics-library.svg)](https://badge.fury.io/js/social-graphics-library)
+[![GitHub issues](https://img.shields.io/github/issues/Social-graphics-library/Social-graphics-library)](https://github.com/Social-graphics-library/Social-graphics-library/issues)
+[![GitHub forks](https://img.shields.io/github/forks/Social-graphics-library/Social-graphics-library)](https://github.com/Social-graphics-library/Social-graphics-library/network)
+[![GitHub stars](https://img.shields.io/github/stars/Social-graphics-library/Social-graphics-library)](https://github.com/Social-graphics-library/Social-graphics-library/stargazers)
+[![GitHub license](https://img.shields.io/github/license/Social-graphics-library/Social-graphics-library)](https://github.com/Social-graphics-library/Social-graphics-library/blob/master/LICENSE)
+![npm](https://img.shields.io/npm/dt/social-graphics-library)
+[![CodeFactor](https://www.codefactor.io/repository/github/social-graphics-library/social-graphics-library/badge)](https://www.codefactor.io/repository/github/social-graphics-library/social-graphics-library)
+[![TypeScript](https://img.shields.io/badge/Developed%20in-TypeScript-blue?logo=typescript)](https://www.typescriptlang.org/)
+
 # Languages
 
 - [Deutsche Version](#german)
@@ -8,6 +17,12 @@
 # German
 
 ## Social Graphics Library
+
+### Installation
+
+> Für die neueste stabile Version:
+
+    npm i social-graphics-library
 
 ### Einführung
 
@@ -149,6 +164,12 @@ Danach nurnoch kompilieren, einbinden und es ist fertig.
 # English
 
 ## Social Graphics Library
+
+### Installation
+
+> For the latest stable version:
+
+     npm i social-graphics-library
 
 ### Introduction
 
