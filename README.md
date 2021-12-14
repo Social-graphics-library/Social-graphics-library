@@ -1,3 +1,5 @@
+# Social Graphics Library
+
 [![npm version](https://badge.fury.io/js/social-graphics-library.svg)](https://badge.fury.io/js/social-graphics-library)
 [![GitHub issues](https://img.shields.io/github/issues/Social-graphics-library/Social-graphics-library)](https://github.com/Social-graphics-library/Social-graphics-library/issues)
 [![GitHub forks](https://img.shields.io/github/forks/Social-graphics-library/Social-graphics-library)](https://github.com/Social-graphics-library/Social-graphics-library/network)
@@ -16,8 +18,6 @@
 
 # German
 
-## Social Graphics Library
-
 ### Installation
 
 > Für die neueste stabile Version:
@@ -26,8 +26,8 @@
 
 ### Einführung
 
-Das **Social Graphics Library** Script nutzt `<canvas>`
-zum generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitglieder und Spieler.
+Die **Social Graphics Library** nutzt `<canvas>`
+zum Generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitglieder und Spieler.
 
 <img src="https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
 
@@ -37,7 +37,7 @@ Es besteht auch Support über den [Software Support Discord Server](https://disc
 
 ### Aufbau
 
-Zum generieren einer Grafik wird die statische Funktion `generator`
+Zum Generieren einer Grafik wird die statische Funktion `generator`
 auf der Klasse `SGL` aufgerufen:
 
     new SGL.generator(
@@ -85,18 +85,19 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
       das generierte Bild dient
 
 - Image Modus:
-  - Der Modus des zu generierenen Bildes
+  - Der Modus des zu generierenden Bildes
     - png
     - svg
     - jpeg
     - webp
 
 - Generate Link
-  - Dieser alternative Modus sorgt für das automatische rendern eines Download Links
+  - Dieser alternative Modus sorgt für das automatische Rendern eines Download Links
     - true
     - false
 
 ---
+
 ### Nur DataURL
 
 Es besteht die möglichkeit, sich nur die dataURL des gewünschten Bildes zu generieren und diese zurück zu geben.
@@ -112,9 +113,10 @@ Ein beispielhafter aufruf:
     ));
 
 ---
+
 ### Inject Template (Experimentelles Feature)
 
-Es ist möglich, alternativ zum Forkend es Projektes, eigene Templates lokal zu injecten. Dazu einfach das NPM Packet installieren mit `npm i social-graphics-library` , danach kann nach der initialisierung mit der folgenden Methode ein Template Injekted werden:
+Es ist möglich, alternativ zum Forkend des Projektes, eigene Templates lokal zu injecten. Dazu einfach das NPM Packet installieren mit `npm i social-graphics-library` , danach kann nach der Initialisierung mit der folgenden Methode ein Template Injekted werden:
 
     new SGL.inject([
       {
@@ -124,6 +126,7 @@ Es ist möglich, alternativ zum Forkend es Projektes, eigene Templates lokal zu 
     ])
 
 ---
+
 ### Templates
 
 Um eine Grafik generieren zu können, müssen sogenannte Template Dateien vorbereitet werden. Dabei handelt es sich um Typescript Klassen, in welchen die Grunddaten hinterlegt sind.
@@ -143,27 +146,36 @@ Ein simples Template ist wie folgt aufgebaut:
       }
     }
 
-> Die Klasse hat immer(!) ein Feld für die Breite, eines für die Höhe und eine Methode, welche des SVG String zurückgibt.
+> Die Klasse hat immer(!) ein Feld für die Breite, eines für die Höhe und eine Methode, welche den SVG String zurückgibt.
 
-Für das erstellen und anpassen liegen im `assetes` Ordner diverse Vorlagen für die großen Social Media Plattformen im .afpub Format vor. Diese Können mit Programmen der [Affinity Familie von Serif](http://affinity.serif.com/) geöffnet und bearbeitet werden. Alternativ liegen im `svg` Verzeichnis die daraus generierten Files.
+Für das Erstellen und Anpassen liegen im `assetes` Ordner diverse Vorlagen für die großen Social Media Plattformen im .afpub Format vor. Diese können mit Programmen der [Affinity Familie von Serif](http://affinity.serif.com/) geöffnet und bearbeitet werden. Alternativ liegen im `svg` Verzeichnis die daraus generierten Files.
 
 ### Achtung!
-> Beim anlegen eines SVG files muss darauf geachtet werden, dass die später dynamischen Teile als TEXT und nicht als Vektor hinterlegt sind.
 
-Nachdem das SVG fertig ist, kann es im `svg` Verzeichnis gespeichert werden und der Sourcecode der SVG wird als String in die `template()` Methode eingepflegt. Dabei werden die entsprechenden test stellen durch die Variablen ersetzt, die der Methode übergeben werden.
+> Beim Anlegen eines SVG files muss darauf geachtet werden, dass die später dynamischen Teile als TEXT und nicht als Vektor hinterlegt sind.
 
-Solange der Name des Files (und der Klasse) einer der bestehenden, ausgenommen des Beispiels ist, kann jetzt das Beispiel Template einfach ersetzt werden und es funktioniert mit dem neuen. Sollte der Name anders sein,
+Nachdem das SVG fertig ist, kann es im `svg` Verzeichnis gespeichert werden und der Sourcecode der SVG wird als String in die `template()` Methode eingepflegt. Dabei werden die entsprechenden Teststellen durch die Variablen ersetzt, die der Methode übergeben werden.
+
+Solange der Name des Files (und der Klasse) einer der bestehenden, ausgenommen des Beispiels ist, kann jetzt das Beispieltemplate einfach ersetzt werden und es funktioniert mit dem neuen. Sollte der Name anders sein,
 muss die Klasse im glc File in der `generator` methoden eingepflegt werden.
 
-Danach nurnoch kompilieren, einbinden und es ist fertig.
+Danach nur noch kompilieren, einbinden und es ist fertig.
+
+---
+
+### Template Generator
+
+Der [SGL Template Generator](https://github.com/Social-graphics-library/Template-Generator) ist ein auf Electron basierendes Werkzeug zur Generierung von JavaScript-/TypeScript-Vorlagenklassen für die Social Graphics Library aus SVG-Dateien. Die Dokumentation des Tools findet sich im entsprechenden Repository, sowie Downloadlinks für die aktuelle Version.
+
+---
+
+## Beispiel
 
 ![Example Gif](https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/Demo.gif)
 
 --------------------------------------------------------------------------------------------------------
 
 # English
-
-## Social Graphics Library
 
 ### Installation
 
@@ -173,7 +185,7 @@ Danach nurnoch kompilieren, einbinden und es ist fertig.
 
 ### Introduction
 
-The **Social Graphics Library** script uses `<canvas>`
+The **Social Graphics Library** uses `<canvas>`
 to generate SVG, PNG, JPEG and WebP graphics for community team members and players.
 
 <img src="https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
@@ -244,6 +256,7 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
     - false
 
 ---
+
 ### DataURL only
 
 It is possible to generate only the dataURL of the desired image and to return it.
@@ -259,9 +272,10 @@ An exemplary call:
      ));
 
 ---
+
 ### Inject Template (Experimental Feature)
 
-As an alternative to forking the project, it is possible to inject your own templates locally. To do this, simply install the NPM package with `npm i social-graphics-library`, then after the initialization a template can be injected with the following method:
+It is possible to inject your own templates locally as an alternative to forking the project. To do this, simply install the NPM package with `npm i social-graphics-library`, then a template can be injected after initialization with the following method:
 
     new SGL.inject([
       {
@@ -293,18 +307,27 @@ A simple template is structured as follows:
 
 > The class always(!) has a field for the width, one for the height and a method which returns the SVG string.
 
-Various templates for the large social media platforms in .afpub format are available in the `assetes` folder for creating and adapting. These can be opened and edited with programs from the
-[Affinity Family of Serif](http://affinity.serif.com/). Alternatively, the files generated from it are located in the `svg` directory.
+For creating and customizing, various templates for the major social media platforms are available in the `assetes` folder in .afpub format. These can be opened and edited with programs from the [Affinity family from Serif](http://affinity.serif.com/). Alternatively, the files generated from them are located in the `svg` directory.
 
-### Caution!
+### Attention!
 
-> When creating an SVG file, it must be ensured that the later dynamic parts are stored as TEXT and not as a vector.
+> When creating an SVG file, make sure that the dynamic parts are stored as TEXT and not as a vector.
 
-After the SVG is ready, it can be saved in the `svg` directory and the source code of the SVG is entered as a string in the `template()` method. The corresponding test points are replaced by the variables that are transferred to the method.
+After the SVG is ready, it can be saved in the `svg` directory and the source code of the SVG is fed as a string into the `template()` method. Thereby the corresponding test places are replaced by the variables that are passed to the method.
 
-As long as the name of the file (and the class) is one of the existing ones, with the exception of the example, the example template can now simply be replaced and it will work with the new one. Should the name be different
-the class must be entered in the glc file in the `generator` methods.
+As long as the name of the file (and the class) is one of the existing ones, except for the example, the example template can now simply be replaced and it will work with the new one. Should the name be different
+you have to add the class in the sgl file in the `generator` methods.
 
-Then just compile, integrate and it's done.
+After that just compile, include and it is ready.
+
+---
+
+### Template Generator
+
+The [SGL Template Generator](https://github.com/Social-graphics-library/Template-Generator) is an Electron-based tool for generating JavaScript/TypeScript template classes for the Social Graphics Library from SVG files. Documentation for the tool can be found in the corresponding repository, as well as download links for the current version.
+
+---
+
+## Example
 
 ![Example Gif](https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/Demo.gif)
