@@ -1,11 +1,20 @@
 ﻿import { Call } from "./model/call.js";
 import { ImportTemplate } from "./model/importTemplate.js";
+import { TcheckTemplateMode } from "./types/TcheckTemplateMode.js";
+import { TcheckAllTemplatesFalse } from "./types/TchekAllTemplatesFalse.js";
+import { Template } from "./model/templateBase.js";
 /**
  * Social graphics library:
  * a TS Library that generates dynamic Social Media images
  */
 export declare class SGL {
+    /**
+     * Template inject of sgl
+     */
     private templateInject;
+    /**
+     * Creates an instance of sgl.
+     */
     constructor();
     /**
      * Generators social graphics library
@@ -43,6 +52,19 @@ export declare class SGL {
      * @param importedTemplates
      */
     inject(importedTemplates: Array<ImportTemplate>): void;
+    /**
+     * Checks template
+     * @param mode
+     * @param [templateName]
+     * @param [template]
+     * @returns boolean | response object
+     */
+    checkTemplate(mode: TcheckTemplateMode, templateName?: string, template?: Template): boolean | TcheckAllTemplatesFalse;
+    /**
+     * Gets injected templates
+     * @returns injected templates
+     */
+    getInjectedTemplates(): Array<ImportTemplate>;
     /**
      * Version of social graphics library
      */

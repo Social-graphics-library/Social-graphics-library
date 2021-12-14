@@ -2,6 +2,7 @@
  * Generates a new GUID string.
  */
 export class Guid {
+    guid;
     constructor() {
         this.guid = Guid.newGuid();
     }

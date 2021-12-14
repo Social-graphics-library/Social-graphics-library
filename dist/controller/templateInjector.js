@@ -4,6 +4,10 @@
  */
 export class TemplateInjector {
     /**
+     * Inject list of template injector
+     */
+    injectList;
+    /**
      * Creates an instance of template injector.
      */
     constructor() {
@@ -34,6 +38,75 @@ export class TemplateInjector {
             }
         });
         return result;
+    }
+    /**
+     * Gets list
+     * @returns list of injected Templates
+     */
+    getList() {
+        return this.injectList;
+    }
+    /**
+     * Checks template
+     * @param mode
+     * @param [templateName]
+     * @param [template]
+     * @returns boolean | response object
+     */
+    checkTemplate(mode, templateName, template) {
+        switch (mode) {
+            case 'basic':
+                if (templateName != ''
+                    && templateName != null
+                    && templateName != undefined
+                    && this.call(templateName) != null) {
+                    let tmp = this.call(templateName);
+                    if (!tmp
+                        || !tmp.template
+                        || tmp.template === undefined
+                        || tmp.template.width <= 0
+                        || tmp.template.height <= 0) {
+                        return false;
+                    }
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            case 'advanced':
+                if (!template
+                    || template.width <= 0
+                    || template.height <= 0
+                    || templateName != '') {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            case 'all':
+                let falseList = [];
+                this.injectList.forEach(template => {
+                    if (template === null
+                        || template.callName === null
+                        || template.callName === undefined
+                        || template.template === null
+                        || template.template === undefined
+                        || template.template.width <= 0
+                        || template.template.height <= 0) {
+                        falseList.push(template);
+                    }
+                });
+                if (falseList.length > 0) {
+                    let response = {
+                        response: false,
+                        falseList: falseList
+                    };
+                    return response;
+                }
+                return true;
+            default:
+                return false;
+        }
     }
 }
 //# sourceMappingURL=templateInjector.js.map
