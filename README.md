@@ -127,7 +127,7 @@ Es ist möglich, alternativ zum Forkend des Projektes, eigene Templates lokal zu
 
 ---
 
-### Template Prüfen
+### Template prüfen
 
 Um mögliche Fehler vorzubeugen, kann ein bereit injectetes, sowie ein noch nicht injectetes Template geprüft werden.
 Hierfür steht die Methode `checkTemplate` zur Verfügung. Diese gibt einen Bool oder ein Response Objekt zurück.
@@ -149,10 +149,10 @@ Ein beispielhafter Aufruf:
 > Für diesen Endpunkt stehen 3 Nutzungsmodi zur Verfügung:
 >
 > - basic
->   - Prüft ob ein bereits injectetes Template vorhanden und valide ist.
+>   - Prüft, ob ein bereits injectetes Template vorhanden und valide ist.
 >   - Gibt ein Bool zurück.
 > - advanced
->   - Prüft ob ein an dieser Stelle übergebenes Template vorhanden und valide ist.
+>   - Prüft, ob ein an dieser Stelle übergebenes Template vorhanden und valide ist.
 >   - Gibt ein Bool zurück.
 > - all
 >   - Prüft alle bereits injecteten Templates.
@@ -164,7 +164,7 @@ Ein beispielhafter Aufruf:
 
 ### Alle injecteten Templates abfragen
 
-Es besteht die Möglichkeit, alle injecteten Templates abzufragen. Dazu steht die Methode `getInjectedTemplates` zur Verfügung. Das Rückgabe Objekt enthällt ein Array, bestehend aus Objekten, welche die Namen und die Klassen der injecteten Temnplates enthalten.
+Es besteht die Möglichkeit, alle injecteten Templates abzufragen. Dazu steht die Methode `getInjectedTemplates` zur Verfügung. Das Rückgabe Objekt enthält ein Array, bestehend aus Objekten, welche die Namen und die Klassen der injecteten Temnplates enthalten.
 
     SGL.getInjectedTemplates()
 
