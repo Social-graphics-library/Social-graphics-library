@@ -4,9 +4,17 @@
         <title>Social-graphics-library Blog</title>
         <link>https://social-graphics-library.net/blog</link>
         <description>Social-graphics-library Blog</description>
-        <lastBuildDate>Tue, 07 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 19 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Version 2.1.0]]></title>
+            <link>https://social-graphics-library.net/blog/version_2_1_0</link>
+            <guid>version_2_1_0</guid>
+            <pubDate>Sun, 19 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[What's Changed]]></description>
+            <content:encoded><![CDATA[<h2>What&#x27;s Changed</h2><ul><li>Rechtschreibung #122 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/124">https://github.com/Social-graphics-library/Social-graphics-library/pull/124</a></li><li>Feature/test template by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/125">https://github.com/Social-graphics-library/Social-graphics-library/pull/125</a></li><li>✅ Version Update 2.1.0 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/126">https://github.com/Social-graphics-library/Social-graphics-library/pull/126</a></li></ul><p><strong>Full Changelog</strong>: <a href="https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0">https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0</a></p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Version 2.0.0]]></title>
             <link>https://social-graphics-library.net/blog/version_2_0_0</link>

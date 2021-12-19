@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://social-graphics-library.net/blog</id>
     <title>Social-graphics-library Blog</title>
-    <updated>2021-12-07T00:00:00.000Z</updated>
+    <updated>2021-12-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://social-graphics-library.net/blog"/>
     <subtitle>Social-graphics-library Blog</subtitle>
     <icon>https://social-graphics-library.net/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Version 2.1.0]]></title>
+        <id>version_2_1_0</id>
+        <link href="https://social-graphics-library.net/blog/version_2_1_0"/>
+        <updated>2021-12-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What's Changed]]></summary>
+        <content type="html"><![CDATA[<h2>What&#x27;s Changed</h2><ul><li>Rechtschreibung #122 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/124">https://github.com/Social-graphics-library/Social-graphics-library/pull/124</a></li><li>Feature/test template by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/125">https://github.com/Social-graphics-library/Social-graphics-library/pull/125</a></li><li>✅ Version Update 2.1.0 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/126">https://github.com/Social-graphics-library/Social-graphics-library/pull/126</a></li></ul><p><strong>Full Changelog</strong>: <a href="https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0">https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0</a></p>]]></content>
+        <author>
+            <name>josunlp</name>
+            <uri>https://github.com/josunlp</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Version 2.0.0]]></title>
         <id>version_2_0_0</id>

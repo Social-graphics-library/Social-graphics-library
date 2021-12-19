@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksocial_graphics_library=self.webpackChunksocial_graphics_library||[]).push([[936],{2614:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/update","name":"Update","count":3,"permalink":"/blog/tags/update"}')}}]);

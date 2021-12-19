@@ -1,4 +1,13 @@
 ﻿export class Twitch_Template {
+    //#region setup
+    /**
+     * Width  of twitch template
+     */
+    static width = 1920;
+    /**
+     * Height  of twitch template
+     */
+    static height = 480;
     //#endregion
     //#region template
     /**
@@ -32,13 +41,4 @@
             '</svg>';
     }
 }
-//#region setup
-/**
- * Width  of twitch template
- */
-Twitch_Template.width = 1920;
-/**
- * Height  of twitch template
- */
-Twitch_Template.height = 480;
 //# sourceMappingURL=twitch-title.template.js.map

@@ -1,4 +1,13 @@
 ﻿export class Logo_Template {
+    //#region setup
+    /**
+     * Width  of logo template
+     */
+    static width = 1000;
+    /**
+     * Height  of logo template
+     */
+    static height = 1000;
     //#endregion
     //#region template
     /**
@@ -20,13 +29,4 @@
             '</svg>\n';
     }
 }
-//#region setup
-/**
- * Width  of logo template
- */
-Logo_Template.width = 1000;
-/**
- * Height  of logo template
- */
-Logo_Template.height = 1000;
 //# sourceMappingURL=logo.template.js.map

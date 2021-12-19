@@ -1,4 +1,13 @@
 ﻿export class Youtube_Template {
+    //#region setup
+    /**
+     * Width  of youtube template
+     */
+    static width = 2560;
+    /**
+     * Height  of youtube template
+     */
+    static height = 1440;
     //#endregion
     //#region template
     /**
@@ -32,13 +41,4 @@
             '</svg>\n';
     }
 }
-//#region setup
-/**
- * Width  of youtube template
- */
-Youtube_Template.width = 2560;
-/**
- * Height  of youtube template
- */
-Youtube_Template.height = 1440;
 //# sourceMappingURL=youtube-title.template.js.map

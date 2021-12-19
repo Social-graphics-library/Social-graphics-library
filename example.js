@@ -1,6 +1,7 @@
 import { SGL } from "./dist/sgl.js";
 
-if(typeof window !== "undefined") {	
+if (typeof window !== 'undefined') 
+{
     window.onload = function () {
         var sgl = new SGL();
 

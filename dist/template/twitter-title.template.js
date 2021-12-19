@@ -1,4 +1,13 @@
 ﻿export class Twitter_Template {
+    //#region setup
+    /**
+     * Width  of twitter template
+     */
+    static width = 1500;
+    /**
+     * Height  of twitter template
+     */
+    static height = 500;
     //#endregion
     //#region template
     /**
@@ -30,13 +39,4 @@
             '</svg>';
     }
 }
-//#region setup
-/**
- * Width  of twitter template
- */
-Twitter_Template.width = 1500;
-/**
- * Height  of twitter template
- */
-Twitter_Template.height = 500;
 //# sourceMappingURL=twitter-title.template.js.map
