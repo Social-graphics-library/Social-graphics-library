@@ -3,6 +3,9 @@ import { Info } from "./model/info.js";
 import { Generator } from "./controller/generator.js";
 import { TemplateInjector } from "./controller/templateInjector.js";
 import { ImportTemplate } from "./model/importTemplate.js";
+import { TcheckTemplateMode } from "./types/TcheckTemplateMode.js";
+import { TcheckAllTemplatesFalse } from "./types/TchekAllTemplatesFalse.js";
+import { Template } from "./model/templateBase.js";
 
 /**
  * Social graphics library:
@@ -11,9 +14,15 @@ import { ImportTemplate } from "./model/importTemplate.js";
 export class SGL {
 
 	//#region properties
+	/**
+	 * Template inject of sgl
+	 */
 	private templateInject: TemplateInjector;
 	//#endregion
 
+	/**
+	 * Creates an instance of sgl.
+	 */
 	constructor() {
 		this.templateInject = new TemplateInjector();
 	}
@@ -86,6 +95,27 @@ export class SGL {
 
 		this.templateInject.injector(importedTemplates)
 
+	}
+
+	/**
+	 * Checks template
+	 * @param mode
+	 * @param [templateName]
+	 * @param [template]
+	 * @returns boolean | response object
+	 */
+	public checkTemplate(mode: TcheckTemplateMode, templateName?: string, template?: Template): boolean | TcheckAllTemplatesFalse {
+
+		return this.templateInject.checkTemplate(mode, templateName, template);
+
+	}
+
+	/**
+	 * Gets injected templates
+	 * @returns injected templates
+	 */
+	public getInjectedTemplates(): Array<ImportTemplate> {
+		return this.templateInject.getList();
 	}
 	//#endregion
 

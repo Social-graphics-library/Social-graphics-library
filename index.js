@@ -1,4 +1,5 @@
 import { SGL } from './dist/sgl.js'
+import { Example_Template } from './dist/template/example.template.js'
 
 var sgl = new SGL();
 
@@ -40,5 +41,32 @@ document
 					document.getElementById('uName').value,
 					'logo',
 					'webp'
-					));
+				));
 		});
+
+sgl.inject([
+	{
+		"callName": "example_template",
+		"template": new Example_Template()
+	},
+	{
+		"callName": "example_template2",
+		"template": new Example_Template()
+	}
+]);
+
+console.log(
+	sgl.checkTemplate("basic", "example_template")
+);
+
+console.log(
+	sgl.checkTemplate("advanced", "example_template", new Example_Template())
+);
+
+console.log(
+	sgl.checkTemplate("all")
+);
+
+console.log(
+	sgl.getInjectedTemplates()
+)
