@@ -1,4 +1,13 @@
 ﻿export class Example_Template {
+    //#region setup
+    /**
+     * Width  of example template
+     */
+    static width = 1000;
+    /**
+     * Height  of example template
+     */
+    static height = 1000;
     //#endregion
     //#region template
     /**
@@ -11,13 +20,4 @@
         return 'svg string';
     }
 }
-//#region setup
-/**
- * Width  of example template
- */
-Example_Template.width = 1000;
-/**
- * Height  of example template
- */
-Example_Template.height = 1000;
 //# sourceMappingURL=example.template.js.map

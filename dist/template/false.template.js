@@ -1,4 +1,13 @@
 ﻿export class False_Template {
+    //#region setup
+    /**
+     * Width  of false template
+     */
+    static width = 1000;
+    /**
+     * Height  of false template
+     */
+    static height = 1000;
     //#endregion
     //#region template
     /**
@@ -11,13 +20,4 @@
             '</svg>\n';
     }
 }
-//#region setup
-/**
- * Width  of false template
- */
-False_Template.width = 1000;
-/**
- * Height  of false template
- */
-False_Template.height = 1000;
 //# sourceMappingURL=false.template.js.map
