@@ -127,6 +127,62 @@ Es ist möglich, alternativ zum Forkend des Projektes, eigene Templates lokal zu
 
 ---
 
+### Template Prüfen
+
+Um mögliche Fehler vorzubeugen, kann ein bereit injectetes, sowie ein noch nicht injectetes Template geprüft werden.
+Hierfür steht die Methode `checkTemplate` zur Verfügung. Diese gibt einen Bool oder ein Response Objekt zurück.
+
+Ein beispielhafter Aufruf:
+
+    SGL.checkTemplate("basic", "example_template")
+
+    // Gibt true oder false zurück
+
+    SGL.checkTemplate("advanced", "example_template", new Example_Template())
+
+    // Gibt true oder false zurück
+
+    SGL.checkTemplate("all")
+
+    // Gibt entweder true oder ein Response Objekt zurück
+
+> Für diesen Endpunkt stehen 3 Nutzungsmodi zur Verfügung:
+>
+> - basic
+>   - Prüft ob ein bereits injectetes Template vorhanden und valide ist.
+>   - Gibt ein Bool zurück.
+> - advanced
+>   - Prüft ob ein an dieser Stelle übergebenes Template vorhanden und valide ist.
+>   - Gibt ein Bool zurück.
+> - all
+>   - Prüft alle bereits injecteten Templates.
+>   - Gibt entweder true oder ein Response Object zurück.
+>
+> Das Default Verhalten bei fehlenden Parametern ist die Rückgabe von false.
+
+---
+
+### Alle injecteten Templates abfragen
+
+Es besteht die Möglichkeit, alle injecteten Templates abzufragen. Dazu steht die Methode `getInjectedTemplates` zur Verfügung. Das Rückgabe Objekt enthällt ein Array, bestehend aus Objekten, welche die Namen und die Klassen der injecteten Temnplates enthalten.
+
+    SGL.getInjectedTemplates()
+
+    // Gibt ein Array aus Objekten zurück
+    // Beispiel:
+    // [
+    //    {
+    //      "callName":"example_template",
+    //      "template":{}
+    //    },
+    //    {
+    //      "callName":"example_template2",
+    //      "template":{}
+    //    }
+    //]
+
+---
+
 ### Templates
 
 Um eine Grafik generieren zu können, müssen sogenannte Template Dateien vorbereitet werden. Dabei handelt es sich um Typescript Klassen, in welchen die Grunddaten hinterlegt sind.
@@ -283,6 +339,62 @@ It is possible to inject your own templates locally as an alternative to forking
         "template": new Template()
       }
     ])
+
+---
+
+### Check template
+
+To prevent possible errors, a template that has already been injected and one that has not yet been injected can be checked.
+The `checkTemplate` method is available for this purpose. This returns a bool or a response object.
+
+An exemplary call:
+
+    SGL.checkTemplate("basic", "example_template")
+
+    // Returns true or false
+
+    SGL.checkTemplate("advanced", "example_template", new Example_Template())
+
+    // Returns true or false
+
+    SGL.checkTemplate("all")
+
+    // Returns either true or a response object
+
+> There are 3 usage modes available for this endpoint:
+>
+> - basic
+> - Checks if an already injected template exists and is valid.
+> - Returns a bool.
+> - advanced
+> - Checks if a template passed at this point is present and valid.
+> - Returns a bool.
+> - all
+> - Checks all already injected templates.
+> - Returns either true or a response object.
+>
+> The default behavior for missing parameters is to return false.
+
+---
+
+### Query all injected templates
+
+It is possible to query all injected templates. The 'getInjectedTemplates' method is available for this purpose. The return object contains an array of objects that contain the names and classes of the injected templates.
+
+    SGL.getInjectedTemplates()
+
+    // Returns an array of objects
+    // Example:
+    // [
+    // {
+    // "callName": "example_template",
+    // "template":{}
+    // },
+    // {
+    // "callName": "example_template2",
+    // "template":{}
+    // }
+    //]
 
 ---
 
