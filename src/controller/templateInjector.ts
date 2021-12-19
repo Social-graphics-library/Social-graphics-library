@@ -100,15 +100,31 @@ export class TemplateInjector {
 
 			case 'advanced':
 
-				if (!template
-					|| template.width <= 0
-					|| template.height <= 0
-					|| templateName != ''
-				) {
+				const cache: Template[] = []
+
+				try {
+					cache.push(<Template>template)
+				} catch (error) {
 					return false
-				} else {
-					return true
 				}
+
+				cache.forEach(tmp => {
+					if (!tmp
+						|| tmp.width <= 0
+						|| tmp.height <= 0
+						|| tmp.template == undefined
+						|| tmp.template == null
+						|| templateName == ''
+						|| templateName == null
+						|| templateName == undefined
+					) {
+						return false
+					} else {
+						return true
+					}
+				})
+
+				return true
 
 			case 'all':
 

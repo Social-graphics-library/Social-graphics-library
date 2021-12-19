@@ -66,3 +66,7 @@ console.log(
 console.log(
 	sgl.checkTemplate("all")
 );
+
+console.log(
+	sgl.getInjectedTemplates()
+)

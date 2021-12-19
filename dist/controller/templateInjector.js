@@ -74,15 +74,29 @@ export class TemplateInjector {
                     return false;
                 }
             case 'advanced':
-                if (!template
-                    || template.width <= 0
-                    || template.height <= 0
-                    || templateName != '') {
+                const cache = [];
+                try {
+                    cache.push(template);
+                }
+                catch (error) {
                     return false;
                 }
-                else {
-                    return true;
-                }
+                cache.forEach(tmp => {
+                    if (!tmp
+                        || tmp.width <= 0
+                        || tmp.height <= 0
+                        || tmp.template == undefined
+                        || tmp.template == null
+                        || templateName == ''
+                        || templateName == null
+                        || templateName == undefined) {
+                        return false;
+                    }
+                    else {
+                        return true;
+                    }
+                });
+                return true;
             case 'all':
                 let falseList = [];
                 this.injectList.forEach(template => {

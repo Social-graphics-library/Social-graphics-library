@@ -1,3 +1,6 @@
+/**
+ * Template
+ */
 export interface Template {
 
 	/**
