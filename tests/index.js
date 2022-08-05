@@ -1,4 +1,4 @@
-import { SGL } from './dist/sgl.js'
+import { SGL } from '../dist/sgl.js'
 import { Example_Template } from './dist/template/example.template.js'
 
 var sgl = new SGL();

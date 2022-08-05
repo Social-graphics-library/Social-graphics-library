@@ -9,16 +9,16 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/social-graphics-library/social-graphics-library/badge)](https://www.codefactor.io/repository/github/social-graphics-library/social-graphics-library)
 [![TypeScript](https://img.shields.io/badge/Developed%20in-TypeScript-blue?logo=typescript)](https://www.typescriptlang.org/)
 
-# Languages
+## Languages
 
 - [Deutsche Version](#german)
 - [English Version](#english)
 
---------------------------------------------------------------------------------------------------------
+______________________________________________________________________________________________________--
 
-# German
+## German
 
-### Installation
+### Einrichtung
 
 > Für die neueste stabile Version:
 
@@ -31,7 +31,7 @@ zum Generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitg
 
 <img src="https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
 
-### Support
+### Hilfe
 
 Es besteht auch Support über den [Software Support Discord Server](https://discord.gg/fraspbc)
 
@@ -96,7 +96,7 @@ Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `mu
     - true
     - false
 
----
+___
 
 ### Nur DataURL
 
@@ -112,7 +112,7 @@ Ein beispielhafter aufruf:
       'webp'
     ));
 
----
+___
 
 ### Inject Template (Experimentelles Feature)
 
@@ -125,7 +125,7 @@ Es ist möglich, alternativ zum Forkend des Projektes, eigene Templates lokal zu
       }
     ])
 
----
+___
 
 ### Template prüfen
 
@@ -160,7 +160,7 @@ Ein beispielhafter Aufruf:
 >
 > Das Default Verhalten bei fehlenden Parametern ist die Rückgabe von false.
 
----
+___
 
 ### Alle injecteten Templates abfragen
 
@@ -181,9 +181,9 @@ Es besteht die Möglichkeit, alle injecteten Templates abzufragen. Dazu steht di
     //    }
     //]
 
----
+___
 
-### Templates
+### Vorlagen
 
 Um eine Grafik generieren zu können, müssen sogenannte Template Dateien vorbereitet werden. Dabei handelt es sich um Typescript Klassen, in welchen die Grunddaten hinterlegt sind.
 
@@ -206,7 +206,7 @@ Ein simples Template ist wie folgt aufgebaut:
 
 Für das Erstellen und Anpassen liegen im `assetes` Ordner diverse Vorlagen für die großen Social Media Plattformen im .afpub Format vor. Diese können mit Programmen der [Affinity Familie von Serif](http://affinity.serif.com/) geöffnet und bearbeitet werden. Alternativ liegen im `svg` Verzeichnis die daraus generierten Files.
 
-### Achtung!
+### Achtung
 
 > Beim Anlegen eines SVG files muss darauf geachtet werden, dass die später dynamischen Teile als TEXT und nicht als Vektor hinterlegt sind.
 
@@ -217,21 +217,21 @@ muss die Klasse im glc File in der `generator` methoden eingepflegt werden.
 
 Danach nur noch kompilieren, einbinden und es ist fertig.
 
----
+___
 
 ### Template Generator
 
 Der [SGL Template Generator](https://github.com/Social-graphics-library/Template-Generator) ist ein auf Electron basierendes Werkzeug zur Generierung von JavaScript-/TypeScript-Vorlagenklassen für die Social Graphics Library aus SVG-Dateien. Die Dokumentation des Tools findet sich im entsprechenden Repository, sowie Downloadlinks für die aktuelle Version.
 
----
+___
 
 ## Beispiel
 
 ![Example Gif](https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/Demo.gif)
 
---------------------------------------------------------------------------------------------------------
+______________________________________________________________________________________________________--
 
-# English
+## English
 
 ### Installation
 
@@ -311,7 +311,7 @@ Alternatively, if several graphics are to be generated, the `multiGenerator` met
     - true
     - false
 
----
+___
 
 ### DataURL only
 
@@ -327,7 +327,7 @@ An exemplary call:
        'webp'
      ));
 
----
+___
 
 ### Inject Template (Experimental Feature)
 
@@ -340,7 +340,7 @@ It is possible to inject your own templates locally as an alternative to forking
       }
     ])
 
----
+___
 
 ### Check template
 
@@ -375,7 +375,7 @@ An exemplary call:
 >
 > The default behavior for missing parameters is to return false.
 
----
+___
 
 ### Query all injected templates
 
@@ -396,7 +396,7 @@ It is possible to query all injected templates. The 'getInjectedTemplates' metho
     // }
     //]
 
----
+___
 
 ### Templates
 
@@ -421,7 +421,7 @@ A simple template is structured as follows:
 
 For creating and customizing, various templates for the major social media platforms are available in the `assetes` folder in .afpub format. These can be opened and edited with programs from the [Affinity family from Serif](http://affinity.serif.com/). Alternatively, the files generated from them are located in the `svg` directory.
 
-### Attention!
+### Attention
 
 > When creating an SVG file, make sure that the dynamic parts are stored as TEXT and not as a vector.
 
@@ -432,13 +432,13 @@ you have to add the class in the sgl file in the `generator` methods.
 
 After that just compile, include and it is ready.
 
----
+___
 
-### Template Generator
+### Template generator
 
 The [SGL Template Generator](https://github.com/Social-graphics-library/Template-Generator) is an Electron-based tool for generating JavaScript/TypeScript template classes for the Social Graphics Library from SVG files. Documentation for the tool can be found in the corresponding repository, as well as download links for the current version.
 
----
+___
 
 ## Example
 
