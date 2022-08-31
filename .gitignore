@@ -193,3 +193,4 @@ typings/
 dist
 tests/index.js
 tools/updateInfo.js
+src/**/*.js

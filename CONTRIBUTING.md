@@ -6,6 +6,7 @@ First off, thanks for taking the time to contribute! ❤️
 All types of contributions are encouraged and valued. See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved. The community looks forward to your contributions. 🎉
 
 > And if you like the project, but just don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
+>
 > - Star the project
 > - Tweet about it
 > - Refer this project in your project's readme
@@ -23,8 +24,6 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 - [Styleguides](#styleguides)
   - [Commit Messages](#commit-messages)
 - [Join The Project Team](#join-the-project-team)
-
-
 
 ## I Have a Question
 
@@ -58,6 +57,7 @@ Depending on how large the project is, you may want to outsource the questioning
 ## I Want To Contribute
 
 > ### Legal Notice <!-- omit in toc -->
+>
 > When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.
 
 ### Reporting Bugs
@@ -99,7 +99,6 @@ Once it's filed:
 
 <!-- You might want to create an issue template for bugs and errors that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
-
 ### Suggesting Enhancements
 
 This section guides you through submitting an enhancement suggestion for Social Graphics Library, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
@@ -130,10 +129,13 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/Social
 When setting up the project ether in your local enviroment
 or a GitHub Code Space, you will need to follow these steps:
 
-> ### Step 1: You need to have NodeJs and NPM installed.
->  - [Download NodeJs](https://nodejs.org/en/download/)
-> ### Step 2: You need to run `npm install` in the root directory of the project.
-> ### Step 3: Your good to go!
+> ### Step 1: You need to have NodeJs and NPM installed
+>
+> - [Download NodeJs](https://nodejs.org/en/download/)
+>
+> ### Step 2: You need to run `npm install` in the root directory of the project
+>
+> ### Step 3: Your good to go
 
 When you are ready with your changes, you can submit them to the project's [GitHub repository](https://github.com/Social-graphics-library/Social-graphics-library). Please do this by creating an new pull request and follow the given guidelines.
 
@@ -165,4 +167,5 @@ Before considering joining the project team, please read the [code of conduct](h
 
 <!-- omit in toc -->
 ## Attribution
+
 This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!

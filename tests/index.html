@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="de" xmlns="http://www.w3.org/1999/html">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/sgl.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/sgl.png" />
     <title>SGL Test Page</title>
     <script src="./index.js" type="module"></script>
     <style type="text/css">
-        #banner {
-            float: left;
-        }
+      #banner {
+        float: left;
+      }
 
-        #banner h2,
-        label,
-        button {
-            font-family: Arial, serif;
-        }
+      #banner h2,
+      label,
+      button {
+        font-family: Arial, serif;
+      }
 
-        #logo {
-            float: right;
-        }
+      #logo {
+        float: right;
+      }
 
-        #wrapper {
-            width: 90%;
-        }
-
+      #wrapper {
+        width: 90%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <label>
-        Player Name:
-        <input type="text" id="uName" alt="Name">
-        Team Name:
-        <input type="text" id="tName" alt="Name">
+      Player Name:
+      <input type="text" id="uName" alt="Name" />
+      Team Name:
+      <input type="text" id="tName" alt="Name" />
     </label>
     <button type="submit" id="generate">Generate</button>
 
-
     <div id="wrapper">
-        <div id="banner">
-            <div class="item">
-                <h2>Twitch: </h2>
-                <div id="img-container-1" style="width: 500px; height: auto"></div>
-            </div>
-            <div class="item">
-                <h2>Twitter: </h2>
-                <div id="img-container-3" style="width: 500px; height: auto"></div>
-            </div>
-            <div class="item">
-                <h2>Youtube: </h2>
-                <div id="img-container-4" style="width: 500px; height: auto"></div>
-            </div>
+      <div id="banner">
+        <div class="item">
+          <h2>Twitch:</h2>
+          <div id="img-container-1"></div>
         </div>
-        <div id="logo">
-            <div class="item">
-                <div id="img-container-5" style="width: 500px; height: auto"></div>
-            </div>
+        <div class="item">
+          <h2>Twitter:</h2>
+          <div id="img-container-3"></div>
         </div>
+        <div class="item">
+          <h2>Youtube:</h2>
+          <div id="img-container-4"></div>
+        </div>
+      </div>
+      <div id="logo">
+        <div class="item">
+          <div id="img-container-5"></div>
+        </div>
+      </div>
     </div>
-
-</body>
+    <style>
+      .item div {
+        width: 500px;
+        height: auto;
+      }
+    </style>
+  </body>
 </html>
