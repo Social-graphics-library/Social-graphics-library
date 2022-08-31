@@ -9,20 +9,132 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/social-graphics-library/social-graphics-library/badge)](https://www.codefactor.io/repository/github/social-graphics-library/social-graphics-library)
 [![TypeScript](https://img.shields.io/badge/Developed%20in-TypeScript-blue?logo=typescript)](https://www.typescriptlang.org/)
 
-# Languages
+## Menü
 
-- [Deutsche Version](#german)
-- [English Version](#english)
+- [Social Graphics Library](#social-graphics-library)
+  - [Menü](#menü)
+  - [Example/Beispiel](#examplebeispiel)
+  - [German](#german)
+    - [Einrichtung](#einrichtung)
+    - [Einführung](#einführung)
+    - [Hilfe](#hilfe)
+    - [Aufbau](#aufbau)
+    - [Modifikatoren](#modifikatoren)
+    - [Nur DataURL](#nur-dataurl)
+    - [Inject Template (Experimentelles Feature)](#inject-template-experimentelles-feature)
+    - [Template prüfen](#template-prüfen)
+    - [Alle injecteten Templates abfragen](#alle-injecteten-templates-abfragen)
+    - [Vorlagen](#vorlagen)
+    - [Achtung](#achtung)
+    - [Template Generator](#template-generator)
+  - [Vorschau](#vorschau)
+  - [English](#english)
+    - [Installation](#installation)
+    - [Introduction](#introduction)
+    - [Support](#support)
+    - [Structure](#structure)
+    - [Modifiers](#modifiers)
+    - [DataURL only](#dataurl-only)
+    - [Inject Template (Experimental Feature)](#inject-template-experimental-feature)
+    - [Check template](#check-template)
+    - [Query all injected templates](#query-all-injected-templates)
+    - [Templates](#templates)
+    - [Attention](#attention)
+    - [Template generator](#template-generator-1)
+  - [Preview](#preview)
 
---------------------------------------------------------------------------------------------------------
+---
 
-# German
+## Example/Beispiel
 
-### Installation
+```typescript
+import { SocialGraphicsLibrary } from 'social-graphics-library';
+
+const sgl = new SocialGraphicsLibrary();
+
+console.log(SGL.info());
+
+console.log(SGL.VERSION);
+
+const generate = document.getElementById('generate') as HTMLButtonElement;
+const tName = document.getElementById('tName') as HTMLInputElement;
+const uName = document.getElementById('uName') as HTMLInputElement;
+
+generate
+ .addEventListener("click",
+  async function () {
+   sgl
+    .multiGenerator(
+     tName
+     .value,
+     uName.value, [{
+       mode: 'twitch-title',
+       containerId: 'img-container-1',
+       imgMode: 'webp',
+       generateLink: false
+      }, {
+       mode: 'twitter-title',
+       containerId: 'img-container-3',
+       imgMode: 'webp',
+       generateLink: false
+      }, {
+       mode: 'youtube-title',
+       containerId: 'img-container-4',
+       imgMode: 'jpeg',
+       generateLink: true
+      }, {
+       mode: 'logo',
+       containerId: 'img-container-5',
+       imgMode: 'png',
+       generateLink: true
+      }])
+
+   console.log(
+    await sgl.getImageDataUrl(
+     tName.value,
+     uName.value,
+     'logo',
+     'webp'
+    ));
+  });
+
+sgl.inject([
+ {
+  "callName": "example_template",
+  "template": new Example_Template() as Template
+ },
+ {
+  "callName": "example_template2",
+  "template": new Example_Template() as Template
+ }
+]);
+
+console.log(
+ sgl.checkTemplate("basic", "example_template")
+);
+
+console.log(
+ sgl.checkTemplate("advanced", "example_template", new Example_Template() as Template)
+);
+
+console.log(
+ sgl.checkTemplate("all")
+);
+
+console.log(
+ sgl.getInjectedTemplates()
+)
+```
+
+## German
+
+### Einrichtung
 
 > Für die neueste stabile Version:
 
+```bash
     npm i social-graphics-library
+```
 
 ### Einführung
 
@@ -31,7 +143,7 @@ zum Generieren von von SVG, PNG, JPEG und WebP Grafiken für Community Team Mitg
 
 <img src="https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/sgl.png" alt="Logo" width="200px" height="auto" align="right" position="absolute">
 
-### Support
+### Hilfe
 
 Es besteht auch Support über den [Software Support Discord Server](https://discord.gg/fraspbc)
 
@@ -40,26 +152,30 @@ Es besteht auch Support über den [Software Support Discord Server](https://disc
 Zum Generieren einer Grafik wird die statische Funktion `generator`
 auf der Klasse `SGL` aufgerufen:
 
-    new SGL.generator(
-        teamName,
-        playerName,
-        mode,
-        containerId,
-        imgMode
-      );
+```typescript
+new SGL.generator(
+    teamName,
+    playerName,
+    mode,
+    containerId,
+    imgMode
+  );
+```
 
 Alternativ kann auch, sollten mehrere Grafiken generiert werden, die Methode `multiGenerator` aufgerufen werden:
 
-    new SGL.multiGenerator(tName, pName, [{
-              mode: 'twitch-title',
-              containerId: 'img-container-1',
-              imgMode: 'jpeg'
-          }, {
-              mode: 'elavate-title',
-              containerId: 'img-container-2',
-              imgMode: 'jpeg',
-              generateLink: true
-          }]
+```typescript
+new SGL.multiGenerator(tName, pName, [{
+          mode: 'twitch-title',
+          containerId: 'img-container-1',
+          imgMode: 'jpeg'
+      }, {
+          mode: 'elavate-title',
+          containerId: 'img-container-2',
+          imgMode: 'jpeg',
+          generateLink: true
+      }]);
+```
 
 ### Modifikatoren
 
@@ -105,12 +221,14 @@ Hierfür wird die Methode `getImageDataUrl` auf der Klasse `SGL` aufgerufen. Die
 
 Ein beispielhafter aufruf:
 
-    await new SGL.getImageDataUrl(
-      document.getElementById('M. Mustermann').value,
-      document.getElementById('Mustercorp').value,
-      'logo',
-      'webp'
-    ));
+```typescript
+await new SGL.getImageDataUrl(
+  document.getElementById('M. Mustermann').value,
+  document.getElementById('Mustercorp').value,
+  'logo',
+  'webp'
+);
+```
 
 ---
 
@@ -118,12 +236,14 @@ Ein beispielhafter aufruf:
 
 Es ist möglich, alternativ zum Forkend des Projektes, eigene Templates lokal zu injecten. Dazu einfach das NPM Packet installieren mit `npm i social-graphics-library` , danach kann nach der Initialisierung mit der folgenden Methode ein Template Injekted werden:
 
-    new SGL.inject([
-      {
-        "callName": "template_name",
-        "template": new Template()
-      }
-    ])
+```typescript
+new SGL.inject([
+  {
+    "callName": "template_name",
+    "template": new Template()
+  }
+])
+```
 
 ---
 
@@ -134,17 +254,19 @@ Hierfür steht die Methode `checkTemplate` zur Verfügung. Diese gibt einen Bool
 
 Ein beispielhafter Aufruf:
 
-    SGL.checkTemplate("basic", "example_template")
+```typescript
+SGL.checkTemplate("basic", "example_template")
 
-    // Gibt true oder false zurück
+// Gibt true oder false zurück
 
-    SGL.checkTemplate("advanced", "example_template", new Example_Template())
+SGL.checkTemplate("advanced", "example_template", new Example_Template())
 
-    // Gibt true oder false zurück
+// Gibt true oder false zurück
 
-    SGL.checkTemplate("all")
+SGL.checkTemplate("all")
 
-    // Gibt entweder true oder ein Response Objekt zurück
+// Gibt entweder true oder ein Response Objekt zurück
+```
 
 > Für diesen Endpunkt stehen 3 Nutzungsmodi zur Verfügung:
 >
@@ -166,29 +288,32 @@ Ein beispielhafter Aufruf:
 
 Es besteht die Möglichkeit, alle injecteten Templates abzufragen. Dazu steht die Methode `getInjectedTemplates` zur Verfügung. Das Rückgabe Objekt enthält ein Array, bestehend aus Objekten, welche die Namen und die Klassen der injecteten Temnplates enthalten.
 
-    SGL.getInjectedTemplates()
+```typescript
+SGL.getInjectedTemplates()
 
-    // Gibt ein Array aus Objekten zurück
-    // Beispiel:
-    // [
-    //    {
-    //      "callName":"example_template",
-    //      "template":{}
-    //    },
-    //    {
-    //      "callName":"example_template2",
-    //      "template":{}
-    //    }
-    //]
+// Gibt ein Array aus Objekten zurück
+// Beispiel:
+// [
+//    {
+//      "callName":"example_template",
+//      "template":{}
+//    },
+//    {
+//      "callName":"example_template2",
+//      "template":{}
+//    }
+//]
+```
 
 ---
 
-### Templates
+### Vorlagen
 
 Um eine Grafik generieren zu können, müssen sogenannte Template Dateien vorbereitet werden. Dabei handelt es sich um Typescript Klassen, in welchen die Grunddaten hinterlegt sind.
 
 Ein simples Template ist wie folgt aufgebaut:
 
+```typescript
     export class Example_Template {
 
       static readonly width: number = 1000;
@@ -201,12 +326,13 @@ Ein simples Template ist wie folgt aufgebaut:
         return 'svg string';
       }
     }
+```
 
 > Die Klasse hat immer(!) ein Feld für die Breite, eines für die Höhe und eine Methode, welche den SVG String zurückgibt.
 
 Für das Erstellen und Anpassen liegen im `assetes` Ordner diverse Vorlagen für die großen Social Media Plattformen im .afpub Format vor. Diese können mit Programmen der [Affinity Familie von Serif](http://affinity.serif.com/) geöffnet und bearbeitet werden. Alternativ liegen im `svg` Verzeichnis die daraus generierten Files.
 
-### Achtung!
+### Achtung
 
 > Beim Anlegen eines SVG files muss darauf geachtet werden, dass die später dynamischen Teile als TEXT und nicht als Vektor hinterlegt sind.
 
@@ -225,19 +351,21 @@ Der [SGL Template Generator](https://github.com/Social-graphics-library/Template
 
 ---
 
-## Beispiel
+## Vorschau
 
 ![Example Gif](https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/Demo.gif)
 
---------------------------------------------------------------------------------------------------------
+---
 
-# English
+## English
 
 ### Installation
 
 > For the latest stable version:
 
-     npm i social-graphics-library
+```bash
+npm i social-graphics-library
+```
 
 ### Introduction
 
@@ -255,26 +383,30 @@ There is also support via the [Software Support Discord Server](https://discord.
 The static function `generator` is used to generate a graphic
 called on the class `SGL`:
 
-    new SGL.generator(
-        teamName,
-        playerName,
-        mode,
-        containerId,
-        imgMode
-      );
+```typescript
+new SGL.generator(
+    teamName,
+    playerName,
+    mode,
+    containerId,
+    imgMode
+  );
+```
 
 Alternatively, if several graphics are to be generated, the `multiGenerator` method can be called:
 
-    new SGL.multiGenerator(tName, pName, [{
-              mode: 'twitch-title',
-              containerId: 'img-container-1',
-              imgMode: 'jpeg'
-          }, {
-              mode: 'elavate-title',
-              containerId: 'img-container-2',
-              imgMode: 'jpeg',
-              generateLink: true
-          }]
+```typescript
+new SGL.multiGenerator(tName, pName, [{
+          mode: 'twitch-title',
+          containerId: 'img-container-1',
+          imgMode: 'jpeg'
+      }, {
+          mode: 'elavate-title',
+          containerId: 'img-container-2',
+          imgMode: 'jpeg',
+          generateLink: true
+      }]
+```
 
 ### Modifiers
 
@@ -320,12 +452,14 @@ For this the method `getImageDataUrl` is called on the class`SGL`. This returns 
 
 An exemplary call:
 
-     await new SGL.getImageDataUrl (
-       document.getElementById ('M. Mustermann'). value,
-       document.getElementById ('Mustercorp'). value,
-       'logo',
-       'webp'
-     ));
+```typescript
+await new SGL.getImageDataUrl (
+  document.getElementById ('M. Mustermann'). value,
+  document.getElementById ('Mustercorp'). value,
+  'logo',
+  'webp'
+));
+```
 
 ---
 
@@ -333,12 +467,14 @@ An exemplary call:
 
 It is possible to inject your own templates locally as an alternative to forking the project. To do this, simply install the NPM package with `npm i social-graphics-library`, then a template can be injected after initialization with the following method:
 
-    new SGL.inject([
-      {
-        "callName": "template_name",
-        "template": new Template()
-      }
-    ])
+```typescript
+new SGL.inject([
+  {
+    "callName": "template_name",
+    "template": new Template()
+  }
+])
+```
 
 ---
 
@@ -349,17 +485,19 @@ The `checkTemplate` method is available for this purpose. This returns a bool or
 
 An exemplary call:
 
-    SGL.checkTemplate("basic", "example_template")
+```typescript
+SGL.checkTemplate("basic", "example_template")
 
-    // Returns true or false
+// Returns true or false
 
-    SGL.checkTemplate("advanced", "example_template", new Example_Template())
+SGL.checkTemplate("advanced", "example_template", new Example_Template())
 
-    // Returns true or false
+// Returns true or false
 
-    SGL.checkTemplate("all")
+SGL.checkTemplate("all")
 
-    // Returns either true or a response object
+// Returns either true or a response object
+```
 
 > There are 3 usage modes available for this endpoint:
 >
@@ -381,20 +519,22 @@ An exemplary call:
 
 It is possible to query all injected templates. The 'getInjectedTemplates' method is available for this purpose. The return object contains an array of objects that contain the names and classes of the injected templates.
 
-    SGL.getInjectedTemplates()
+```typescript
+SGL.getInjectedTemplates()
 
-    // Returns an array of objects
-    // Example:
-    // [
-    // {
-    // "callName": "example_template",
-    // "template":{}
-    // },
-    // {
-    // "callName": "example_template2",
-    // "template":{}
-    // }
-    //]
+// Returns an array of objects
+// Example:
+// [
+// {
+// "callName": "example_template",
+// "template":{}
+// },
+// {
+// "callName": "example_template2",
+// "template":{}
+// }
+//]
+```
 
 ---
 
@@ -404,24 +544,26 @@ In order to be able to generate a graphic, so-called template files must be prep
 
 A simple template is structured as follows:
 
-    export class Example_Template {
+```typescript
+export class Example_Template {
 
-      static readonly width: number = 1000;
+  static readonly width: number = 1000;
 
-      static readonly height: number = 1000;
+  static readonly height: number = 1000;
 
-      static template(teamName: string, playerName: string): string {
-        teamName;
-        playerName;
-        return 'svg string';
-      }
-    }
+  static template(teamName: string, playerName: string): string {
+    teamName;
+    playerName;
+    return 'svg string';
+  }
+}
+```
 
 > The class always(!) has a field for the width, one for the height and a method which returns the SVG string.
 
 For creating and customizing, various templates for the major social media platforms are available in the `assetes` folder in .afpub format. These can be opened and edited with programs from the [Affinity family from Serif](http://affinity.serif.com/). Alternatively, the files generated from them are located in the `svg` directory.
 
-### Attention!
+### Attention
 
 > When creating an SVG file, make sure that the dynamic parts are stored as TEXT and not as a vector.
 
@@ -434,12 +576,12 @@ After that just compile, include and it is ready.
 
 ---
 
-### Template Generator
+### Template generator
 
 The [SGL Template Generator](https://github.com/Social-graphics-library/Template-Generator) is an Electron-based tool for generating JavaScript/TypeScript template classes for the Social Graphics Library from SVG files. Documentation for the tool can be found in the corresponding repository, as well as download links for the current version.
 
 ---
 
-## Example
+## Preview
 
 ![Example Gif](https://raw.githubusercontent.com/JosunLP/Social-graphics-library/master/assets/Demo.gif)
