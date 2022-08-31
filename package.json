@@ -1,18 +1,19 @@
 {
   "name": "social-graphics-library",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A script for generating social media logos and banners",
   "main": "./dist/sgl.js",
-  "types": "dist/sgl.d.ts",
+  "types": "./dist/sgl.d.ts",
   "type": "module",
   "files": [
     "/dist"
   ],
   "scripts": {
-    "dev:build": "tsc",
-    "dev:deploy": "npm install && npm run dev:update && npm run dev:build",
-    "dev:run": "tsc -w",
-    "dev:update": "node ./tools/updateInfo.js",
+    "dev:build": "tsc -p tsconfig.json",
+    "dev:deploy": "npm install && npm run dev:update && npm run dev:prepareTest && npm run dev:build",
+    "dev:run": "tsc -w -p tsconfig.json",
+    "dev:update": "tsc ./tools/updateInfo.ts --target esnext --module esnext && node ./tools/updateInfo.js",
+    "dev:prepareTest": "tsc ./tests/index.ts --target esnext --module esnext --excludeDirectories ./src",
     "prod:deploy": "npm run dev:deploy && npm publish"
   },
   "module": "src/sgl.ts",
@@ -61,6 +62,8 @@
   },
   "homepage": "https://social-graphics-library.net/",
   "devDependencies": {
-    "typescript": "^4.5.2"
-  }
+    "@types/node": "^18.6.4",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {}
 }
