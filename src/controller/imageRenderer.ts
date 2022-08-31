@@ -108,10 +108,8 @@ export class ImageRenderer {
 			document.getElementById("render-canvas" + containerId)!
 		);
 
-		let ctx: CanvasRenderingContext2D | null;
+		const ctx: CanvasRenderingContext2D | null = renderCanvas.getContext("2d");
 		let imgDataUrl: string;
-
-		ctx = renderCanvas.getContext("2d");
 
 		img.onload = () => {
 			ctx!.drawImage(img, 0, 0);
@@ -168,12 +166,15 @@ export class ImageRenderer {
 				"data:image/svg+xml;charset=utf-8;base64, " +
 				window.btoa(new XMLSerializer().serializeToString(inlineSVG)),
 			img = new Image(),
-			canvas = document.createElement("canvas"),
 			imgAtr: string,
 			imgDataUrl: string,
-			containerId: string = new Guid().toString(),
-			container = document.createElement("div");
+			containerId: string = new Guid().toString();
+
+		const canvas = document.createElement("canvas");
+		const container = document.createElement("div");
+
 		container.id = containerId;
+
 
 		document.body.appendChild(container);
 
@@ -234,9 +235,8 @@ export class ImageRenderer {
 			document.getElementById(canvas.id)!
 		);
 
-		let ctx: CanvasRenderingContext2D | null;
-
-		ctx = renderCanvas.getContext("2d");
+		const ctx: CanvasRenderingContext2D | null =
+			renderCanvas.getContext("2d");
 
 		return new Promise<string>((resolve) => {
 			img.onload = () => {
