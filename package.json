@@ -1,6 +1,6 @@
 {
   "name": "social-graphics-library",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A script for generating social media logos and banners",
   "main": "./dist/sgl.js",
   "types": "./dist/sgl.d.ts",
