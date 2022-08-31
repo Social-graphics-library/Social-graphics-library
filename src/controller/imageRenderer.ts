@@ -167,8 +167,8 @@ export class ImageRenderer {
 				window.btoa(new XMLSerializer().serializeToString(inlineSVG)),
 			img = new Image(),
 			imgAtr: string,
-			imgDataUrl: string,
-			containerId: string = new Guid().toString();
+			imgDataUrl: string;
+		const containerId: string = new Guid().toString();
 
 		const canvas = document.createElement("canvas");
 		const container = document.createElement("div");
