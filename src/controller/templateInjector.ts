@@ -81,7 +81,7 @@ export class TemplateInjector {
 					&& this.call(templateName) != null
 				) {
 
-					let tmp = this.call(templateName)
+					const tmp = this.call(templateName)
 
 					if (!tmp
 						|| !tmp.template
@@ -128,7 +128,7 @@ export class TemplateInjector {
 
 			case 'all':
 
-				let falseList: ImportTemplate[] = []
+				const falseList: ImportTemplate[] = []
 
 				this.injectList.forEach(template => {
 					if (template === null
@@ -145,7 +145,7 @@ export class TemplateInjector {
 
 				if (falseList.length > 0) {
 
-					let response: TcheckAllTemplatesFalse = {
+					const response: TcheckAllTemplatesFalse = {
 						response: false,
 						falseList: falseList
 					}

@@ -18,7 +18,7 @@ export class ImageRenderer {
 	 */
 	public static renderImage(svgString: string, width: number, height: number, containerId: string, imgMode: string, generateLink?: boolean): void {
 
-		let xml = svgString,
+		const xml = svgString,
 			parser = new DOMParser(),
 			result: XMLDocument = parser.parseFromString(xml, 'text/xml'),
 			inlineSVG: SVGSVGElement = <SVGSVGElement>result.getElementsByTagName('svg')[0];
@@ -48,7 +48,7 @@ export class ImageRenderer {
 
 				if (generateLink) {
 
-					let downloadLink = document.createElement('a')
+					const downloadLink = document.createElement('a')
 
 					downloadLink.setAttribute('href', data);
 					downloadLink.setAttribute('download', 'image.' + imgMode);
@@ -93,7 +93,7 @@ export class ImageRenderer {
 			throw new Error("The Container " + containerId + " is not defined!");
 		}
 
-		let renderCanvas = <HTMLCanvasElement>document.getElementById('render-canvas' + containerId)!;
+		const renderCanvas = <HTMLCanvasElement>document.getElementById('render-canvas' + containerId)!;
 
 		let ctx: CanvasRenderingContext2D | null;
 		let imgDataUrl: string;
@@ -118,7 +118,7 @@ export class ImageRenderer {
 
 			if (generateLink) {
 
-				let downloadLink = document.createElement('a')
+				const downloadLink = document.createElement('a')
 
 				downloadLink.setAttribute('href', imgDataUrl);
 				downloadLink.setAttribute('download', 'image.' + imgMode);
@@ -139,7 +139,7 @@ export class ImageRenderer {
 	 */
 	public static async getImageDataUrl(svgString: string, width: number, height: number, imgMode: string): Promise<string> {
 
-		let xml = svgString,
+		const xml = svgString,
 			parser = new DOMParser(),
 			result: XMLDocument = parser.parseFromString(xml, 'text/xml'),
 			inlineSVG: SVGSVGElement = <SVGSVGElement>result.getElementsByTagName('svg')[0];
@@ -206,7 +206,7 @@ export class ImageRenderer {
 			throw new Error("The Container " + containerId + " is not defined!");
 		}
 
-		let renderCanvas = <HTMLCanvasElement>document.getElementById(canvas.id)!;
+		const renderCanvas = <HTMLCanvasElement>document.getElementById(canvas.id)!;
 
 		let ctx: CanvasRenderingContext2D | null;
 
