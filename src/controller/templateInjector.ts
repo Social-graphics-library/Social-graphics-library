@@ -8,17 +8,16 @@ import { TcheckAllTemplatesFalse } from "src/types/TchekAllTemplatesFalse.js";
  * Template injector
  */
 export class TemplateInjector {
-
 	/**
 	 * Inject list of template injector
 	 */
-	private injectList: Array<ImportTemplate>
+	private injectList: Array<ImportTemplate>;
 
 	/**
 	 * Creates an instance of template injector.
 	 */
 	constructor() {
-		this.injectList = []
+		this.injectList = [];
 	}
 
 	/**
@@ -26,14 +25,12 @@ export class TemplateInjector {
 	 * @param importedTemplates
 	 */
 	public injector(importedTemplates: Array<ImportTemplate>): void {
-
-		importedTemplates.forEach(template => {
+		importedTemplates.forEach((template) => {
 			if (!template.callName || !template.template) {
 				throw new Error(ErrorCodes.TEMPLATE_INJECTOR_ERROR);
 			}
-			this.injectList.push(template)
-		})
-
+			this.injectList.push(template);
+		});
 	}
 
 	/**
@@ -42,12 +39,11 @@ export class TemplateInjector {
 	 * @returns call
 	 */
 	public call(templateName: string): ImportTemplate | null {
-
 		let result: ImportTemplate | null = null;
 
-		this.injectList.forEach(template => {
+		this.injectList.forEach((template) => {
 			if (template.callName == templateName) {
-				result = template
+				result = template;
 			}
 		});
 
@@ -59,7 +55,7 @@ export class TemplateInjector {
 	 * @returns list of injected Templates
 	 */
 	public getList(): Array<ImportTemplate> {
-		return this.injectList
+		return this.injectList;
 	}
 
 	/**
@@ -69,94 +65,94 @@ export class TemplateInjector {
 	 * @param [template]
 	 * @returns boolean | response object
 	 */
-	public checkTemplate(mode: TcheckTemplateMode, templateName?: string, template?: Template): boolean | TcheckAllTemplatesFalse {
-
+	public checkTemplate(
+		mode: TcheckTemplateMode,
+		templateName?: string,
+		template?: Template
+	): boolean | TcheckAllTemplatesFalse {
 		switch (mode) {
-
-			case 'basic':
-
-				if (templateName != ''
-					&& templateName != null
-					&& templateName != undefined
-					&& this.call(templateName) != null
+			case "basic":
+				if (
+					templateName != "" &&
+					templateName != null &&
+					templateName != undefined &&
+					this.call(templateName) != null
 				) {
+					const tmp = this.call(templateName);
 
-					const tmp = this.call(templateName)
-
-					if (!tmp
-						|| !tmp.template
-						|| tmp.template === undefined
-						|| tmp.template.width <= 0
-						|| tmp.template.height <= 0
+					if (
+						!tmp ||
+						!tmp.template ||
+						tmp.template === undefined ||
+						tmp.template.width <= 0 ||
+						tmp.template.height <= 0
 					) {
-						return false
+						return false;
 					}
 
-					return true
-
+					return true;
 				} else {
-					return false
+					return false;
 				}
 
-			case 'advanced':
-
-				const cache: Template[] = []
+			case "advanced":
+				const cache: Template[] = [];
 
 				try {
-					cache.push(<Template>template)
+					cache.push(<Template>template);
 				} catch (error) {
-					return false
+					return false;
 				}
 
-				cache.forEach(tmp => {
-					if (!tmp
-						|| tmp.width <= 0
-						|| tmp.height <= 0
-						|| tmp.template == undefined
-						|| tmp.template == null
-						|| templateName == ''
-						|| templateName == null
-						|| templateName == undefined
+				cache.forEach((tmp) => {
+					if (
+						!tmp ||
+						tmp.width <= 0 ||
+						tmp.height <= 0 ||
+						tmp.template == undefined ||
+						tmp.template == null ||
+						templateName == "" ||
+						templateName == null ||
+						templateName == undefined
 					) {
-						return false
+						return false;
 					} else {
-						return true
+						return true;
 					}
-				})
+				});
 
-				return true
+				return true;
 
-			case 'all':
+			case "all":
+				const falseList: ImportTemplate[] = [];
 
-				const falseList: ImportTemplate[] = []
-
-				this.injectList.forEach(template => {
-					if (template === null
-						|| template.callName === null
-						|| template.callName === undefined
-						|| template.template === null
-						|| template.template === undefined
-						|| template.template.width <= 0
-						|| template.template.height <= 0
+				this.injectList.forEach((template) => {
+					if (
+						template === null ||
+						template.callName === null ||
+						template.callName === undefined ||
+						template.template === null ||
+						template.template === undefined ||
+						template.template.width <= 0 ||
+						template.template.height <= 0
 					) {
-						falseList.push(template)
+						falseList.push(template);
 					}
 				});
 
 				if (falseList.length > 0) {
-
 					const response: TcheckAllTemplatesFalse = {
 						response: false,
-						falseList: falseList
-					}
+						falseList: falseList,
+					};
 
-					return response
+					return response;
 				}
 
-				return true
+				return true;
 
 			default:
-				return false
+				return false;
 		}
 	}
 }

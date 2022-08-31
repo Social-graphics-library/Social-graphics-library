@@ -12,7 +12,6 @@ import { StringCleaner } from "./stringCleaner.js";
  * Generator
  */
 export class Generator {
-
 	/**
 	 * Runs generator
 	 * @param teamName
@@ -22,8 +21,15 @@ export class Generator {
 	 * @param imgMode
 	 * @param [generateLink]
 	 */
-	public static run(teamName: string, playerName: string, mode: string, containerId: string, imgMode: string, templateInjector: TemplateInjector, generateLink?: boolean): void {
-
+	public static run(
+		teamName: string,
+		playerName: string,
+		mode: string,
+		containerId: string,
+		imgMode: string,
+		templateInjector: TemplateInjector,
+		generateLink?: boolean
+	): void {
 		let svgString: string,
 			width: number,
 			height: number,
@@ -73,18 +79,38 @@ export class Generator {
 		}
 
 		if (templateInjector.call(mode) !== null) {
-			tempTemplate = templateInjector.call(mode)!.template
-			svgString = tempTemplate.template(teamName, playerName)
-			width = tempTemplate.width
-			height = tempTemplate.height
+			tempTemplate = templateInjector.call(mode)!.template;
+			svgString = tempTemplate.template(teamName, playerName);
+			width = tempTemplate.width;
+			height = tempTemplate.height;
 		}
 
-		ImageRenderer.renderImage(svgString, width, height, containerId, imgMode, generateLink)
-
+		ImageRenderer.renderImage(
+			svgString,
+			width,
+			height,
+			containerId,
+			imgMode,
+			generateLink
+		);
 	}
 
-	public static async getImageDataUrl(teamName: string, playerName: string, mode: string, imgMode: string, templateInjector: TemplateInjector): Promise<string> {
-
+	/**
+	 * Gets image data url
+	 * @param teamName
+	 * @param playerName
+	 * @param mode
+	 * @param imgMode
+	 * @param templateInjector
+	 * @returns image data url
+	 */
+	public static async getImageDataUrl(
+		teamName: string,
+		playerName: string,
+		mode: string,
+		imgMode: string,
+		templateInjector: TemplateInjector
+	): Promise<string> {
 		let svgString: string,
 			width: number,
 			height: number,
@@ -134,12 +160,12 @@ export class Generator {
 		}
 
 		if (templateInjector.call(mode) !== null) {
-			tempTemplate = templateInjector.call(mode)!.template
-			svgString = tempTemplate.template(teamName, playerName)
-			width = tempTemplate.width
-			height = tempTemplate.height
+			tempTemplate = templateInjector.call(mode)!.template;
+			svgString = tempTemplate.template(teamName, playerName);
+			width = tempTemplate.width;
+			height = tempTemplate.height;
 		}
 
-		return ImageRenderer.getImageDataUrl(svgString, width, height, imgMode)
+		return ImageRenderer.getImageDataUrl(svgString, width, height, imgMode);
 	}
 }
