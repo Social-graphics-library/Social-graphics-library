@@ -3,7 +3,7 @@
     /**
      * Version  of info
      */
-    _version = "2.1.0";
+    _version = "2.1.1";
     /**
      * Author  of info
      */

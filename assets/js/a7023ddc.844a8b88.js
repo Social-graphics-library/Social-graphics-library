@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksocial_graphics_library=self.webpackChunksocial_graphics_library||[]).push([[713],{3457:l=>{l.exports=JSON.parse('[{"label":"Tests","permalink":"/blog/tags/tests","count":4},{"label":"Update","permalink":"/blog/tags/update","count":5},{"label":"hello","permalink":"/blog/tags/hello","count":1}]')}}]);

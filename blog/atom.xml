@@ -2,18 +2,32 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://social-graphics-library.net/blog</id>
     <title>Social-graphics-library Blog</title>
-    <updated>2021-12-19T00:00:00.000Z</updated>
+    <updated>2022-08-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://social-graphics-library.net/blog"/>
     <subtitle>Social-graphics-library Blog</subtitle>
     <icon>https://social-graphics-library.net/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Version 2.1.1]]></title>
+        <id>version_2_1_1</id>
+        <link href="https://social-graphics-library.net/blog/version_2_1_1"/>
+        <updated>2022-08-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What's Changed]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-changed">What's Changed<a class="hash-link" href="#whats-changed" title="Direct link to heading">​</a></h2><ul><li>Feature/product maintenance by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/128" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/128</a></li><li>Version 2.1.1 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/129" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/129</a></li></ul><p><strong>Full Changelog</strong>: <a href="https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.1.0...v2.1.1" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.1.0...v2.1.1</a></p>]]></content>
+        <author>
+            <name>josunlp</name>
+            <uri>https://github.com/josunlp</uri>
+        </author>
+        <category label="Tests" term="Tests"/>
+        <category label="Update" term="Update"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Version 2.1.0]]></title>
         <id>version_2_1_0</id>
         <link href="https://social-graphics-library.net/blog/version_2_1_0"/>
         <updated>2021-12-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[What's Changed]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="whats-changed">What's Changed<a class="hash-link" href="#whats-changed" title="Direct link to heading">​</a></h2><ul><li>Rechtschreibung #122 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/124" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/124</a></li><li>Feature/test template by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/125" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/125</a></li><li>✅ Version Update 2.1.0 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/126" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/126</a></li></ul><p><strong>Full Changelog</strong>: <a href="https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-changed">What's Changed<a class="hash-link" href="#whats-changed" title="Direct link to heading">​</a></h2><ul><li>Rechtschreibung #122 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/124" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/124</a></li><li>Feature/test template by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/125" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/125</a></li><li>✅ Version Update 2.1.0 by @JosunLP in <a href="https://github.com/Social-graphics-library/Social-graphics-library/pull/126" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/pull/126</a></li></ul><p><strong>Full Changelog</strong>: <a href="https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0" target="_blank" rel="noopener noreferrer">https://github.com/Social-graphics-library/Social-graphics-library/compare/v2.0.1...v2.1.0</a></p>]]></content>
         <author>
             <name>josunlp</name>
             <uri>https://github.com/josunlp</uri>
@@ -26,9 +40,9 @@
         <id>version_2_0_0</id>
         <link href="https://social-graphics-library.net/blog/version_2_0_0"/>
         <updated>2021-12-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Hey everyone,]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="hey-everyone">Hey everyone,<a class="hash-link" href="#hey-everyone" title="Direct link to heading">​</a></h2><p>it's been a while since I've posted a update on the blog and the SGL,
-but i have exciting news!</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="version-200-is-out"><strong>Version 2.0.0 is out!</strong><a class="hash-link" href="#version-200-is-out" title="Direct link to heading">​</a></h3><p>With this release, we have a list of changes and improvements ^^</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="changes">Changes<a class="hash-link" href="#changes" title="Direct link to heading">​</a></h3><ul><li>Updatet packes</li><li>Changed main class name to SGL</li><li>Implemented new call for returning dataURLs</li><li>Improving performance</li></ul><p>It took a while, but now we are ready to go! :D</p>]]></content>
+        <summary type="html"><![CDATA[Hey everyone]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hey-everyone">Hey everyone<a class="hash-link" href="#hey-everyone" title="Direct link to heading">​</a></h2><p>it's been a while since I've posted a update on the blog and the SGL,
+but i have exciting news!</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="version-200-is-out"><strong>Version 2.0.0 is out!</strong><a class="hash-link" href="#version-200-is-out" title="Direct link to heading">​</a></h3><p>With this release, we have a list of changes and improvements ^^</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes">Changes<a class="hash-link" href="#changes" title="Direct link to heading">​</a></h3><ul><li>Updatet packes</li><li>Changed main class name to SGL</li><li>Implemented new call for returning dataURLs</li><li>Improving performance</li></ul><p>It took a while, but now we are ready to go! :D</p>]]></content>
         <author>
             <name>josunlp</name>
             <uri>https://github.com/josunlp</uri>
@@ -41,8 +55,8 @@ but i have exciting news!</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="
         <id>test-area</id>
         <link href="https://social-graphics-library.net/blog/test-area"/>
         <updated>2020-12-04T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Hey everyone,]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="hey-everyone">Hey everyone,<a class="hash-link" href="#hey-everyone" title="Direct link to heading">​</a></h2><p>I've now built a test area on the bottom of the main page. Now you can test the live generation of the images immediately :)</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="josun">Josun<a class="hash-link" href="#josun" title="Direct link to heading">​</a></h3>]]></content>
+        <summary type="html"><![CDATA[Hey everyone]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hey-everyone">Hey everyone<a class="hash-link" href="#hey-everyone" title="Direct link to heading">​</a></h2><p>I've now built a test area on the bottom of the main page. Now you can test the live generation of the images immediately :)</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="josun">Josun<a class="hash-link" href="#josun" title="Direct link to heading">​</a></h3>]]></content>
         <author>
             <name>josunlp</name>
             <uri>https://github.com/josunlp</uri>
