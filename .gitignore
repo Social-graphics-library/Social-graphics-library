@@ -194,3 +194,4 @@ dist
 tests/index.js
 tools/updateInfo.js
 src/**/*.js
+package-lock.json
