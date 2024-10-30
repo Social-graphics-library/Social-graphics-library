@@ -1,4 +1,4 @@
-import { ImportTemplate } from "src/model/importTemplate"
+import { ImportTemplate } from "../model/importTemplate.js"
 
 export type TcheckAllTemplatesFalse = {
 	response: boolean,
